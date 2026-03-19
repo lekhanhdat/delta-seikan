@@ -1,3 +1,5 @@
+import hinh8 from "../assets/images/hinh8.jpg";
+
 type CapabilityItem = {
   title: string;
   desc: string;
@@ -12,37 +14,66 @@ type CapabilityProps = {
 
 const CapabilitySection = ({ heading, subheading, items }: CapabilityProps) => {
   return (
-    <section className="py-24 bg-[#f6f7fb] text-center">
-      {/* SUBTITLE */}
-      <p className="text-blue-600 text-xs font-semibold tracking-widest uppercase mb-3">
-        {subheading}
-      </p>
+    <section className="relative py-14 md:py-20 lg:py-28 text-center overflow-hidden">
+      {/* BACKGROUND (RÕ NÉT FULL WIDTH) */}
+      <img
+        src={hinh8}
+        alt="bg"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-      {/* TITLE */}
-      <h2 className="text-3xl md:text-4xl font-bold text-[#142a4a] mb-14">
-        {heading}
-      </h2>
+      {/* overlay nhẹ cho dễ đọc chữ */}
+      <div className="absolute inset-0 bg-black/30" />
 
-      {/* GRID */}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 px-6">
-        {items.map((item, i) => (
-          <div
-            key={i}
-            className="bg-white rounded-2xl p-8 text-left shadow-sm hover:shadow-md transition 
-             border-b-[4px] border-blue-600"
-          >
-            {/* ICON */}
-            <div className="text-blue-600 text-2xl mb-5">{item.icon}</div>
+      {/* CONTENT */}
+      <div className="relative z-10 px-4 sm:px-6">
+        {/* SUBTITLE */}
+        <p className="text-white/80 text-sm sm:text-base md:text-lg font-semibold tracking-widest uppercase mb-2 md:mb-3">
+          {subheading}
+        </p>
 
-            {/* TITLE */}
-            <h3 className="text-lg font-semibold text-[#142a4a] mb-3">
-              {item.title}
-            </h3>
+        {/* TITLE */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 md:mb-14">
+          {heading}
+        </h2>
 
-            {/* DESC */}
-            <p className="text-[16px] text-gray-500 leading-relaxed">{item.desc}</p>
-          </div>
-        ))}
+        {/* GRID */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 px-0 sm:px-2 md:px-4 lg:px-6">
+          {items.map((item, i) => (
+            <div
+              key={i}
+              className="
+                group
+                rounded-2xl p-5 md:p-6 lg:p-8 text-left
+                bg-white/10
+                backdrop-blur-xl
+                border border-white/20
+                shadow-[0_8px_30px_rgba(0,0,0,0.2)]
+                
+                transition-all duration-[300ms]
+                
+                hover:bg-white/80
+                hover:shadow-2xl
+                hover:-translate-y-2
+              "
+            >
+              {/* ICON */}
+              <div className="text-white text-xl md:text-2xl mb-4 md:mb-5 transition group-hover:text-primary-dark">
+                {item.icon}
+              </div>
+
+              {/* TITLE */}
+              <h3 className="text-base md:text-lg font-semibold text-white mb-2 md:mb-3 transition group-hover:text-primary-dark group-hover:font-bold">
+                {item.title}
+              </h3>
+
+              {/* DESC */}
+              <p className="text-sm md:text-[15px] text-white/80 leading-relaxed transition group-hover:text-primary-dark">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

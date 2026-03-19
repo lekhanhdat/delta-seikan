@@ -3,13 +3,14 @@ import AboutSection from "../components/AboutSection";
 import FeatureCards from "../components/FeatureCards";
 import CapabilitySection from "../components/CapabilitySection";
 import TimelineSection from "../components/TimelineSection";
-import { FiEye } from "react-icons/fi";
-import { FiTarget } from "react-icons/fi";
-import { FiAward } from "react-icons/fi";
 import { FiActivity } from "react-icons/fi"; // nghiên cứu
 import { FiTool } from "react-icons/fi"; // sản xuất
 import { FiShield } from "react-icons/fi"; // QC
 import { FiUsers } from "react-icons/fi"; // kinh doanh
+import hinh6 from "../assets/images/hinh6.jpg";
+import mission from "../assets/images/mission.png";
+import vision from "../assets/images/vision.png";
+import values from "../assets/images/values.png";
 
 const heroContentVI = {
   title: "Giải pháp bao bì kim loại đáng tin cậy cho ngành thực phẩm",
@@ -34,54 +35,54 @@ const HomePage = () => {
 
       <AboutSection
         subtitle="VỀ CHÚNG TÔI"
-        title="Tổng quan về Delta Seikan"
+        title="TỔNG QUAN VỀ CÔNG TY CỔ PHẦN DELTA SEIKAN"
         description1="Được thành lập vào năm 2020, Delta Seikan Corporation tự hào là đơn vị tiên phong trong lĩnh vực sản xuất bao bì kim loại tại Việt Nam, phục vụ đa dạng các nhu cầu trong ngành thực phẩm và đồ uống."
         description2={`Với triết lý "Khách hàng là trọng tâm", chúng tôi không ngừng cải tiến công nghệ và quy trình để mang đến những sản phẩm đạt chất lượng đỉnh cao, góp phần nâng tầm giá trị thương hiệu cho đối tác.`}
         tags={["Bao bì kim loại", "Chất lượng cao"]}
-        image="https://lh3.googleusercontent.com/aida-public/AB6AXuD2tD6nX3QS3P58MSyp_uPpqIoWJ1GYRFD6tXD_ohK10cAdXuzXkxnnKfsq_vsjQh-ym-AK4GrWllV4NIlfQqRt-mfgmDE2Aq3oaPktgDQYC6UxLXRy_yKGi5C76KV9IdwMKsSMTjzU09Vv_vvpsISFi8jPyKZPbjyRTUC6tgz1diU5E0uf_pZtQ5pNzJPSTTxqfMYwZWEG_u4aFPednjwHKc9Q64XQN96S8bGmbL3BpJbDyttkXWIjA6ks_GYiPzitcyIQO7CGwX4"
+        image={hinh6}
       />
 
       <FeatureCards
         items={[
           {
             title: "Tầm nhìn",
-            desc: "Trở thành biểu tượng của sự tin cậy và chất lượng trong ngành sản xuất bao bì kim loại tại Đông Nam Á.",
-            icon: <FiEye />,
+            desc: "Trở thành nhà sản xuất bao bì kim loại dung trong ngành thực phẩm hàng đầu tại Việt Nam.",
+            image: mission,
           },
           {
             title: "Sứ mệnh",
-            desc: "Cung cấp các giải pháp bao bì an toàn, thẩm mỹ và bảo vệ môi trường, song hành cùng sự phát triển của khách hàng.",
-            icon: <FiTarget />,
+            desc: "Cung cấp các giải pháp đáng tin cậy và bền vững để nâng cao chất lượng và dịch vụ.",
+            image: vision,
           },
           {
             title: "Giá trị cốt lõi",
-            icon: <FiAward />,
-            tags: ["CHÍNH TRỰC", "SÁNG TẠO", "BỀN VỮNG", "TẬN TÂM"],
+            image: values,
+            tags: ["Khách hàng là trung tâm", "Trung thực", "Hợp tác và làm việc nhóm", "Cam kết và chủ động"],
           },
         ]}
       />
       <CapabilitySection
-        subheading="HOẠT ĐỘNG VẬN HÀNH"
+        subheading="HOẠT ĐỘNG SẢN XUẤT"
         heading="Năng lực sản xuất toàn diện"
         items={[
           {
-            title: "Nghiên cứu & Phát triển",
-            desc: "Luôn cập nhật công nghệ vật liệu mới nhằm tối ưu hóa trọng lượng và độ bền bao bì.",
+            title: "Phát triển sản phẩm",
+            desc: "Tiến hành nghiên cứu, phát triển và thử nghiệm sản phẩm để đáp ứng nhu cầu thị trường, nâng cao chất lượng và hiệu quả của sản phẩm.",
             icon: <FiActivity />,
           },
           {
             title: "Quản lý sản xuất",
-            desc: "Hệ thống quản trị hiện đại đảm bảo tiến độ và công suất cung ứng quy mô lớn.",
+            desc: "Cung cấp các sản phẩm với chất lượng tốt nhất cho khách hàng với hệ thống sản xuất và quản lý tối ưu.",
             icon: <FiTool />,
           },
           {
-            title: "QC & An toàn thực phẩm",
-            desc: "Kiểm soát nghiêm ngặt theo tiêu chuẩn FSSC 22000 cho mọi lô sản phẩm.",
+            title: "Kiểm soát chất lượng - ATTP",
+            desc: "Chúng tôi luôn cam kết rằng tất cả các sản phẩm đều được kiểm tra để đáp ứng tiêu chuẩn chất lượng đã ký kết và tuân thủ hệ thống quản lý an toàn thực phẩm FSSC22000 trước khi giao hàng cho khách hàng.",
             icon: <FiShield />,
           },
           {
-            title: "Chiến lược kinh doanh",
-            desc: "Đồng hành cùng đối tác phát triển thị trường với chính sách linh hoạt.",
+            title: "Chiến lược bán hàng",
+            desc: "Về hoạt động bán hàng, chúng tôi luôn cố gắng tìm hiểu nhu cầu của khách hàng và phát triển thị trường mới, cung cấp phản hồi cho nhóm R&D để bắt kịp xu hướng thị trường nhằm tạo ra các sản phẩm có chất lượng tốt nhất với giá cả cạnh tranh.",
             icon: <FiUsers />,
           },
         ]}
@@ -97,12 +98,12 @@ const HomePage = () => {
           },
           {
             year: "2021",
-            title: "Ra mắt dòng DRD",
+            title: "Ra mắt dòng lon DRD",
             desc: "Thành công triển khai dây chuyền sản xuất lon DRD công nghệ cao.",
           },
           {
             year: "2022",
-            title: "ISO & HACCP",
+            title: "ISO 9001:2015 & HACCP",
             desc: "Đạt chứng chỉ quản lý chất lượng và an toàn thực phẩm quốc tế.",
           },
           {

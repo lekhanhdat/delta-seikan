@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { FiGlobe } from 'react-icons/fi'
-import { HiOutlineFlag } from 'react-icons/hi2'
+import { FiMenu, FiX } from 'react-icons/fi'
+import logoColor from '../assets/images/logoColor.jpg'
 
 const Header = () => {
   const location = useLocation()
@@ -11,10 +11,9 @@ const Header = () => {
 
   const [active, setActive] = useState(0)
   const [style, setStyle] = useState({ left: 0, width: 0 })
-  const [openLang, setOpenLang] = useState(false)
+  const [openMenu, setOpenMenu] = useState(false)
 
   const refs = useRef<(HTMLDivElement | null)[]>([])
-  const langRef = useRef<HTMLDivElement | null>(null)
 
   const menu = {
     vi: [
@@ -31,7 +30,7 @@ const Header = () => {
       { label: 'Certificates', path: '/en' },
       { label: 'Careers', path: '/en' },
       { label: 'News', path: '/en' },
-      { label: 'Contact', path: '/en' },
+      { label: 'Contact Us', path: '/en' },
     ],
   }
 
@@ -52,16 +51,6 @@ const Header = () => {
     }
   }, [active, pathname])
 
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (langRef.current && !langRef.current.contains(e.target as Node)) {
-        setOpenLang(false)
-      }
-    }
-    document.addEventListener('click', handleClickOutside)
-    return () => document.removeEventListener('click', handleClickOutside)
-  }, [])
-
   const getSwitchLink = (targetLang: 'vi' | 'en') => {
     if (targetLang === 'en') {
       if (pathname.startsWith('/en')) return pathname
@@ -70,29 +59,26 @@ const Header = () => {
     return pathname.replace(/^\/en/, '') || '/'
   }
 
-  const handleChangeLanguage = (targetLang: 'vi' | 'en') => {
-    navigate(getSwitchLink(targetLang))
-    setOpenLang(false)
-  }
-
   return (
-    <header className="sticky top-0 bg-[#f6f7fb] border-b z-50">
-      <div className="w-full px-10 py-4 flex items-center justify-between">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#f6f7fb] border-b shadow-sm">
+      <div className="w-full px-4 py-3 md:px-6 md:py-4 lg:px-10 flex items-center justify-between">
+        
+        {/* LOGO */}
         <a
           href={lang === 'en' ? '/en' : '/'}
           onClick={(e) => {
             e.preventDefault()
             navigate(lang === 'en' ? '/en' : '/')
           }}
-          className="font-bold text-[#1e3a8a] text-lg"
         >
-          DELTA SEIKAN
+          <img src={logoColor} alt="Delta Seikan" className="h-10 md:h-12 lg:h-16" />
         </a>
 
-        <nav className="relative flex items-center gap-8">
+        {/* NAV DESKTOP */}
+        <nav className="relative hidden md:flex items-center gap-6 lg:gap-8">
           {menuItems.map((item, index) => (
             <div
-              key={`${item.label}-${index}`}
+              key={index}
               ref={(el) => {
                 if (el) refs.current[index] = el
               }}
@@ -101,14 +87,14 @@ const Header = () => {
                 navigate(item.path)
               }}
               className={`cursor-pointer font-medium transition
-                ${active === index ? 'text-blue-600' : 'text-gray-500 hover:text-blue-600'}`}
+                ${active === index ? 'text-primary-dark' : 'text-gray-500 hover:text-primary-dark'}`}
             >
               {item.label}
             </div>
           ))}
 
           <span
-            className="absolute bottom-0 h-[2px] bg-blue-600 transition-all duration-300"
+            className="absolute bottom-0 h-[2px] bg-primary-dark transition-all duration-300"
             style={{
               left: style.left,
               width: style.width,
@@ -116,44 +102,72 @@ const Header = () => {
           />
         </nav>
 
-        <div className="flex items-center gap-6">
-          <div ref={langRef} className="relative">
-            <FiGlobe
-              onClick={() => setOpenLang(!openLang)}
-              className="text-xl text-gray-600 hover:text-blue-600 cursor-pointer transition"
-            />
+        {/* RIGHT */}
+        <div className="flex items-center gap-4 md:gap-6">
+          
+          {/* LANGUAGE SWITCH */}
+          <div className="flex items-center gap-2 text-sm font-medium">
+            <span
+              onClick={() => navigate(getSwitchLink('vi'))}
+              className={`cursor-pointer transition ${
+                lang === 'vi'
+                  ? 'text-primary-dark font-semibold'
+                  : 'text-gray-500 hover:text-primary-dark'
+              }`}
+            >
+              Tiếng Việt
+            </span>
 
-            {openLang && (
-              <div className="absolute right-0 mt-2 w-36 bg-white border rounded-md shadow-lg overflow-hidden">
-                <button
-                  type="button"
-                  onClick={() => handleChangeLanguage('vi')}
-                  className={`block px-4 py-2 text-sm hover:bg-gray-100 ${
-                    lang === 'vi' ? 'text-blue-600 font-semibold' : 'text-gray-700'
-                  }`}
-                >
-                  🇻🇳 Tiếng Việt
-                </button>
+            <span className="text-gray-400">|</span>
 
-                <button
-                  type="button"
-                  onClick={() => handleChangeLanguage('en')}
-                  className={`block px-4 py-2 text-sm hover:bg-gray-100 ${
-                    lang === 'en' ? 'text-blue-600 font-semibold' : 'text-gray-700'
-                  }`}
-                >
-                  🇺🇸 English
-                </button>
-              </div>
-            )}
+            <span
+              onClick={() => navigate(getSwitchLink('en'))}
+              className={`cursor-pointer transition ${
+                lang === 'en'
+                  ? 'text-primary-dark font-semibold'
+                  : 'text-gray-500 hover:text-primary-dark'
+              }`}
+            >
+              English
+            </span>
           </div>
-          <HiOutlineFlag className="text-xl text-gray-600 hover:text-blue-600 cursor-pointer transition" />
 
-          <button className="bg-[#1e3a8a] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+          {/* CTA */}
+          {/* <button className="hidden md:block bg-primary-dark text-white px-4 py-2 rounded-md hover:bg-primary transition">
             {lang === 'en' ? 'Contact us' : 'Liên hệ tư vấn'}
+          </button> */}
+
+          {/* MOBILE MENU */}
+          <button
+            className="md:hidden"
+            onClick={() => setOpenMenu(!openMenu)}
+          >
+            {openMenu ? <FiX /> : <FiMenu />}
           </button>
         </div>
       </div>
+
+      {/* MOBILE MENU */}
+      {openMenu && (
+        <div className="md:hidden px-4 pb-4 border-t bg-[#f6f7fb]">
+          {menuItems.map((item, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                navigate(item.path)
+                setOpenMenu(false)
+              }}
+              className="block w-full text-left py-2"
+            >
+              {item.label}
+            </button>
+          ))}
+
+          {/* <button className="mt-3 w-full bg-primary-dark text-white px-4 py-2 rounded-md">
+            {lang === 'en' ? 'Contact us' : 'Liên hệ tư vấn'}
+          </button> */}
+        </div>
+      )}
     </header>
   )
 }

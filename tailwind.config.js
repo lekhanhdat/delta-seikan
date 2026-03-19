@@ -1,14 +1,31 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
+      colors: {
+        primary: "var(--primary)",
+        "primary-dark": "var(--primary-dark)",
+        accent: "var(--accent)",
+        text: "var(--text)",
+        gray: "var(--gray)",
+        "bg-light": "var(--bg-light)",
+      },
+      keyframes: {
+        slideIn: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        slideOut: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        "slide-in": "slideIn 1s ease forwards",
+        "slide-out": "slideOut 1s ease forwards",
       },
     },
   },
   plugins: [],
-}
+};

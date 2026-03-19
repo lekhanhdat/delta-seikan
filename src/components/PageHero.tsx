@@ -10,7 +10,7 @@ const PageHero = ({
   backgroundImage,
 }: PageHeroProps) => {
   return (
-    <section className="relative w-full h-[320px] md:h-[420px] overflow-hidden">
+    <section className="relative w-full h-[280px] sm:h-[340px] md:h-[420px] overflow-hidden">
       
       {/* BACKGROUND */}
       <img
@@ -26,13 +26,13 @@ const PageHero = ({
       <div className="relative z-10 h-full flex items-center">
         
         {/* ❗ KHÔNG mx-auto */}
-        <div className="px-6 md:px-16 lg:px-24 max-w-[1000px]">
+        <div className="px-4 sm:px-6 md:px-16 lg:px-24 max-w-[1000px] pt-12 md:pt-16">
           
-          <h1 className="text-white text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-3 md:mb-6 leading-tight">
             {title}
           </h1>
 
-          <p className="text-gray-200 text-lg md:text-xl leading-relaxed">
+          <p className="text-gray-200 text-sm sm:text-base md:text-xl leading-relaxed max-w-2xl">
             {description}
           </p>
 

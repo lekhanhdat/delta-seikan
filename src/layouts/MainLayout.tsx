@@ -12,7 +12,7 @@ function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="layout-root flex z-0 flex-col min-h-screen">
       <Header/>
-      <main className="layout-main flex-grow min-h-screen w-full">
+      <main className="layout-main flex-grow min-h-screen w-full pt-[72px] md:pt-[84px]">
         {children}
       </main>
       <Footer />
