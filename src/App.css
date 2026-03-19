@@ -182,3 +182,13 @@
     border-right-color: var(--border);
   }
 }
+
+.sample-content {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sample-content p {
+  line-height: 1.6;
+}
