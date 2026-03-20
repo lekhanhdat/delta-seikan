@@ -1,14 +1,18 @@
+import PageHero from "@/components/sections/PageHero/PageHero";
+import hinh19 from "@/assets/images/hinh19.jpg";
+import CertificateSection from "./components/CertificateSection/CertificateSection";
+
 const CertificatePage = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 md:py-20">
-      <h1 className="text-3xl md:text-4xl font-bold text-primary-dark">
-        Chung nhan
-      </h1>
-      <p className="mt-4 text-gray-600 text-base md:text-lg leading-relaxed">
-        Day la trang placeholder cho muc Chung nhan. Noi dung chi tiet se duoc cap
-        nhat o giai doan tiep theo.
-      </p>
-    </section>
+    <div>
+      <PageHero
+        title="Chứng nhận"
+        description="Hệ thống chứng nhận quốc tế khẳng định cam kết của chúng tôi về chất lượng, an toàn và sự bền vững trong sản xuất bao bì kim loại."
+        backgroundImage={hinh19}
+      />
+
+      <CertificateSection />
+    </div>
   );
 };
 

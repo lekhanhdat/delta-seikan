@@ -1,4 +1,4 @@
-import "./ProductSection.css";
+import styles from "./ProductSection.module.css";
 
 type ProductSectionProps = {
   title: string;
@@ -21,24 +21,24 @@ const ProductSection = ({
   specImage,
 }: ProductSectionProps) => {
   return (
-    <section className="product-section">
+    <section className={styles.productSection}>
       
       {/* LEFT */}
-      <div className="product-left">
-        <h2 className="product-title">{title}</h2>
+      <div className={styles.productLeft}>
+        <h2 className={styles.productTitle}>{title}</h2>
 
-        <div className="product-line" />
+        <div className={styles.productLine} />
 
-        <p className="product-desc">{description}</p>
+        <p className={styles.productDesc}>{description}</p>
 
         {features && (
-          <div className="product-features">
+          <div className={styles.productFeatures}>
             {features.map((item, index) => (
-              <div key={index} className="product-feature-item">
-                <h4 className="product-feature-title">
+              <div key={index} className={styles.productFeatureItem}>
+                <h4 className={styles.productFeatureTitle}>
                   {item.title}
                 </h4>
-                <p className="product-feature-desc">
+                <p className={styles.productFeatureDesc}>
                   {item.desc}
                 </p>
               </div>
@@ -48,22 +48,20 @@ const ProductSection = ({
       </div>
 
       {/* RIGHT */}
-      <div className="product-right">
-
-        <div className="product-images">
+      <div className={styles.productRight}>
+        <div className={styles.productImages}>
           {images.map((img, index) => (
-            <div key={index} className="product-image-item group">
-              <img src={img} className="product-image" />
+            <div key={index} className={styles.productImageItem}>
+              <img src={img} className={styles.productImage} />
             </div>
           ))}
         </div>
 
         {specImage && (
-          <div className="product-spec">
-            <img src={specImage} className="product-spec-img" />
+          <div className={styles.productSpec}>
+            <img src={specImage} className={styles.productSpecImg} />
           </div>
         )}
-
       </div>
     </section>
   );

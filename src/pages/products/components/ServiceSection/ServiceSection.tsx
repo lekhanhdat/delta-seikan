@@ -1,4 +1,4 @@
-import "./ServiceSection.css";
+import styles from "./ServiceSection.module.css";
 
 type ServiceItem = {
   title: string;
@@ -22,27 +22,27 @@ const ServiceSection = ({
   badgeSubText,
 }: ServiceSectionProps) => {
   return (
-    <section className="service-section">
+    <section className={styles.serviceSection}>
       
-      <div className="service-container">
+      <div className={styles.serviceContainer}>
         
-        <h2 className="service-title">{title}</h2>
+        <h2 className={styles.serviceTitle}>{title}</h2>
 
-        <p className="service-desc">{description}</p>
+        <p className={styles.serviceDesc}>{description}</p>
 
-        <div className="service-grid">
+        <div className={styles.serviceGrid}>
           {items.map((item, index) => (
-            <div key={index} className="service-card">
+            <div key={index} className={styles.serviceCard}>
               
-              <div className="service-icon">
+              <div className={styles.serviceIcon}>
                 {item.icon || "✓"}
               </div>
 
-              <h4 className="service-item-title">
+              <h4 className={styles.serviceItemTitle}>
                 {item.title}
               </h4>
 
-              <p className="service-item-desc">
+              <p className={styles.serviceItemDesc}>
                 {item.desc}
               </p>
 
@@ -51,11 +51,11 @@ const ServiceSection = ({
         </div>
 
         {(badgeText || badgeSubText) && (
-          <div className="service-badge">
-            <span className="service-badge-text">
+          <div className={styles.serviceBadge}>
+            <span className={styles.serviceBadgeText}>
               {badgeText}
             </span>
-            <span className="service-badge-sub">
+            <span className={styles.serviceBadgeSub}>
               {badgeSubText}
             </span>
           </div>
