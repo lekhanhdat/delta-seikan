@@ -1,5 +1,5 @@
 import hinh8 from "@/assets/images/hinh8.jpg";
-import "./CapabilitySection.css";
+import styles from "./CapabilitySection.module.css";
 
 type CapabilityItem = {
   title: string;
@@ -19,39 +19,42 @@ const CapabilitySection = ({
   items,
 }: CapabilityProps) => {
   return (
-    <section className="capability-section">
+    <section className={styles.capabilitySection}>
+      
       {/* BACKGROUND */}
-      <img src={hinh8} alt="bg" className="capability-bg" />
+      <img src={hinh8} alt="bg" className={styles.capabilityBg} />
 
       {/* OVERLAY */}
-      <div className="capability-overlay" />
+      <div className={styles.capabilityOverlay} />
 
       {/* CONTENT */}
-      <div className="capability-content">
-        {/* SUBTITLE */}
-        <p className="capability-subtitle">{subheading}</p>
+      <div className={styles.capabilityContent}>
+        
+        <p className={styles.capabilitySubtitle}>{subheading}</p>
 
-        {/* TITLE */}
-        <h2 className="capability-title">{heading}</h2>
+        <h2 className={styles.capabilityTitle}>{heading}</h2>
 
-        {/* GRID */}
-        <div className="capability-grid">
+        <div className={styles.capabilityGrid}>
           {items.map((item, i) => (
-            <div key={i} className="capability-card group">
-              {/* ICON */}
-              <div className="capability-icon">{item.icon}</div>
+            <div key={i} className={styles.capabilityCard}>
+              
+              <div className={styles.capabilityIcon}>
+                {item.icon}
+              </div>
 
-              {/* TITLE */}
-              <h3 className="capability-card-title">
+              <h3 className={styles.capabilityCardTitle}>
                 {item.title}
               </h3>
 
-              {/* DESC */}
-              <p className="capability-desc">{item.desc}</p>
+              <p className={styles.capabilityDesc}>
+                {item.desc}
+              </p>
+
             </div>
           ))}
         </div>
       </div>
+
     </section>
   );
 };

@@ -1,4 +1,4 @@
-import "./FeatureCards.css";
+import styles from "./FeatureCards.module.css";
 
 type Card = {
   title: string;
@@ -11,7 +11,7 @@ type FeatureProps = {
   items: Card[];
 };
 
-// 👉 tách chữ title thành 2 phần
+// tách title
 const splitTitle = (text: string) => {
   const words = text.split(" ");
   const mid = Math.ceil(words.length / 2);
@@ -24,24 +24,27 @@ const splitTitle = (text: string) => {
 
 const FeatureCards = ({ items }: FeatureProps) => {
   return (
-    <section className="feature-section">
-      <div className="feature-container">
+    <section className={styles.featureSection}>
+      <div className={styles.featureContainer}>
         {items.map((item, i) => {
           const { first, second } = splitTitle(item.title);
 
           return (
-            <div key={i} className="feature-card">
-              <div className="feature-content">
+            <div key={i} className={styles.featureCard}>
+              
+              <div className={styles.featureContent}>
                 {/* ICON */}
-                <div className="feature-icon">
+                <div className={styles.featureIcon}>
                   <img src={item.image} alt={item.title} />
                 </div>
 
                 {/* TITLE */}
-                <h3 className="feature-title">
-                  <span className="feature-title-main">{first} </span>
+                <h3 className={styles.featureTitle}>
+                  <span className={styles.featureTitleMain}>
+                    {first}{" "}
+                  </span>
                   {second && (
-                    <span className="feature-title-sub">
+                    <span className={styles.featureTitleSub}>
                       {second}
                     </span>
                   )}
@@ -50,19 +53,20 @@ const FeatureCards = ({ items }: FeatureProps) => {
 
               {/* DESC */}
               {item.desc && (
-                <p className="feature-desc">{item.desc}</p>
+                <p className={styles.featureDesc}>{item.desc}</p>
               )}
 
               {/* TAGS */}
               {item.tags && (
-                <div className="feature-tags">
+                <div className={styles.featureTags}>
                   {item.tags.map((tag, idx) => (
-                    <span key={idx} className="feature-tag">
+                    <span key={idx} className={styles.featureTag}>
                       {tag}
                     </span>
                   ))}
                 </div>
               )}
+
             </div>
           );
         })}

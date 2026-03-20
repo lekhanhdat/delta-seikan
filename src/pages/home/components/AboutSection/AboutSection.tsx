@@ -1,6 +1,6 @@
 import { FiSettings } from "react-icons/fi";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
-import "./AboutSection.css";
+import styles from "./AboutSection.module.css";
 
 type AboutProps = {
   title: string;
@@ -20,42 +20,43 @@ const AboutSection = ({
   image,
 }: AboutProps) => {
   return (
-    <section className="about-section">
-      <div className="about-container">
+    <section className={styles.aboutSection}>
+      <div className={styles.aboutContainer}>
         
         {/* LEFT IMAGE */}
-        <div className="about-image-wrapper">
+        <div className={styles.aboutImageWrapper}>
           <img
             src={image}
             alt="about"
-            className="about-image"
+            className={styles.aboutImage}
           />
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="about-content">
-          <p className="about-subtitle">{subtitle}</p>
+        <div className={styles.aboutContent}>
+          <p className={styles.aboutSubtitle}>{subtitle}</p>
 
-          <h2 className="about-title">{title}</h2>
+          <h2 className={styles.aboutTitle}>{title}</h2>
 
-          <p className="about-desc">{description1}</p>
-          <p className="about-desc">{description2}</p>
+          <p className={styles.aboutDesc}>{description1}</p>
+          <p className={styles.aboutDesc}>{description2}</p>
 
           {/* TAGS */}
-          <div className="about-tags">
+          <div className={styles.aboutTags}>
             {tags.map((tag, i) => (
-              <div key={i} className="about-tag">
+              <div key={i} className={styles.aboutTag}>
                 {i === 0 ? (
-                  <FiSettings className="about-tag-icon" />
+                  <FiSettings className={styles.aboutTagIcon} />
                 ) : (
-                  <HiOutlineBadgeCheck className="about-tag-icon" />
+                  <HiOutlineBadgeCheck className={styles.aboutTagIcon} />
                 )}
 
-                <span className="about-tag-text">{tag}</span>
+                <span className={styles.aboutTagText}>{tag}</span>
               </div>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );

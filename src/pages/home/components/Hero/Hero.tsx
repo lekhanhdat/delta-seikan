@@ -7,7 +7,7 @@ import hinh3 from "@/assets/images/hinh3.jpg";
 import hinh4 from "@/assets/images/hinh4.jpg";
 import hinh5 from "@/assets/images/hinh2.jpg";
 
-import "./Hero.css";
+import styles from "./Hero.module.css";
 
 type StatItem = {
   value: string;
@@ -44,56 +44,58 @@ const Hero = ({
   }, [index]);
 
   return (
-    <section className="hero-section">
+    <section className={styles.heroSection}>
+      
       {/* Background */}
-      <div className="hero-bg">
+      <div className={styles.heroBg}>
         <img
           src={images[prevIndex]}
-          alt="hero background previous"
-          className="hero-img animate-slide-out"
+          className={`${styles.heroImg} ${styles.slideOut}`}
         />
         <img
           src={images[index]}
-          alt="hero background current"
-          className="hero-img animate-slide-in"
+          className={`${styles.heroImg} ${styles.slideIn}`}
         />
       </div>
 
       {/* Overlay */}
-      <div className="hero-overlay-dark" />
-      <div className="hero-overlay-gradient" />
+      <div className={styles.heroOverlayDark} />
+      <div className={styles.heroOverlayGradient} />
 
       {/* Content */}
-      <div className="hero-content">
-        <div className="hero-container">
-          <h1 className="hero-title">{title}</h1>
+      <div className={styles.heroContent}>
+        <div className={styles.heroContainer}>
+          
+          <h1 className={styles.heroTitle}>{title}</h1>
 
-          <p className="hero-desc">{description}</p>
+          <p className={styles.heroDesc}>{description}</p>
 
-          <div className="hero-buttons">
-            <button className="hero-btn-primary">
+          <div className={styles.heroButtons}>
+            <button className={styles.heroBtnPrimary}>
               {primaryText}
               <FiArrowRight />
             </button>
 
-            <button className="hero-btn-secondary">
+            <button className={styles.heroBtnSecondary}>
               {secondaryText}
             </button>
           </div>
+
         </div>
       </div>
 
       {/* Stats */}
-      <div className="hero-stats">
-        <div className="hero-stats-grid">
+      <div className={styles.heroStats}>
+        <div className={styles.heroStatsGrid}>
           {stats.map((item, i) => (
             <div key={i}>
-              <p className="hero-stat-value">{item.value}</p>
-              <p className="hero-stat-label">{item.label}</p>
+              <p className={styles.heroStatValue}>{item.value}</p>
+              <p className={styles.heroStatLabel}>{item.label}</p>
             </div>
           ))}
         </div>
       </div>
+
     </section>
   );
 };

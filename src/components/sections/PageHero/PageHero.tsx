@@ -1,4 +1,4 @@
-import "./PageHero.css";
+import styles from "./PageHero.module.css";
 
 type PageHeroProps = {
   title: string;
@@ -12,32 +12,33 @@ const PageHero = ({
   backgroundImage,
 }: PageHeroProps) => {
   return (
-    <section className="hero-section">
+    <section className={styles.pageHero}>
 
       {/* BACKGROUND */}
-      <div className="hero-bg">
+      <div className={styles.pageHeroBg}>
         <img
           src={backgroundImage}
           alt="hero"
-          className="hero-img"
+          className={styles.pageHeroImg}
         />
       </div>
 
       {/* OVERLAY */}
-      <div className="hero-overlay" />
+      <div className={styles.pageHeroOverlay} />
 
       {/* CONTENT */}
-      <div className="hero-content">
-        <div className="hero-container">
+      <div className={styles.pageHeroContent}>
+        <div className={styles.pageHeroContainer}>
 
-          <h1 className="hero-title">{title}</h1>
+          <h1 className={styles.pageHeroTitle}>{title}</h1>
 
-          <div className="hero-line" />
+          <div className={styles.pageHeroLine} />
 
-          <p className="hero-desc">{description}</p>
+          <p className={styles.pageHeroDesc}>{description}</p>
 
         </div>
       </div>
+
     </section>
   );
 };

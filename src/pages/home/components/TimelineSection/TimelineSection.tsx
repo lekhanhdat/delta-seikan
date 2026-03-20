@@ -1,4 +1,4 @@
-import "./TimelineSection.css";
+import styles from "./TimelineSection.module.css";
 
 type TimelineItem = {
   year: string;
@@ -13,23 +13,30 @@ type TimelineProps = {
 
 const TimelineSection = ({ heading, items }: TimelineProps) => {
   return (
-    <section className="timeline-section">
-      <div className="timeline-container">
+    <section className={styles.timelineSection}>
+      <div className={styles.timelineContainer}>
         {/* TITLE */}
-        <h2 className="timeline-heading">{heading}</h2>
+        <h2 className={styles.timelineHeading}>{heading}</h2>
 
         {/* TIMELINE */}
-        <div className="timeline-wrapper">
+        <div className={styles.timelineWrapper}>
           {/* LINE */}
-          <div className="timeline-line-desktop"></div>
-          <div className="timeline-line-mobile"></div>
+          <div className={styles.timelineLineDesktop}></div>
+          <div className={styles.timelineLineMobile}></div>
 
-          <div className="timeline-list">
+          <div className={styles.timelineList}>
             {items.map((item, i) => (
-              <div key={i} className="timeline-item group">
+              <div key={i} className={styles.timelineItem}>
+                {/* DOT */}
+                <div
+                  className={`${styles.timelineDot} ${
+                    i % 2 === 0 ? "bg-primary-dark" : "bg-accent"
+                  }`}
+                />
+
                 {/* YEAR */}
                 <div
-                  className={`timeline-year ${
+                  className={`${styles.timelineYear} ${
                     i % 2 === 0 ? "bg-primary-dark" : "bg-accent"
                   }`}
                 >
@@ -37,9 +44,9 @@ const TimelineSection = ({ heading, items }: TimelineProps) => {
                 </div>
 
                 {/* CONTENT */}
-                <div className="timeline-content">
-                  <h4 className="timeline-title">{item.title}</h4>
-                  <p className="timeline-desc">{item.desc}</p>
+                <div className={styles.timelineContent}>
+                  <h4 className={styles.timelineTitle}>{item.title}</h4>
+                  <p className={styles.timelineDesc}>{item.desc}</p>
                 </div>
               </div>
             ))}
