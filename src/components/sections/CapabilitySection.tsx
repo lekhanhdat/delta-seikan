@@ -1,4 +1,4 @@
-import hinh8 from "../assets/images/hinh8.jpg";
+import hinh8 from "../../assets/images/hinh8.jpg";
 
 type CapabilityItem = {
   title: string;

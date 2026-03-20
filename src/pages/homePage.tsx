@@ -1,8 +1,8 @@
-import Hero from "../components/Hero";
-import AboutSection from "../components/AboutSection";
-import FeatureCards from "../components/FeatureCards";
-import CapabilitySection from "../components/CapabilitySection";
-import TimelineSection from "../components/TimelineSection";
+import Hero from "../components/sections/Hero";
+import AboutSection from "../components/sections/AboutSection";
+import FeatureCards from "../components/sections/FeatureCards";
+import CapabilitySection from "../components/sections/CapabilitySection";
+import TimelineSection from "../components/sections/TimelineSection";
 import { FiActivity } from "react-icons/fi"; // nghiên cứu
 import { FiTool } from "react-icons/fi"; // sản xuất
 import { FiShield } from "react-icons/fi"; // QC
