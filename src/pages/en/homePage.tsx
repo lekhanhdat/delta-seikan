@@ -1,8 +1,8 @@
-import Hero from "../../components/sections/Hero";
-import AboutSection from "../../components/sections/AboutSection";
-import FeatureCards from "../../components/sections/FeatureCards";
-import CapabilitySection from "../../components/sections/CapabilitySection";
-import TimelineSection from "../../components/sections/TimelineSection";
+import Hero from "../home/components/Hero/Hero";
+import AboutSection from "../home/components/AboutSection/AboutSection";
+import FeatureCards from "../home/components/FeatureCards/FeatureCards";
+import CapabilitySection from "../home/components/CapabilitySection/CapabilitySection";
+import TimelineSection from "../home/components/TimelineSection/TimelineSection";
 
 import { FiActivity, FiTool, FiShield, FiUsers } from "react-icons/fi";
 

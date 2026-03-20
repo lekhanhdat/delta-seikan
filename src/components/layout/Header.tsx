@@ -9,7 +9,6 @@ const Header = () => {
   const pathname = location.pathname;
   const lang = pathname.startsWith("/en") ? "en" : "vi";
 
-  const [active, setActive] = useState(0);
   const [style, setStyle] = useState({ left: 0, width: 0 });
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -19,10 +18,10 @@ const Header = () => {
     vi: [
       { label: "Giới thiệu", path: "/" },
       { label: "Sản phẩm", path: "/products" },
-      { label: "Chứng nhận", path: "/" },
-      { label: "Tuyển dụng", path: "/" },
-      { label: "Tin tức", path: "/" },
-      { label: "Liên hệ", path: "/" },
+      { label: "Chứng nhận", path: "/certificates" },
+      { label: "Tuyển dụng", path: "/careers" },
+      { label: "Tin tức", path: "/news" },
+      { label: "Liên hệ", path: "/contact" },
     ],
     en: [
       { label: "About", path: "/en" },
@@ -35,11 +34,10 @@ const Header = () => {
   };
 
   const menuItems = menu[lang];
-
-  useEffect(() => {
-    const currentIndex = menuItems.findIndex((item) => item.path === pathname);
-    setActive(currentIndex >= 0 ? currentIndex : 0);
-  }, [menuItems, pathname]);
+  const active = Math.max(
+    menuItems.findIndex((item) => item.path === pathname),
+    0
+  );
 
   useEffect(() => {
     const el = refs.current[active];
@@ -86,7 +84,6 @@ const Header = () => {
                 if (el) refs.current[index] = el;
               }}
               onClick={() => {
-                setActive(index);
                 navigate(item.path);
               }}
               className={`cursor-pointer font-medium transition
