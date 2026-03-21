@@ -1,0 +1,51 @@
+.capabilitySection {
+  @apply relative py-14 md:py-20 lg:py-28 text-center overflow-hidden;
+}
+
+.capabilityBg {
+  @apply absolute inset-0 w-full h-full object-cover;
+}
+
+.capabilityOverlay {
+  @apply absolute inset-0 bg-black/30;
+}
+
+.capabilityContent {
+  @apply relative z-10 px-4 sm:px-6;
+}
+
+.capabilitySubtitle {
+  @apply text-white/80 text-sm sm:text-base md:text-lg font-semibold tracking-widest uppercase mb-2 md:mb-3;
+}
+
+.capabilityTitle {
+  @apply text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 md:mb-14;
+}
+
+.capabilityGrid {
+  @apply max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 px-0 sm:px-2 md:px-4 lg:px-6;
+}
+
+.capabilityCard {
+  @apply rounded-2xl p-5 md:p-6 lg:p-8 text-left
+         bg-white/10 backdrop-blur-xl border border-white/20
+         shadow-[0_8px_30px_rgba(0,0,0,0.2)];
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.capabilityCard:hover {
+  @apply bg-white/80 shadow-2xl -translate-y-2;
+}
+
+/* ⚠️ KHÔNG dùng group trong @apply */
+.capabilityIcon {
+  @apply text-white text-xl md:text-2xl mb-4 md:mb-5 transition-colors;
+}
+
+.capabilityCardTitle {
+  @apply text-base md:text-lg font-semibold text-white mb-2 md:mb-3 transition-colors;
+}
+
+.capabilityDesc {
+  @apply text-sm md:text-[15px] text-white/80 leading-relaxed transition-colors;
+}

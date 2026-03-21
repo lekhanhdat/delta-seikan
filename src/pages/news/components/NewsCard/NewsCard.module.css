@@ -1,0 +1,50 @@
+.card {
+  @apply rounded-2xl border border-[#e6ebff] bg-white p-4 md:p-5 shadow-sm hover:shadow-xl;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+  @apply border-[#cfd9ff];
+  transform: translateY(-4px);
+}
+
+.imageWrap {
+  @apply relative mb-4 overflow-hidden rounded-xl;
+}
+
+.image {
+  @apply h-52 w-full object-cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  @apply pointer-events-none absolute inset-0 bg-gradient-to-t from-[#001545]/30 via-transparent to-transparent;
+}
+
+.metaRow {
+  @apply flex items-center justify-between gap-3;
+}
+
+.tag {
+  @apply inline-flex items-center rounded-full bg-[#eaf0ff] px-3 py-1 text-[11px] font-semibold tracking-wide text-primary-dark uppercase;
+}
+
+.title {
+  @apply mt-3 text-lg md:text-xl font-semibold text-gray-900 leading-snug;
+}
+
+.date {
+  @apply text-xs md:text-sm text-gray-500;
+}
+
+.description {
+  @apply mt-3 text-sm text-gray-600 leading-relaxed;
+}
+
+.link {
+  @apply mt-5 inline-flex items-center gap-2 rounded-lg bg-[#f3f6ff] px-3 py-2 text-sm font-semibold text-primary-dark hover:bg-[#e5ecff] transition-colors;
+}
