@@ -1,15 +1,27 @@
 .wrapper {
-  @apply max-w-3xl;
+  @apply max-w-4xl rounded-2xl border border-[#dbe4ff] bg-gradient-to-br from-white to-[#f6f8ff] p-6 md:p-8 shadow-sm;
+}
+
+.topRow {
+  @apply flex items-center gap-2 md:gap-3;
 }
 
 .label {
-  @apply text-sm font-semibold tracking-[0.14em] text-primary uppercase;
+  @apply text-xs md:text-sm font-semibold tracking-[0.14em] text-primary uppercase;
+}
+
+.dot {
+  @apply h-1.5 w-1.5 rounded-full bg-primary;
+}
+
+.smallText {
+  @apply text-xs md:text-sm text-gray-500;
 }
 
 .title {
-  @apply mt-3 text-2xl md:text-3xl font-bold text-primary-dark;
+  @apply mt-4 text-2xl md:text-4xl font-bold text-primary-dark leading-tight;
 }
 
 .description {
-  @apply mt-4 text-gray-600 text-base md:text-lg leading-relaxed;
+  @apply mt-4 text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl;
 }

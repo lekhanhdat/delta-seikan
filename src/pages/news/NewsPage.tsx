@@ -51,6 +51,7 @@ const NewsPage = () => {
       />
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 md:py-20">
+        <div className="rounded-3xl bg-gradient-to-b from-[#f7f9ff] to-white p-4 md:p-8">
         <NewsIntro
           label={introContent.label}
           title={introContent.title}
@@ -58,6 +59,7 @@ const NewsPage = () => {
         />
 
         <NewsGrid items={newsItems} />
+        </div>
       </section>
     </div>
   );
