@@ -1,4 +1,5 @@
 import styles from "./TimelineSection.module.css";
+import { memo } from "react";
 
 type TimelineItem = {
   year: string;
@@ -57,4 +58,4 @@ const TimelineSection = ({ heading, items }: TimelineProps) => {
   );
 };
 
-export default TimelineSection;
+export default memo(TimelineSection);

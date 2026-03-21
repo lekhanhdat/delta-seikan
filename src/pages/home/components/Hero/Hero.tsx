@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 
 import hinh1 from "@/assets/images/hinh1.jpg";
@@ -33,15 +33,17 @@ const Hero = ({
 }: HeroProps) => {
   const [index, setIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(0);
+  const indexRef = useRef(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPrevIndex(index);
-      setIndex((prev) => (prev + 1) % images.length);
+      setPrevIndex(indexRef.current);
+      indexRef.current = (indexRef.current + 1) % images.length;
+      setIndex(indexRef.current);
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [index]);
+  }, []);
 
   return (
     <section className={styles.heroSection}>

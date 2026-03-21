@@ -1,4 +1,5 @@
 import styles from "./ServiceSection.module.css";
+import { memo } from "react";
 
 type ServiceItem = {
   title: string;
@@ -66,4 +67,4 @@ const ServiceSection = ({
   );
 };
 
-export default ServiceSection;
+export default memo(ServiceSection);

@@ -6,10 +6,10 @@ import TimelineSection from "./components/TimelineSection/TimelineSection";
 
 import { FiActivity, FiTool, FiShield, FiUsers } from "react-icons/fi";
 
-import hinh6 from "../../assets/images/hinh6.jpg";
-import mission from "../../assets/images/mission.png";
-import vision from "../../assets/images/vision.png";
-import values from "../../assets/images/values.png";
+import hinh6 from "@/assets/images/hinh6.jpg";
+import mission from "@/assets/images/mission.png";
+import vision from "@/assets/images/vision.png";
+import values from "@/assets/images/values.png";
 
 //
 // 🔥 DATA (tách riêng giống hero)

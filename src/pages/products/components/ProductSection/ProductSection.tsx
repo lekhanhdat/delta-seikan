@@ -1,4 +1,5 @@
 import styles from "./ProductSection.module.css";
+import { memo } from "react";
 
 type ProductSectionProps = {
   title: string;
@@ -67,4 +68,4 @@ const ProductSection = ({
   );
 };
 
-export default ProductSection;
+export default memo(ProductSection);

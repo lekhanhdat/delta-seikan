@@ -1,6 +1,7 @@
 import { FiSettings } from "react-icons/fi";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
 import styles from "./AboutSection.module.css";
+import { memo } from "react";
 
 type AboutProps = {
   title: string;
@@ -62,4 +63,4 @@ const AboutSection = ({
   );
 };
 
-export default AboutSection;
+export default memo(AboutSection);

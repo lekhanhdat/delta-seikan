@@ -1,4 +1,5 @@
 import styles from "./FeatureCards.module.css";
+import { memo } from "react";
 
 type Card = {
   title: string;
@@ -75,4 +76,4 @@ const FeatureCards = ({ items }: FeatureProps) => {
   );
 };
 
-export default FeatureCards;
+export default memo(FeatureCards);

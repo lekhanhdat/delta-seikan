@@ -1,5 +1,6 @@
 import hinh8 from "@/assets/images/hinh8.jpg";
 import styles from "./CapabilitySection.module.css";
+import { memo } from "react";
 
 type CapabilityItem = {
   title: string;
@@ -59,4 +60,4 @@ const CapabilitySection = ({
   );
 };
 
-export default CapabilitySection;
+export default memo(CapabilitySection);

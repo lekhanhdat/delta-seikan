@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import logoColor from "../../assets/images/logoColor.jpg";
@@ -9,53 +9,43 @@ const Header = () => {
   const pathname = location.pathname;
   const lang = pathname.startsWith("/en") ? "en" : "vi";
 
-  const [style, setStyle] = useState({ left: 0, width: 0 });
   const [openMenu, setOpenMenu] = useState(false);
 
-  const refs = useRef<(HTMLDivElement | null)[]>([]);
-
-  const menu = {
-    vi: [
-      { label: "Giới thiệu", path: "/" },
-      { label: "Sản phẩm", path: "/products" },
-      { label: "Chứng nhận", path: "/certificates" },
-      { label: "Tuyển dụng", path: "/careers" },
-      { label: "Tin tức", path: "/news" },
-      { label: "Liên hệ", path: "/contact" },
-    ],
-    en: [
-      { label: "About", path: "/en" },
-      { label: "Products", path: "/en/products" },
-      { label: "Certificates", path: "/en" },
-      { label: "Careers", path: "/en" },
-      { label: "News", path: "/en" },
-      { label: "Contact Us", path: "/en" },
-    ],
-  };
-
-  const menuItems = menu[lang];
-  const active = Math.max(
-    menuItems.findIndex((item) => item.path === pathname),
-    0
+  const menu = useMemo(
+    () => ({
+      vi: [
+        { label: "Giới thiệu", path: "/" },
+        { label: "Sản phẩm", path: "/products" },
+        { label: "Chứng nhận", path: "/certificates" },
+        { label: "Tuyển dụng", path: "/careers" },
+        { label: "Tin tức", path: "/news" },
+        { label: "Liên hệ", path: "/contact" },
+      ],
+      en: [
+        { label: "About", path: "/en" },
+        { label: "Products", path: "/en/products" },
+        { label: "Certificates", path: "/en" },
+        { label: "Careers", path: "/en" },
+        { label: "News", path: "/en" },
+        { label: "Contact Us", path: "/en" },
+      ],
+    }),
+    []
   );
 
-  useEffect(() => {
-    const el = refs.current[active];
-    if (el) {
-      setStyle({
-        left: el.offsetLeft,
-        width: el.offsetWidth,
-      });
-    }
-  }, [active, pathname]);
+  const menuItems = menu[lang];
+  const active = useMemo(
+    () => Math.max(menuItems.findIndex((item) => item.path === pathname), 0),
+    [menuItems, pathname]
+  );
 
-  const getSwitchLink = (targetLang: "vi" | "en") => {
+  const getSwitchLink = useCallback((targetLang: "vi" | "en") => {
     if (targetLang === "en") {
       if (pathname.startsWith("/en")) return pathname;
       return pathname === "/" ? "/en" : `/en${pathname}`;
     }
     return pathname.replace(/^\/en/, "") || "/";
-  };
+  }, [pathname]);
 
   return (
     <header className="fixed top-0 left-0 w-full h-[80px] z-50 bg-[#f6f7fb] border-b shadow-sm">
@@ -80,9 +70,6 @@ const Header = () => {
           {menuItems.map((item, index) => (
             <div
               key={index}
-              ref={(el) => {
-                if (el) refs.current[index] = el;
-              }}
               onClick={() => {
                 navigate(item.path);
               }}
@@ -92,14 +79,6 @@ const Header = () => {
               {item.label}
             </div>
           ))}
-
-          <span
-            className="absolute bottom-0 h-[2px] bg-primary-dark transition-all duration-300"
-            style={{
-              left: style.left,
-              width: style.width,
-            }}
-          />
         </nav>
 
         {/* RIGHT */}
