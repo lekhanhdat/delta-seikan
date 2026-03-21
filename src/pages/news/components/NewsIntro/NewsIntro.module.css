@@ -1,0 +1,15 @@
+.wrapper {
+  @apply max-w-3xl;
+}
+
+.label {
+  @apply text-sm font-semibold tracking-[0.14em] text-primary uppercase;
+}
+
+.title {
+  @apply mt-3 text-2xl md:text-3xl font-bold text-primary-dark;
+}
+
+.description {
+  @apply mt-4 text-gray-600 text-base md:text-lg leading-relaxed;
+}
