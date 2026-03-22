@@ -1,7 +1,8 @@
 import { useState, useMemo, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import logoColor from "../../assets/images/logoColor.jpg";
+import logoColor from "@/assets/images/logoColor.jpg";
+import styles from "./Header.module.css";
 
 const Header = () => {
   const location = useLocation();
@@ -48,11 +49,11 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <header className="fixed top-0 left-0 w-full h-[80px] z-50 bg-[#f6f7fb] border-b shadow-sm">
-      <div className="w-full h-full px-4 md:px-6 lg:px-10 flex items-center justify-between">
+    <header className={styles.header}>
+      <div className={styles.headerInner}>
         {/* LOGO */}
         <a
-          className="flex items-center gap-3"
+          className={styles.logoLink}
           href={lang === "en" ? "/en" : "/"}
           onClick={(e) => {
             e.preventDefault();
@@ -62,25 +63,24 @@ const Header = () => {
           <img
             src={logoColor}
             alt="Delta Seikan"
-            className="h-10 md:h-12 lg:h-16"
+            className={styles.logoImg}
             loading="lazy"
             decoding="async"
           />
-          <span className="text-sm md:text-lg lg:text-xl font-bold tracking-wide text-primary-dark">
+          <span className={styles.logoText}>
             DELTA SEIKAN
           </span>
         </a>
 
         {/* NAV DESKTOP */}
-        <nav className="relative hidden md:flex items-center gap-6 lg:gap-8">
+        <nav className={styles.desktopNav}>
           {menuItems.map((item, index) => (
             <div
               key={index}
               onClick={() => {
                 navigate(item.path);
               }}
-              className={`cursor-pointer font-medium transition
-                ${active === index ? "text-primary-dark" : "text-gray-500 hover:text-primary-dark"}`}
+              className={`${styles.navItem} ${active === index ? styles.navItemActive : ""}`}
             >
               {item.label}
             </div>
@@ -88,29 +88,21 @@ const Header = () => {
         </nav>
 
         {/* RIGHT */}
-        <div className="flex items-center gap-4 md:gap-6">
+        <div className={styles.rightGroup}>
           {/* LANGUAGE SWITCH */}
-          <div className="flex items-center gap-2 text-sm font-medium">
+          <div className={styles.languageSwitch}>
             <span
               onClick={() => navigate(getSwitchLink("vi"))}
-              className={`cursor-pointer transition ${
-                lang === "vi"
-                  ? "text-primary-dark font-semibold"
-                  : "text-gray-500 hover:text-primary-dark"
-              }`}
+              className={`${styles.languageItem} ${lang === "vi" ? styles.languageItemActive : ""}`}
             >
               Tiếng Việt
             </span>
 
-            <span className="text-gray-400">|</span>
+            <span className={styles.languageDivider}>|</span>
 
             <span
               onClick={() => navigate(getSwitchLink("en"))}
-              className={`cursor-pointer transition ${
-                lang === "en"
-                  ? "text-primary-dark font-semibold"
-                  : "text-gray-500 hover:text-primary-dark"
-              }`}
+              className={`${styles.languageItem} ${lang === "en" ? styles.languageItemActive : ""}`}
             >
               English
             </span>
@@ -122,7 +114,7 @@ const Header = () => {
           </button> */}
 
           {/* MOBILE MENU */}
-          <button className="md:hidden" onClick={() => setOpenMenu(!openMenu)}>
+          <button className={styles.mobileMenuButton} onClick={() => setOpenMenu(!openMenu)}>
             {openMenu ? <FiX /> : <FiMenu />}
           </button>
         </div>
@@ -130,7 +122,7 @@ const Header = () => {
 
       {/* MOBILE MENU */}
       {openMenu && (
-        <div className="md:hidden px-4 pb-4 border-t bg-[#f6f7fb]">
+        <div className={styles.mobileMenu}>
           {menuItems.map((item, index) => (
             <button
               key={index}
@@ -138,7 +130,7 @@ const Header = () => {
                 navigate(item.path);
                 setOpenMenu(false);
               }}
-              className="block w-full text-left py-2"
+              className={styles.mobileMenuItem}
             >
               {item.label}
             </button>

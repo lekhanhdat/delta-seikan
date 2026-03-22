@@ -1,5 +1,6 @@
 import { FiAward, FiLink } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   const location = useLocation();
@@ -47,26 +48,26 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full bg-primary-dark text-white">
+    <footer className={styles.footer}>
       
       {/* TOP */}
-      <div className="w-full px-4 sm:px-6 md:px-10 py-12 md:py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-10 gap-8 md:gap-10 lg:gap-12">
+      <div className={styles.top}>
         
         {/* Column 1 */}
-        <div className="lg:col-span-3">
-          <h2 className="font-bold text-lg sm:text-xl mb-3 md:mb-4 tracking-wide">
+        <div className={styles.colPrimary}>
+          <h2 className={styles.brandTitle}>
             DELTA SEIKAN
           </h2>
 
-          <p className="text-white/70 leading-relaxed mb-5 md:mb-6 text-sm md:text-[15px]">
+          <p className={styles.brandDesc}>
             {t.desc}
           </p>
 
-          <div className="flex gap-4">
+          <div className={styles.iconList}>
             {[FiAward, FiLink].map((Icon, i) => (
               <div
                 key={i}
-                className="w-10 h-10 border border-white/30 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-white/10 hover:border-[var(--primary)] hover:text-[var(--primary)]"
+                className={styles.iconButton}
               >
                 <Icon />
               </div>
@@ -75,17 +76,17 @@ const Footer = () => {
         </div>
 
         {/* Column 2 */}
-        <div className="lg:col-span-2">
-          <h3 className="font-semibold mb-5 tracking-widest text-xs text-white/80">
+        <div className={styles.colLink}>
+          <h3 className={styles.colHeading}>
             {t.explore}
           </h3>
 
-          <ul className="space-y-3">
+          <ul className={styles.linkList}>
             {exploreLinks.map((item) => (
               <li key={item.label}>
                 <Link
                   to={item.to}
-                  className="inline-block text-white transition-all duration-200 hover:text-[var(--primary)] hover:translate-x-1"
+                  className={styles.linkItem}
                 >
                   {item.label}
                 </Link>
@@ -95,17 +96,17 @@ const Footer = () => {
         </div>
 
         {/* Column 3 */}
-        <div className="lg:col-span-2">
-          <h3 className="font-semibold mb-5 tracking-widest text-xs text-white/80">
+        <div className={styles.colLink}>
+          <h3 className={styles.colHeading}>
             {t.products}
           </h3>
 
-          <ul className="space-y-3">
+          <ul className={styles.linkList}>
             {productLinks.map((item) => (
               <li key={item.label}>
                 <Link
                   to={item.to}
-                  className="inline-block text-white transition-all duration-200 hover:text-[var(--primary)] hover:translate-x-1"
+                  className={styles.linkItem}
                 >
                   {item.label}
                 </Link>
@@ -115,22 +116,22 @@ const Footer = () => {
         </div>
 
         {/* Column 4 */}
-        <div className="lg:col-span-3">
-          <h3 className="font-semibold mb-5 tracking-widest text-xs text-white/80">
+        <div className={styles.colLocation}>
+          <h3 className={styles.colHeading}>
             {t.location}
           </h3>
 
-          <div className="space-y-4 text-white">
+          <div className={styles.locationList}>
             <div>
-              <p className="font-semibold mb-1">{t.office}</p>
-              <p className="text-white/70 text-sm">
+              <p className={styles.locationName}>{t.office}</p>
+              <p className={styles.locationAddress}>
                 602/32 Điện Biên Phủ, Phường 22, Bình Thạnh, HCMC
               </p>
             </div>
 
             <div>
-              <p className="font-semibold mb-1">{t.factory}</p>
-              <p className="text-white/70 text-sm">
+              <p className={styles.locationName}>{t.factory}</p>
+              <p className={styles.locationAddress}>
                 Lot A, Tam Lap Industrial Cluster, Binh Duong
               </p>
             </div>
@@ -139,12 +140,12 @@ const Footer = () => {
       </div>
 
       {/* DIVIDER */}
-      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+      <div className={styles.divider}></div>
 
       {/* BOTTOM */}
-      <div className="px-4 sm:px-6 md:px-10 py-5 md:py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-xs sm:text-sm text-white/70">
+      <div className={styles.bottom}>
         
-        <p className="text-left md:text-center">
+        <p className={styles.copyright}>
           © 2026 DELTA SEIKAN CORPORATION. ALL RIGHTS RESERVED.
         </p>
       </div>
