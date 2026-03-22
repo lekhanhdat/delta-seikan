@@ -1,11 +1,10 @@
 import PageHero from "@/components/sections/PageHero/PageHero";
-import hinh19 from "@/assets/images/hinh19.jpg";
+import hinh21 from "@/assets/images/hinh21.jpg";
 
 import CareerHighlights from "./components/CareerHighlights/CareerHighlights";
 import CareerBlog from "./components/CareerBlog/CareerBlog";
 
 const CareerPage = () => {
-
   const highlightsData = [
     {
       title: "Môi trường làm việc",
@@ -48,8 +47,8 @@ const CareerPage = () => {
     <div>
       <PageHero
         title="Tuyển Dụng"
-        description="Chúng tôi luôn tìm kiếm những nhân sự tài năng, nhiệt huyết và sẵn sàng phát triển cùng doanh nghiệp."
-        backgroundImage={hinh19}
+        description="Chúng tôi luôn chào đón những cá nhân tài năng, nhiệt huyết và sẵn sàng đồng hành cùng doanh nghiệp trên hành trình phát triển bền vững. Đây là nơi bạn có thể phát huy năng lực và xây dựng sự nghiệp lâu dài."
+        backgroundImage={hinh21}
       />
 
       <CareerHighlights data={highlightsData} />

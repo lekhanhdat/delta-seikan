@@ -61,71 +61,76 @@ const sections: Section[] = [
     props: {
       title: "Dịch vụ Tráng phủ Kim loại",
       description:
-        "Với dây chuyền đồng bộ của KBA - LTG (Đức), các sản phẩm tráng phủ kim loại đáp ứng các tiêu chuẩn khắt khe của Châu Âu và Vương quốc Anh như BPA-NI, PFAS.",
+        "Delta Seikan cung cấp dịch vụ tráng phủ kim loại với công nghệ hiện đại từ KBA - LTG (Đức), đảm bảo độ bám dính cao, khả năng chống ăn mòn vượt trội và an toàn cho thực phẩm. Các sản phẩm đáp ứng các tiêu chuẩn quốc tế nghiêm ngặt như BPA-NI, PFAS-free, phù hợp cho ngành thực phẩm và đồ uống.",
       images: [hinh9],
     },
   },
+
   {
     type: "product",
     tab: "LON 2 MẢNH (DRD)",
     variant: "stacked",
     props: {
-      title: "Lon 2 mảnh – Lon DRD",
+      title: "Lon 2 mảnh – Công nghệ DRD",
       description:
-        "Lon 2 mảnh (DRD – Drawn & Redrawn) được sản xuất bằng công nghệ dập vuốt hiện đại.",
+        "Lon 2 mảnh (DRD – Drawn & Redrawn) được sản xuất bằng công nghệ dập vuốt tiên tiến, giúp tối ưu độ bền cơ học, giảm thiểu mối ghép và đảm bảo tính kín tuyệt đối. Sản phẩm phù hợp cho các loại thực phẩm đóng hộp, mang lại hiệu quả bảo quản cao và tối ưu chi phí sản xuất.",
       images: [hinh10, hinh11],
       specImage: hinh12,
     },
   },
+
   {
     type: "product",
     tab: "LON 3 MẢNH",
     variant: "reverse",
     props: {
       title: "Lon 3 mảnh",
-      description: "Lon 3 mảnh gồm thân, đáy và nắp được ghép nối chắc chắn.",
+      description:
+        "Lon 3 mảnh được cấu tạo từ thân, đáy và nắp, liên kết bằng công nghệ hàn hiện đại, đảm bảo độ kín và độ bền cao. Giải pháp linh hoạt về kích thước và dung tích, phù hợp với nhiều loại sản phẩm từ thực phẩm đến hóa chất công nghiệp.",
       images: [hinh13, hinh14],
       specImage: hinh15,
     },
   },
+
   {
     type: "product",
     tab: "NẮP EOE",
     variant: "feature",
     props: {
-      title: "Nắp EOE",
+      title: "Nắp EOE (Easy Open End)",
       description:
-        "Nắp EOE (Easy Open End) được thiết kế tiện lợi giúp người dùng dễ dàng mở.",
+        "Nắp EOE được thiết kế với cơ chế mở dễ dàng, mang lại trải nghiệm tiện lợi cho người dùng mà vẫn đảm bảo độ kín và an toàn sản phẩm. Sản phẩm được sản xuất theo tiêu chuẩn quốc tế, phù hợp cho nhiều loại lon thực phẩm và đồ uống.",
       images: [hinh16, hinh17],
       specImage: hinh18,
     },
   },
+
   {
     type: "service",
     tab: "ĐÓNG GÓI & PHÂN PHỐI",
     props: {
-      title: "Đóng gói & Phân phối",
+      title: "Giải pháp Đóng gói & Phân phối",
       description:
-        "Các giải pháp đóng gói chuyên nghiệp, dễ vận hành và thân thiện môi trường.",
+        "Delta Seikan cung cấp giải pháp đóng gói và phân phối toàn diện, giúp tối ưu chuỗi cung ứng, nâng cao hiệu quả vận hành và đảm bảo chất lượng sản phẩm trong suốt quá trình lưu trữ và vận chuyển.",
       items: [
         {
           title: "An toàn tuyệt đối",
-          desc: "Đảm bảo chất lượng hàng hóa",
+          desc: "Quy trình kiểm soát nghiêm ngặt, đảm bảo chất lượng và an toàn sản phẩm trong mọi điều kiện.",
           icon: "✓",
         },
         {
-          title: "Dễ dàng vận hành",
-          desc: "Thiết kế tối ưu",
+          title: "Tối ưu vận hành",
+          desc: "Thiết kế linh hoạt, dễ tích hợp vào hệ thống sản xuất và logistics hiện có.",
           icon: "⚙",
         },
         {
-          title: "Thân thiện môi trường",
-          desc: "Giải pháp bền vững",
+          title: "Bền vững & thân thiện",
+          desc: "Giải pháp hướng đến giảm thiểu tác động môi trường và phát triển bền vững.",
           icon: "🌱",
         },
       ],
       badgeText: "24/7",
-      badgeSubText: "Hỗ trợ vận hành liên tục",
+      badgeSubText: "Hỗ trợ vận hành liên tục và kịp thời",
       image: hinh19,
     },
   },
@@ -163,7 +168,7 @@ const ProductPage = () => {
       const rootStyles = getComputedStyle(document.documentElement);
       const headerHeight = parseInt(
         rootStyles.getPropertyValue("--header-height").replace("px", "").trim(),
-        10
+        10,
       );
       const offsetTop = (Number.isNaN(headerHeight) ? 80 : headerHeight) + 120;
 
@@ -203,7 +208,7 @@ const ProductPage = () => {
 
   const renderProductSection = (
     variant: ProductSectionType["variant"],
-    props: ProductSectionProps
+    props: ProductSectionProps,
   ) => {
     if (variant === "reverse") {
       return <ProductSectionReverse {...props} />;
@@ -225,7 +230,7 @@ const ProductPage = () => {
       {/* HERO */}
       <PageHero
         title="Sản phẩm"
-        description="Chúng tôi cung cấp các giải pháp bao bì kim loại chất lượng cao..."
+        description="Chúng tôi cung cấp các giải pháp bao bì kim loại chất lượng cao, đáp ứng tiêu chuẩn quốc tế và nhu cầu đa dạng của khách hàng. Với công nghệ hiện đại và quy trình sản xuất nghiêm ngặt, mỗi sản phẩm đều đảm bảo độ bền, tính an toàn và hiệu quả trong quá trình sử dụng."
         backgroundImage={hinh3}
       />
 

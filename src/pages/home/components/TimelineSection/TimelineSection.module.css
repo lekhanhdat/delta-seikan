@@ -1,5 +1,6 @@
 .timelineSection {
   @apply py-16 md:py-24 bg-gradient-to-b from-gray-50 to-gray-100;
+  min-height: calc(100svh - var(--header-height));
 }
 
 .timelineContainer {

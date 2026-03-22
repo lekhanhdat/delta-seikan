@@ -1,5 +1,5 @@
 import PageHero from "@/components/sections/PageHero/PageHero";
-import hinh19 from "@/assets/images/hinh19.jpg";
+import newshinhanh from "@/assets/images/newshinhanh.jpg";
 import news1 from "@/assets/images/news1.png";
 import news2 from "@/assets/images/news2.png";
 import news3 from "@/assets/images/news3.jpg";
@@ -46,19 +46,19 @@ const NewsPage = () => {
     <div>
       <PageHero
         title="Tin tức"
-        description="Cập nhật các hoạt động nổi bật, thông tin chứng nhận và xu hướng bao bì kim loại mới nhất từ Delta Seikan."
-        backgroundImage={hinh19}
+        description="Cập nhật những hoạt động nổi bật, thông tin chứng nhận và các xu hướng mới nhất trong lĩnh vực bao bì kim loại từ Delta Seikan."
+        backgroundImage={newshinhanh}
       />
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 md:py-20">
         <div className="rounded-3xl bg-gradient-to-b from-[#f7f9ff] to-white p-4 md:p-8">
-        <NewsIntro
-          label={introContent.label}
-          title={introContent.title}
-          description={introContent.description}
-        />
+          <NewsIntro
+            label={introContent.label}
+            title={introContent.title}
+            description={introContent.description}
+          />
 
-        <NewsGrid items={newsItems} />
+          <NewsGrid items={newsItems} />
         </div>
       </section>
     </div>

@@ -1,5 +1,5 @@
 import { FiAward, FiLink } from "react-icons/fi";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
@@ -30,6 +30,21 @@ const Footer = () => {
   };
 
   const t = content[lang];
+  const basePath = lang === "en" ? "/en" : "";
+
+  const exploreLinks = [
+    { label: t.exploreList[0], to: `${basePath}/` },
+    { label: t.exploreList[1], to: `${basePath}/products` },
+    { label: t.exploreList[2], to: "/certificates" },
+    { label: t.exploreList[3], to: "/news" },
+  ];
+
+  const productLinks = [
+    { label: t.productList[0], to: `${basePath}/products` },
+    { label: t.productList[1], to: `${basePath}/products` },
+    { label: t.productList[2], to: `${basePath}/products` },
+    { label: t.productList[3], to: `${basePath}/products` },
+  ];
 
   return (
     <footer className="w-full bg-primary-dark text-white">
@@ -66,12 +81,14 @@ const Footer = () => {
           </h3>
 
           <ul className="space-y-3">
-            {t.exploreList.map((item) => (
-              <li
-                key={item}
-                className="cursor-pointer text-white transition-all duration-200 hover:text-[var(--primary)] hover:translate-x-1"
-              >
-                {item}
+            {exploreLinks.map((item) => (
+              <li key={item.label}>
+                <Link
+                  to={item.to}
+                  className="inline-block text-white transition-all duration-200 hover:text-[var(--primary)] hover:translate-x-1"
+                >
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -84,12 +101,14 @@ const Footer = () => {
           </h3>
 
           <ul className="space-y-3">
-            {t.productList.map((item) => (
-              <li
-                key={item}
-                className="cursor-pointer text-white transition-all duration-200 hover:text-[var(--primary)] hover:translate-x-1"
-              >
-                {item}
+            {productLinks.map((item) => (
+              <li key={item.label}>
+                <Link
+                  to={item.to}
+                  className="inline-block text-white transition-all duration-200 hover:text-[var(--primary)] hover:translate-x-1"
+                >
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>

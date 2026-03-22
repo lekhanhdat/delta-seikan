@@ -1,9 +1,9 @@
 import PageHero from "@/components/sections/PageHero/PageHero";
-import hinh19 from "@/assets/images/hinh19.jpg";
 import CertificateSection from "./components/CertificateSection/CertificateSection";
 import CertificateHighlights from "./components/CertificateHighlights/CertificateHighlights";
 import CertificateCta from "./components/CertificateCta/CertificateCta";
 import { FiTarget, FiShield, FiCheckSquare } from "react-icons/fi";
+import hinh20 from "@/assets/images/hinh20.jpg";
 
 const highlightData = {
   heading: "Năng lực đảm bảo chất lượng toàn diện",
@@ -42,8 +42,8 @@ const CertificatePage = () => {
     <div>
       <PageHero
         title="Chứng nhận"
-        description="Hệ thống chứng nhận quốc tế khẳng định cam kết của chúng tôi về chất lượng, an toàn và sự bền vững trong sản xuất bao bì kim loại."
-        backgroundImage={hinh19}
+        description="Các chứng nhận quốc tế là minh chứng cho cam kết của chúng tôi trong việc duy trì tiêu chuẩn chất lượng, an toàn và phát triển bền vững trong toàn bộ quy trình sản xuất bao bì kim loại."
+        backgroundImage={hinh20}
       />
 
       <CertificateSection />
