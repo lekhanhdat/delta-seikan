@@ -52,6 +52,7 @@ const Header = () => {
       <div className="w-full h-full px-4 md:px-6 lg:px-10 flex items-center justify-between">
         {/* LOGO */}
         <a
+          className="flex items-center gap-3"
           href={lang === "en" ? "/en" : "/"}
           onClick={(e) => {
             e.preventDefault();
@@ -62,7 +63,12 @@ const Header = () => {
             src={logoColor}
             alt="Delta Seikan"
             className="h-10 md:h-12 lg:h-16"
+            loading="lazy"
+            decoding="async"
           />
+          <span className="text-sm md:text-lg lg:text-xl font-bold tracking-wide text-primary-dark">
+            DELTA SEIKAN
+          </span>
         </a>
 
         {/* NAV DESKTOP */}

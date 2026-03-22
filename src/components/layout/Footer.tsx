@@ -16,7 +16,6 @@ const Footer = () => {
       productList: ["Lon 2 mảnh", "Lon 3 mảnh", "Nắp EOE", "Tráng phủ"],
       office: "HCMC Office",
       factory: "Factory",
-      policy: ["QUY ĐỊNH BẢO MẬT", "ĐIỀU KHOẢN SỬ DỤNG"],
     },
     en: {
       desc: "Leading in metal packaging technology and 2-piece aluminum cans in Vietnam market.",
@@ -27,7 +26,6 @@ const Footer = () => {
       productList: ["2-piece cans", "3-piece cans", "EOE lids", "Coating"],
       office: "HCMC Office",
       factory: "Factory",
-      policy: ["PRIVACY POLICY", "TERMS OF USE"],
     },
   };
 
@@ -37,10 +35,10 @@ const Footer = () => {
     <footer className="w-full bg-primary-dark text-white">
       
       {/* TOP */}
-      <div className="w-full px-4 sm:px-6 md:px-10 py-12 md:py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
+      <div className="w-full px-4 sm:px-6 md:px-10 py-12 md:py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-10 gap-8 md:gap-10 lg:gap-12">
         
         {/* Column 1 */}
-        <div>
+        <div className="lg:col-span-3">
           <h2 className="font-bold text-lg sm:text-xl mb-3 md:mb-4 tracking-wide">
             DELTA SEIKAN
           </h2>
@@ -62,7 +60,7 @@ const Footer = () => {
         </div>
 
         {/* Column 2 */}
-        <div>
+        <div className="lg:col-span-2">
           <h3 className="font-semibold mb-5 tracking-widest text-xs text-white/80">
             {t.explore}
           </h3>
@@ -80,7 +78,7 @@ const Footer = () => {
         </div>
 
         {/* Column 3 */}
-        <div>
+        <div className="lg:col-span-2">
           <h3 className="font-semibold mb-5 tracking-widest text-xs text-white/80">
             {t.products}
           </h3>
@@ -98,7 +96,7 @@ const Footer = () => {
         </div>
 
         {/* Column 4 */}
-        <div>
+        <div className="lg:col-span-3">
           <h3 className="font-semibold mb-5 tracking-widest text-xs text-white/80">
             {t.location}
           </h3>
@@ -128,19 +126,8 @@ const Footer = () => {
       <div className="px-4 sm:px-6 md:px-10 py-5 md:py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-xs sm:text-sm text-white/70">
         
         <p className="text-left md:text-center">
-          © 2024 DELTA SEIKAN CORPORATION. ALL RIGHTS RESERVED.
+          © 2026 DELTA SEIKAN CORPORATION. ALL RIGHTS RESERVED.
         </p>
-
-        <div className="flex flex-wrap gap-3 sm:gap-5 md:gap-6 mt-0">
-          {t.policy.map((item) => (
-            <span
-              key={item}
-              className="cursor-pointer transition-all duration-200 hover:text-[var(--primary)] hover:underline"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
       </div>
     </footer>
   );

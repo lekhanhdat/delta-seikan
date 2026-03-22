@@ -30,6 +30,8 @@ const AboutSection = ({
             src={image}
             alt="about"
             className={styles.aboutImage}
+            loading="lazy"
+            decoding="async"
           />
         </div>
 

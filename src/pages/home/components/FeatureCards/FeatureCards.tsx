@@ -36,7 +36,12 @@ const FeatureCards = ({ items }: FeatureProps) => {
               <div className={styles.featureContent}>
                 {/* ICON */}
                 <div className={styles.featureIcon}>
-                  <img src={item.image} alt={item.title} />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
 
                 {/* TITLE */}

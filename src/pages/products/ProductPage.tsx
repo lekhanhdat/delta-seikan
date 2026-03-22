@@ -1,8 +1,12 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PageHero from "@/components/sections/PageHero/PageHero";
-import ProductSection from "@/pages/products/components/ProductSection/ProductSection";
 import ServiceSection from "@/pages/products/components/ServiceSection/ServiceSection";
 import ProductTabs from "@/pages/products/components/ProductTabs/ProductTabs";
+import ProductSectionClassic from "@/pages/products/components/ProductSection/ProductSectionClassic";
+import ProductSectionReverse from "@/pages/products/components/ProductSection/ProductSectionReverse";
+import ProductSectionFeature from "@/pages/products/components/ProductSection/ProductSectionFeature";
+import ProductSectionStacked from "@/pages/products/components/ProductSection/ProductSectionStacked";
+import { type ProductSectionProps } from "@/pages/products/components/ProductSection/types";
 
 import hinh3 from "@/assets/images/hinh3.jpg";
 import hinh9 from "@/assets/images/hinh9.jpg";
@@ -15,6 +19,7 @@ import hinh15 from "@/assets/images/hinh15.jpg";
 import hinh16 from "@/assets/images/hinh16.jpg";
 import hinh17 from "@/assets/images/hinh17.jpg";
 import hinh18 from "@/assets/images/hinh18.jpg";
+import hinh19 from "@/assets/images/hinh19.jpg";
 
 import styles from "./ProductPage.module.css";
 
@@ -23,12 +28,8 @@ import styles from "./ProductPage.module.css";
 type ProductSectionType = {
   type: "product";
   tab: string;
-  props: {
-    title: string;
-    description: string;
-    images: string[];
-    specImage?: string;
-  };
+  variant: "classic" | "reverse" | "feature" | "stacked";
+  props: ProductSectionProps;
 };
 
 type ServiceSectionType = {
@@ -44,6 +45,7 @@ type ServiceSectionType = {
     }[];
     badgeText: string;
     badgeSubText: string;
+    image?: string;
   };
 };
 
@@ -55,6 +57,7 @@ const sections: Section[] = [
   {
     type: "product",
     tab: "TRÁNG PHỦ",
+    variant: "feature",
     props: {
       title: "Dịch vụ Tráng phủ Kim loại",
       description:
@@ -65,6 +68,7 @@ const sections: Section[] = [
   {
     type: "product",
     tab: "LON 2 MẢNH (DRD)",
+    variant: "stacked",
     props: {
       title: "Lon 2 mảnh – Lon DRD",
       description:
@@ -76,6 +80,7 @@ const sections: Section[] = [
   {
     type: "product",
     tab: "LON 3 MẢNH",
+    variant: "reverse",
     props: {
       title: "Lon 3 mảnh",
       description: "Lon 3 mảnh gồm thân, đáy và nắp được ghép nối chắc chắn.",
@@ -86,6 +91,7 @@ const sections: Section[] = [
   {
     type: "product",
     tab: "NẮP EOE",
+    variant: "feature",
     props: {
       title: "Nắp EOE",
       description:
@@ -120,6 +126,7 @@ const sections: Section[] = [
       ],
       badgeText: "24/7",
       badgeSubText: "Hỗ trợ vận hành liên tục",
+      image: hinh19,
     },
   },
 ];
@@ -129,16 +136,88 @@ const sections: Section[] = [
 const ProductPage = () => {
   const [active, setActive] = useState(0);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const lockActiveUntilRef = useRef(0);
 
   const categories = sections.map((s) => s.tab);
 
   const handleTabChange = (index: number) => {
+    lockActiveUntilRef.current = Date.now() + 600;
     setActive(index);
 
     sectionRefs.current[index]?.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
+  };
+
+  useEffect(() => {
+    let ticking = false;
+
+    const updateActiveSection = () => {
+      if (Date.now() < lockActiveUntilRef.current) {
+        ticking = false;
+        return;
+      }
+
+      const sections = sectionRefs.current;
+      const rootStyles = getComputedStyle(document.documentElement);
+      const headerHeight = parseInt(
+        rootStyles.getPropertyValue("--header-height").replace("px", "").trim(),
+        10
+      );
+      const offsetTop = (Number.isNaN(headerHeight) ? 80 : headerHeight) + 120;
+
+      let nextActive = 0;
+      let nearestDistance = Number.POSITIVE_INFINITY;
+
+      for (let i = 0; i < sections.length; i += 1) {
+        const el = sections[i];
+        if (!el) continue;
+
+        const { top } = el.getBoundingClientRect();
+        const distance = Math.abs(top - offsetTop);
+
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nextActive = i;
+        }
+      }
+
+      setActive((prev) => (prev === nextActive ? prev : nextActive));
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(updateActiveSection);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    updateActiveSection();
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  const renderProductSection = (
+    variant: ProductSectionType["variant"],
+    props: ProductSectionProps
+  ) => {
+    if (variant === "reverse") {
+      return <ProductSectionReverse {...props} />;
+    }
+
+    if (variant === "feature") {
+      return <ProductSectionFeature {...props} />;
+    }
+
+    if (variant === "stacked") {
+      return <ProductSectionStacked {...props} />;
+    }
+
+    return <ProductSectionClassic {...props} />;
   };
 
   return (
@@ -168,7 +247,7 @@ const ProductPage = () => {
             className={styles.productSectionOffset}
           >
             {section.type === "product" ? (
-              <ProductSection {...section.props} />
+              renderProductSection(section.variant, section.props)
             ) : (
               <ServiceSection {...section.props} />
             )}

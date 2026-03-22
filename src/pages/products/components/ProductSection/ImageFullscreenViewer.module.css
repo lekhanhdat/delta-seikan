@@ -1,0 +1,23 @@
+.trigger {
+  @apply block h-full w-full cursor-zoom-in;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.overlay {
+  @apply fixed inset-0 z-[100] bg-black/85 p-4 md:p-8;
+  display: grid;
+  place-items: center;
+}
+
+.fullscreenImage {
+  @apply max-h-[90svh] w-auto max-w-[92vw] rounded-xl object-contain;
+}
+
+.closeButton {
+  @apply absolute top-3 right-3 md:top-6 md:right-6 text-white text-4xl leading-none;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}

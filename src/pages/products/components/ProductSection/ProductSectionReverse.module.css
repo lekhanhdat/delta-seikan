@@ -1,0 +1,67 @@
+.section {
+  @apply grid md:grid-cols-2 gap-10 md:gap-12 items-start;
+}
+
+.gallery {
+  @apply order-2 md:order-1 grid gap-4 rounded-2xl p-4 md:p-5;
+}
+
+.galleryMulti {
+  @apply grid-cols-1 sm:grid-cols-2;
+}
+
+.gallerySingle {
+  @apply grid-cols-1;
+}
+
+.galleryItem {
+  @apply rounded-2xl overflow-hidden shadow-md h-[32svh];
+}
+
+.galleryItemSingle {
+  @apply h-[52svh] md:h-[62svh];
+}
+
+.galleryImage {
+  @apply w-full h-full object-cover;
+}
+
+.specCard {
+  @apply rounded-xl shadow-lg overflow-hidden h-[30svh] md:h-[34svh] sm:col-span-2;
+}
+
+.specImage {
+  @apply w-full h-full object-contain p-3;
+}
+
+.content {
+  @apply order-1 md:order-2 rounded-2xl p-5 md:p-6;
+}
+
+.badge {
+  @apply inline-flex px-3 py-1 rounded-full text-[#1a4b95] text-xs font-semibold uppercase tracking-wide mb-4;
+}
+
+.title {
+  @apply text-3xl md:text-4xl font-bold text-[#0f2f5f] mb-4;
+}
+
+.description {
+  @apply text-gray-600 leading-relaxed mb-8;
+}
+
+.features {
+  @apply grid sm:grid-cols-2 gap-4;
+}
+
+.featureItem {
+  @apply p-4 rounded-xl;
+}
+
+.featureTitle {
+  @apply text-sm md:text-base font-semibold text-[#1e3a66] mb-1;
+}
+
+.featureDesc {
+  @apply text-xs md:text-sm text-gray-500;
+}

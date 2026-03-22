@@ -13,9 +13,6 @@ const ContactPage = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
           <article className="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
-            <p className="text-sm font-semibold tracking-[0.12em] text-primary uppercase">
-              Address
-            </p>
             <h2 className="mt-2 text-2xl md:text-3xl font-bold text-primary-dark">
               Thông tin liên hệ
             </h2>
@@ -27,10 +24,6 @@ const ContactPage = () => {
                   Lô A, cụm công nghiệp Tam Lập, xã Phú Giáo, Thành phố Hồ Chí
                   Minh, Việt Nam
                 </p>
-                <p className="mt-1 leading-relaxed text-sm text-gray-600">
-                  FACTORY: LOT A, TAM LAP INDUSTRIAL PARK, Phu Giao Commune, Ho
-                  Chi Minh City, Viet Nam
-                </p>
               </div>
 
               <div>
@@ -38,10 +31,6 @@ const ContactPage = () => {
                 <p className="mt-2 leading-relaxed">
                   602/32 Điện Biên Phủ, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí
                   Minh, Việt Nam
-                </p>
-                <p className="mt-1 leading-relaxed text-sm text-gray-600">
-                  OFFICE: 602/32 Dien Bien Phu Street, Thanh My Tay Ward, Ho Chi
-                  Minh City, Viet Nam
                 </p>
               </div>
             </div>
@@ -57,9 +46,7 @@ const ContactPage = () => {
                 </a>
               </p>
               <p>
-                <span className="font-semibold text-gray-900">
-                  Số điện thoại liên hệ - Contact us:
-                </span>{" "}
+                <span className="font-semibold text-gray-900">Số điện thoại liên hệ:</span>{" "}
                 <a
                   href="tel:0901838385"
                   className="text-primary-dark hover:text-primary"

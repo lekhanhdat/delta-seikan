@@ -3,7 +3,6 @@ import hinh19 from "@/assets/images/hinh19.jpg";
 
 import CareerHighlights from "./components/CareerHighlights/CareerHighlights";
 import CareerBlog from "./components/CareerBlog/CareerBlog";
-import JobList from "./components/JobList/JobList";
 
 const CareerPage = () => {
 
@@ -45,30 +44,6 @@ const CareerPage = () => {
     },
   ];
 
-  const jobData = [
-  {
-    title: "Kỹ sư Vận hành Máy",
-    desc: "Chịu trách nhiệm giám sát và điều chỉnh hệ thống dây chuyền sản xuất lon nhôm.",
-    location: "TP. Hồ Chí Minh",
-    salary: "Cạnh tranh",
-    type: "TOÀN THỜI GIAN",
-  },
-  {
-    title: "Chuyên viên Kiểm soát Chất lượng (QC)",
-    desc: "Thực hiện kiểm định các tiêu chuẩn kỹ thuật nghiêm ngặt của sản phẩm.",
-    location: "TP. Hồ Chí Minh",
-    salary: "Thỏa thuận",
-    type: "TOÀN THỜI GIAN",
-  },
-  {
-    title: "Trưởng nhóm Điều phối Chuỗi cung ứng",
-    desc: "Quản lý và tối ưu hóa quy trình luân chuyển nguyên vật liệu.",
-    location: "TP. Hồ Chí Minh",
-    salary: "Cạnh tranh",
-    type: "TOÀN THỜI GIAN",
-  },
-];
-
   return (
     <div>
       <PageHero
@@ -81,8 +56,6 @@ const CareerPage = () => {
 
       {/* 👉 truyền data vào */}
       <CareerBlog data={blogData} />
-
-      <JobList data={jobData} />
     </div>
   );
 };

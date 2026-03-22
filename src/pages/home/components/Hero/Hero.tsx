@@ -52,11 +52,17 @@ const Hero = ({
       <div className={styles.heroBg}>
         <img
           src={images[prevIndex]}
+          alt="Hero background previous"
           className={`${styles.heroImg} ${styles.slideOut}`}
+          loading="lazy"
+          decoding="async"
         />
         <img
           src={images[index]}
+          alt="Hero background current"
           className={`${styles.heroImg} ${styles.slideIn}`}
+          loading="lazy"
+          decoding="async"
         />
       </div>
 

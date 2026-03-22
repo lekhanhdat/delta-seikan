@@ -25,12 +25,12 @@
 
 /* LIST */
 .timelineList {
-  @apply flex flex-col md:flex-row md:justify-between items-start gap-8 md:gap-6;
+  @apply flex flex-col md:flex-row md:justify-between items-start md:items-stretch gap-8 md:gap-6;
 }
 
 /* ITEM */
 .timelineItem {
-  @apply relative flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 w-full md:max-w-[240px];
+  @apply relative flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 w-full md:max-w-[240px] md:h-full;
 }
 
 /* DOT */
@@ -59,7 +59,7 @@
 
 /* CONTENT */
 .timelineContent {
-  @apply bg-white text-center rounded-2xl p-4 md:p-5 shadow-md w-full transition-all duration-300 border border-gray-100;
+  @apply bg-white text-center rounded-2xl p-4 md:p-5 shadow-md w-full transition-all duration-300 border border-gray-100 md:h-full md:min-h-[180px];
 }
 
 /* hover effect */

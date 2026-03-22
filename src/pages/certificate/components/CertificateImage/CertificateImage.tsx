@@ -7,7 +7,13 @@ type Props = {
 const CertificateImage = ({ image }: Props) => {
   return (
     <div className={styles.wrapper}>
-      <img src={image} alt="Certificates" className={styles.image} />
+      <img
+        src={image}
+        alt="Certificates"
+        className={styles.image}
+        loading="lazy"
+        decoding="async"
+      />
     </div>
   );
 };

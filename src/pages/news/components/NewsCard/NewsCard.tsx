@@ -18,7 +18,13 @@ const NewsCard = ({ item }: NewsCardProps) => {
   return (
     <article className={styles.card}>
       <div className={styles.imageWrap}>
-        <img src={item.image} alt={item.title} className={styles.image} />
+        <img
+          src={item.image}
+          alt={item.title}
+          className={styles.image}
+          loading="lazy"
+          decoding="async"
+        />
         <div className={styles.imageOverlay} />
       </div>
 
