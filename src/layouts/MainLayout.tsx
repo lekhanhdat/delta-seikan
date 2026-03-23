@@ -21,9 +21,8 @@ function MainLayout({ children }: MainLayoutProps) {
     <div className="layout-root flex flex-col min-h-screen">
       <Header />
       <main className="layout-main flex-grow w-full pt-[var(--header-height)]">
-        {children}
+        <div className="page-sections">{children}</div>
       </main>
-      <Footer />
     </div>
   );
 }

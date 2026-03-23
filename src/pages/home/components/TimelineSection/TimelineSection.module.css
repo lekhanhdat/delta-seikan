@@ -60,7 +60,7 @@
 
 /* CONTENT */
 .timelineContent {
-  @apply bg-white text-center rounded-2xl p-4 md:p-5 shadow-md w-full transition-all duration-300 border border-gray-100 md:h-full md:min-h-[180px];
+  @apply bg-white text-center rounded-2xl p-4 md:p-5 shadow-md w-full transition-all duration-300 border border-gray-100 md:h-full md:min-h-[180px] flex flex-col;
 }
 
 /* hover effect */
@@ -73,5 +73,5 @@
 }
 
 .timelineDesc {
-  @apply text-sm md:text-[15px] text-gray-500 leading-relaxed;
+  @apply text-sm md:text-[15px] text-gray-500 leading-relaxed mt-auto;
 }

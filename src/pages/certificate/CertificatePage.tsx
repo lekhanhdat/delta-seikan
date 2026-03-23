@@ -4,6 +4,31 @@ import CertificateHighlights from "./components/CertificateHighlights/Certificat
 import CertificateCta from "./components/CertificateCta/CertificateCta";
 import { FiTarget, FiShield, FiCheckSquare } from "react-icons/fi";
 import hinh20 from "@/assets/images/hinh20.jpg";
+import Footer from "@/components/layout/Footer/Footer";
+
+const certificateSectionData = {
+  heading: "Kiểm soát chất lượng cơ bản",
+  items: [
+    {
+      title: "ISO 9001:2015",
+      desc: "Quy trình vận hành được chuẩn hóa từ khâu nhập nguyên liệu đến sản phẩm hoàn thiện, đảm bảo chất lượng ổn định.",
+    },
+    {
+      title: "FSSC 22000 Ver 6.0",
+      desc: "Tiêu chuẩn an toàn thực phẩm quốc tế, kiểm soát rủi ro và đảm bảo sản phẩm đáp ứng yêu cầu nghiêm ngặt.",
+    },
+    {
+      title: "HACCP",
+      desc: "HACCP là hệ thống quản lý an toàn thực phẩm theo phương pháp phòng ngừa, tập trung vào nhận diện mối nguy và kiểm soát tại các điểm kiểm soát tới hạn (CCP) trong toàn bộ quy trình sản xuất bao bì tiếp xúc thực phẩm.",
+    },
+  ],
+  tags: [
+    "ISO 9001:2015",
+    "FSSC 22000",
+    "HACCP",
+    "Active Production",
+  ],
+};
 
 const highlightData = {
   heading: "Năng lực đảm bảo chất lượng toàn diện",
@@ -39,14 +64,19 @@ const ctaData = {
 
 const CertificatePage = () => {
   return (
-    <div>
+    <div className="page-snap-container">
       <PageHero
         title="Chứng nhận"
         description="Các chứng nhận quốc tế là minh chứng cho cam kết của chúng tôi trong việc duy trì tiêu chuẩn chất lượng, an toàn và phát triển bền vững trong toàn bộ quy trình sản xuất bao bì kim loại."
         backgroundImage={hinh20}
       />
 
-      <CertificateSection />
+      <CertificateSection
+        image={hinh20}
+        heading={certificateSectionData.heading}
+        items={certificateSectionData.items}
+        tags={certificateSectionData.tags}
+      />
 
       <CertificateHighlights
         heading={highlightData.heading}
@@ -62,6 +92,8 @@ const CertificatePage = () => {
         secondaryLabel={ctaData.secondaryLabel}
         secondaryTo={ctaData.secondaryTo}
       />
+
+      <Footer />
     </div>
   );
 };

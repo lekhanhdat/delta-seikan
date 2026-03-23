@@ -53,3 +53,28 @@
     filter: invert(1) brightness(2);
   }
 }
+
+/* Page Snap Scroll Container */
+.page-snap-container {
+  height: calc(100svh - var(--header-height));
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.page-snap-container > section,
+.page-snap-container .snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.page-snap-container .snap-section {
+  min-height: auto; /* Footer có thể ngắn hơn full screen */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-snap-container {
+    scroll-behavior: auto;
+  }
+}

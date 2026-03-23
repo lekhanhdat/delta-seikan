@@ -48,7 +48,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} snap-section`}>
       
       {/* TOP */}
       <div className={styles.top}>

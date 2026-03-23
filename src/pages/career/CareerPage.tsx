@@ -3,6 +3,7 @@ import hinh21 from "@/assets/images/hinh21.jpg";
 
 import CareerHighlights from "./components/CareerHighlights/CareerHighlights";
 import CareerBlog from "./components/CareerBlog/CareerBlog";
+import Footer from "@/components/layout/Footer/Footer";
 
 const CareerPage = () => {
   const highlightsData = [
@@ -44,7 +45,7 @@ const CareerPage = () => {
   ];
 
   return (
-    <div>
+    <div className="page-snap-container">
       <PageHero
         title="Tuyển Dụng"
         description="Chúng tôi luôn chào đón những cá nhân tài năng, nhiệt huyết và sẵn sàng đồng hành cùng doanh nghiệp trên hành trình phát triển bền vững. Đây là nơi bạn có thể phát huy năng lực và xây dựng sự nghiệp lâu dài."
@@ -53,8 +54,9 @@ const CareerPage = () => {
 
       <CareerHighlights data={highlightsData} />
 
-      {/* 👉 truyền data vào */}
       <CareerBlog data={blogData} />
+
+      <Footer />
     </div>
   );
 };

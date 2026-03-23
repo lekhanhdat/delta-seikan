@@ -9,7 +9,7 @@ type Props = {
 
 const ProductTabs = ({ categories, active, onChange }: Props) => {
   return (
-    <div className={styles.productTabs}>
+    <div className={styles.productTabs} data-product-tabs="true">
       <div className={styles.productTabsContainer}>
         <div className={styles.productTabsWrapper}>
           <div className={styles.productTabsList}>

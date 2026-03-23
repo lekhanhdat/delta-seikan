@@ -1,6 +1,6 @@
 .productTabs {
   @apply sticky z-40 border-b bg-white/95;
-  top: var(--header-height);
+  top: 0;
 }
 
 .productTabsContainer {

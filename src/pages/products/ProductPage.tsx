@@ -7,6 +7,7 @@ import ProductSectionReverse from "@/pages/products/components/ProductSection/Pr
 import ProductSectionFeature from "@/pages/products/components/ProductSection/ProductSectionFeature";
 import ProductSectionStacked from "@/pages/products/components/ProductSection/ProductSectionStacked";
 import { type ProductSectionProps } from "@/pages/products/components/ProductSection/types";
+import Footer from "@/components/layout/Footer/Footer";
 
 import hinh3 from "@/assets/images/hinh3.jpg";
 import hinh9 from "@/assets/images/hinh9.jpg";
@@ -140,6 +141,7 @@ const sections: Section[] = [
 
 const ProductPage = () => {
   const [active, setActive] = useState(0);
+  const pageRef = useRef<HTMLDivElement | null>(null);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const lockActiveUntilRef = useRef(0);
 
@@ -156,6 +158,9 @@ const ProductPage = () => {
   };
 
   useEffect(() => {
+    const scrollContainer = pageRef.current;
+    if (!scrollContainer) return;
+
     let ticking = false;
 
     const updateActiveSection = () => {
@@ -165,12 +170,12 @@ const ProductPage = () => {
       }
 
       const sections = sectionRefs.current;
-      const rootStyles = getComputedStyle(document.documentElement);
-      const headerHeight = parseInt(
-        rootStyles.getPropertyValue("--header-height").replace("px", "").trim(),
-        10,
+      const tabsElement = scrollContainer.querySelector<HTMLElement>(
+        '[data-product-tabs="true"]',
       );
-      const offsetTop = (Number.isNaN(headerHeight) ? 80 : headerHeight) + 120;
+      const tabsHeight = tabsElement?.offsetHeight ?? 0;
+      const containerTop = scrollContainer.getBoundingClientRect().top;
+      const offsetTop = containerTop + tabsHeight + 24;
 
       let nextActive = 0;
       let nearestDistance = Number.POSITIVE_INFINITY;
@@ -198,11 +203,11 @@ const ProductPage = () => {
       requestAnimationFrame(updateActiveSection);
     };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
+    scrollContainer.addEventListener("scroll", onScroll, { passive: true });
     updateActiveSection();
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      scrollContainer.removeEventListener("scroll", onScroll);
     };
   }, []);
 
@@ -226,7 +231,7 @@ const ProductPage = () => {
   };
 
   return (
-    <div className={styles.productPage}>
+    <div ref={pageRef} className={styles.productPage}>
       {/* HERO */}
       <PageHero
         title="Sản phẩm"
@@ -259,6 +264,8 @@ const ProductPage = () => {
           </div>
         ))}
       </div>
+
+      <Footer />
     </div>
   );
 };
