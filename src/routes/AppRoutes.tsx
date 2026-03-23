@@ -58,10 +58,50 @@ export const appRouter = createBrowserRouter([
     ),
   },
   {
+    path: '/en',
+    element: (
+      <MainLayout>
+        <HomePage />
+      </MainLayout>
+    ),
+  },
+  {
     path: '/en/products',
     element: (
       <MainLayout>
         <ProductPage />
+      </MainLayout>
+    ),
+  },
+  {
+    path: '/en/certificates',
+    element: (
+      <MainLayout>
+        <CertificatePage />
+      </MainLayout>
+    ),
+  },
+  {
+    path: '/en/careers',
+    element: (
+      <MainLayout>
+        <CareerPage />
+      </MainLayout>
+    ),
+  },
+  {
+    path: '/en/news',
+    element: (
+      <MainLayout>
+        <NewsPage />
+      </MainLayout>
+    ),
+  },
+  {
+    path: '/en/contact',
+    element: (
+      <MainLayout>
+        <ContactPage />
       </MainLayout>
     ),
   },

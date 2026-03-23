@@ -55,9 +55,6 @@ type Section = ProductSectionType | ServiceSectionType;
 
 // ================= DATA =================
 
-// Empty array as we moved it inside the component for i18n
-const _sections_deprecated: Section[] = [];
-
 // ================= COMPONENT =================
 
 const ProductPage = () => {
