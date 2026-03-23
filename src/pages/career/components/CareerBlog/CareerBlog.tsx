@@ -1,5 +1,6 @@
 import styles from "./CareerBlog.module.css";
 import { memo } from "react";
+import { useTranslation } from "react-i18next";
 
 type BlogItem = {
   title: string;
@@ -13,12 +14,14 @@ type Props = {
 };
 
 const CareerBlog = ({ data }: Props) => {
+  const { t } = useTranslation("career");
+
   return (
     <section className={styles.wrapper}>
       <div className={styles.header}>
         <div>
           <p className={styles.sub}>Kiến thức & chia sẻ</p>
-          <h2 className={styles.title}>Cẩm nang nghề nghiệp</h2>
+          <h2 className={styles.title}>{t("blog.sectionTitle")}</h2>
         </div>
       </div>
 

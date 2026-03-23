@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "title": "Reliable Metal Packaging Solutions for Food Industry",
+    "description": "We provide high-quality metal packaging solutions that meet food safety and durability standards, suitable for the food and beverage industry.",
+    "primaryText": "View Products",
+    "secondaryText": "Contact Now",
+    "starts": {
+      "founded": "FOUNDED YEAR",
+      "groups": "PRODUCT GROUPS",
+      "standard": "STANDARD",
+      "customers": "CUSTOMERS"
+    }
+  },
+  "about": {
+    "subtitle": "ABOUT US",
+    "title": "DELTA SEIKAN OVERVIEW",
+    "desc1": "Founded in 2020, Delta Seikan Corporation is proud to be a pioneer in the field of metal packaging production in Vietnam, serving a variety of needs in the food and beverage industry.",
+    "desc2": "With the philosophy of \"Customer centered\", we constantly improve technology and processes to bring top quality products, contributing to enhancing brand value for partners.",
+    "tag1": "Metal Packaging",
+    "tag2": "High Quality"
+  },
+  "features": {
+    "vision": "Vision",
+    "visionDesc": "To become the leading manufacturer of metal packaging for the food industry in Vietnam.",
+    "mission": "Mission",
+    "missionDesc": "Providing reliable and sustainable solutions to improve quality and service.",
+    "values": "Core Values",
+    "v1": "Customer Centricity",
+    "v2": "Integrity",
+    "v3": "Collaboration & Teamwork",
+    "v4": "Commitment & Proactivity"
+  },
+  "capability": {
+    "sub": "OPERATIONS",
+    "title": "Production Capability",
+    "r1": "Product Development",
+    "r1Desc": "Conducting research, development and product testing to meet market needs, improving product quality and efficiency.",
+    "r2": "Production Management",
+    "r2Desc": "Providing products with the best quality to customers with optimal production and management systems.",
+    "r3": "Quality Control",
+    "r3Desc": "We always commit that all products are tested to meet the signed quality standards and comply with the FSSC22000 food safety management system before delivery to customers.",
+    "r4": "Sales",
+    "r4Desc": "Regarding sales activities, we always try to understand customer needs and develop new markets, providing feedback to the R&D team to catch up with market trends to create products of the best quality at competitive prices."
+  },
+  "timeline": {
+    "title": "Development Journey",
+    "y2020": "Establishment of Delta Seikan",
+    "y2020Desc": "Officially went into operation with the vision of leading the metal packaging industry.",
+    "y2021": "Launch of DRD cans",
+    "y2021Desc": "Successfully implemented high-tech DRD can production line.",
+    "y2022": "Factory Expansion",
+    "y2022Desc": "Upgrading production capacity and modern warehouse.",
+    "y2023": "FSSC 22000 Certification",
+    "y2023Desc": "Achieved international food safety system certification."
+  }
+}

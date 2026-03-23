@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Tuyển Dụng",
+    "description": "Chúng tôi luôn chào đón những cá nhân tài năng, nhiệt huyết và sẵn sàng đồng hành cùng doanh nghiệp trên hành trình phát triển bền vững. Đây là nơi bạn có thể phát huy năng lực và xây dựng sự nghiệp lâu dài."
+  },
+  "sections": {
+    "highlights": {
+      "kicker": "Văn hóa công ty",
+      "heading": "Giá trị nghề nghiệp tại Delta Seikan",
+      "lead": "Mỗi điểm nhấn dưới đây được thiết kế để bạn nhìn rõ hơn con đường phát triển, môi trường làm việc và cơ hội học hỏi dài hạn."
+    }
+  },
+  "highlights": [
+    {
+      "title": "Môi trường làm việc",
+      "desc": "Kiến tạo không gian chuyên nghiệp, nơi sự đổi mới và kỷ luật song hành."
+    },
+    {
+      "title": "Cơ hội phát triển",
+      "desc": "Lộ trình thăng tiến minh bạch cùng đào tạo chuyên sâu."
+    },
+    {
+      "title": "Cẩm nang nghề nghiệp",
+      "desc": "Nguồn cảm hứng và kiến thức thực tiễn."
+    }
+  ],
+  "blog": {
+    "sectionTitle": "Cẩm nang nghề nghiệp",
+    "items": [
+      {
+        "title": "6 yếu tố bù đắp sự thiếu hụt kinh nghiệm",
+        "tag": "KỸ NĂNG MỀM"
+      },
+      {
+        "title": "Hiểu Millennials & Gen Z trong sản xuất",
+        "tag": "THẾ HỆ"
+      },
+      {
+        "title": "Hiểu chính mình để chọn đúng công việc",
+        "tag": "PHÁT TRIỂN"
+      }
+    ]
+  }
+}

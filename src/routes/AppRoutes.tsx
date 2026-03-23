@@ -6,7 +6,6 @@ import CertificatePage from '../pages/certificate/CertificatePage'
 import ContactPage from '../pages/contact/ContactPage'
 import HomePage from '../pages/home/HomePage'
 import NewsPage from '../pages/news/NewsPage'
-import HomePageEN from '../pages/en/homePage'
 import ProductPage from '../pages/products/ProductPage'
 
 export const appRouter = createBrowserRouter([
@@ -55,14 +54,6 @@ export const appRouter = createBrowserRouter([
     element: (
       <MainLayout>
         <ContactPage />
-      </MainLayout>
-    ),
-  },
-  {
-    path: '/en',
-    element: (
-      <MainLayout>
-        <HomePageEN />
       </MainLayout>
     ),
   },

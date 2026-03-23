@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Contact",
+    "description": "Contact Delta Seikan for quick consultation on metal packaging solutions and receive information support from our team of experts."
+  },
+  "info": {
+    "title": "Contact Information",
+    "factoryLabel": "Factory",
+    "factoryAddress": "Lot A, Tam Lap Industrial Park, Phu Giao Commune, Ho Chi Minh City, Vietnam",
+    "officeLabel": "Office",
+    "officeAddress": "602/32 Dien Bien Phu, Thanh My Tay Ward, Ho Chi Minh City, Vietnam",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone Number",
+    "taxCodeLabel": "Tax Code"
+  },
+  "map": {
+    "note": "Factory address: Lot A, Tam Lap Industrial Cluster, Phu Giao Commune, Ho Chi Minh City, Vietnam."
+  }
+}

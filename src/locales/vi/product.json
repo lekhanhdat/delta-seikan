@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Sản phẩm & Dịch vụ",
+    "description": "Delta Seikan cung cấp các giải pháp bao bì kim loại toàn diện, từ lon nhôm 2 mảnh, 3 mảnh đến dịch vụ tráng phủ công nghệ cao, đáp ứng các tiêu chuẩn khát khe nhất của ngành thực phẩm."
+  },
+  "sections": {
+    "trangPhu": {
+      "tab": "TRÁNG PHỦ",
+      "title": "Dịch vụ Tráng phủ Kim loại",
+      "desc": "Delta Seikan cung cấp dịch vụ tráng phủ kim loại với công nghệ hiện đại từ KBA - LTG (Đức), đảm bảo độ bám dính cao, khả năng chống ăn mòn vượt trội và an toàn cho thực phẩm. Các sản phẩm đáp ứng các tiêu chuẩn quốc tế nghiêm ngặt như BPA-NI, PFAS-free, phù hợp cho ngành thực phẩm và đồ uống."
+    },
+    "lon2manh": {
+      "tab": "LON 2 MẢNH (DRD)",
+      "title": "Lon 2 mảnh – Công nghệ DRD",
+      "desc": "Lon 2 mảnh (DRD – Drawn & Redrawn) được sản xuất bằng công nghệ dập vuốt tiên tiến, giúp tối ưu độ bền cơ học, giảm thiểu mối ghép và đảm bảo tính kín tuyệt đối. Sản phẩm phù hợp cho các loại thực phẩm đóng hộp, mang lại hiệu quả bảo quản cao và tối ưu chi phí sản xuất."
+    },
+    "lon3manh": {
+      "tab": "LON 3 MẢNH",
+      "title": "Lon 3 mảnh",
+      "desc": "Lon 3 mảnh được cấu tạo từ thân, đáy và nắp, liên kết bằng công nghệ hàn hiện đại, đảm bảo độ kín và độ bền cao. Giải pháp linh hoạt về kích thước và dung tích, phù hợp với nhiều loại sản phẩm từ thực phẩm đến hóa chất công nghiệp."
+    },
+    "napEOE": {
+      "tab": "NẮP EOE",
+      "title": "Nắp EOE (Easy Open End)",
+      "desc": "Nắp EOE được thiết kế với cơ chế mở dễ dàng, mang lại trải nghiệm tiện lợi cho người dùng mà vẫn đảm bảo độ kín và an toàn sản phẩm. Sản phẩm được sản xuất theo tiêu chuẩn quốc tế, phù hợp cho nhiều loại lon thực phẩm và đồ uống."
+    },
+    "dichVu": {
+      "tab": "ĐÓNG GÓI & PHÂN PHỐI",
+      "title": "Giải pháp Đóng gói & Phân phối",
+      "desc": "Delta Seikan cung cấp giải pháp đóng gói và phân phối toàn diện, giúp tối ưu chuỗi cung ứng, nâng cao hiệu quả vận hành và đảm bảo chất lượng sản phẩm trong suốt quá trình lưu trữ và vận chuyển.",
+      "badge": "24/7",
+      "badgeSub": "Hỗ trợ khách hàng",
+      "i1": "An toàn tuyệt đối",
+      "i1Desc": "Quy trình kiểm soát nghiêm ngặt, đảm bảo chất lượng và an toàn sản phẩm.",
+      "i2": "Tối ưu vận hành",
+      "i2Desc": "Thiết kế linh hoạt, dễ tích hợp vào hệ thống sản xuất.",
+      "i3": "Bền vững",
+      "i3Desc": "Giải pháp hướng đến giảm thiểu tác động môi trường."
+    }
+  }
+}

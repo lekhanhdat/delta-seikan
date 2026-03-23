@@ -31,12 +31,10 @@ const ContactContentSection = ({
   mapInfo,
 }: ContactContentSectionProps) => {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 md:py-20">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
-        <ContactInfoCard {...contactInfo} />
-        <ContactMapCard {...mapInfo} />
-      </div>
-    </section>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
+      <ContactInfoCard {...contactInfo} />
+      <ContactMapCard {...mapInfo} />
+    </div>
   );
 };
 

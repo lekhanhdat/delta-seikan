@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "title": "Điểm tin mới nhất từ Delta Seikan",
+    "description": "Chúng tôi liên tục cập nhật thông tin về năng lực sản xuất, tiêu chuẩn chất lượng và các hoạt động hợp tác nhằm mang đến giải pháp bao bì kim loại an toàn, bền vững cho khách hàng."
+  },
+  "intro": {
+    "label": "Bản tin doanh nghiệp"
+  },
+  "readMore": "Đọc bài viết",
+  "items": [
+    {
+      "title": "6 xu hướng bao bì dự kiến dẫn dắt năm 2026",
+      "tag": "Xu hướng",
+      "date": "Tháng 03/2026",
+      "desc": "Tổng hợp các xu hướng bao bì nổi bật như bền vững, thông minh và cá nhân hóa đang định hình thị trường toàn cầu."
+    },
+    {
+      "title": "Báo cáo thị trường bao bì kim loại toàn cầu",
+      "tag": "Thị trường",
+      "date": "Tháng 02/2026",
+      "desc": "Phân tích quy mô, tốc độ tăng trưởng và các động lực chính của ngành bao bì kim loại trong giai đoạn tới."
+    },
+    {
+      "title": "Thành lập công đoàn cơ sở tại Delta Seikan",
+      "tag": "Doanh nghiệp",
+      "date": "Tháng 01/2026",
+      "desc": "Liên đoàn Lao động huyện Phú Giáo công bố thành lập công đoàn cơ sở, đánh dấu bước phát triển mới trong hoạt động nội bộ."
+    }
+  ]
+}
