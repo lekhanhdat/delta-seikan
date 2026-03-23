@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer/Footer";
 
 import { FiActivity, FiTool, FiShield, FiUsers } from "react-icons/fi";
 
-import hinh6 from "../../assets/images/hinh6.jpg";
+import hinh6 from "../../assets/images/hinh6.JPG";
 import mission from "../../assets/images/mission.png";
 import vision from "../../assets/images/vision.png";
 import values from "../../assets/images/values.png";
