@@ -1,5 +1,5 @@
 import PageHero from "@/components/sections/PageHero/PageHero";
-import hinh19 from "@/assets/images/hinh19.jpg";
+import hinh19 from "@/assets/images/hinh19.JPG";
 
 import CareerHighlights from "./components/CareerHighlights/CareerHighlights";
 import CareerBlog from "./components/CareerBlog/CareerBlog";

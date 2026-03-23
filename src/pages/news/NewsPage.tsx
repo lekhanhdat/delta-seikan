@@ -1,5 +1,5 @@
 import PageHero from "@/components/sections/PageHero/PageHero";
-import hinh19 from "@/assets/images/hinh19.jpg";
+import hinh19 from "@/assets/images/hinh19.JPG";
 import news1 from "@/assets/images/news1.png";
 import news2 from "@/assets/images/news2.png";
 import news3 from "@/assets/images/news3.jpg";

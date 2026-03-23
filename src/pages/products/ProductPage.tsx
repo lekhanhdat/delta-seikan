@@ -7,7 +7,7 @@ import ProductTabs from "@/pages/products/components/ProductTabs/ProductTabs";
 import hinh3 from "@/assets/images/hinh3.jpg";
 import hinh9 from "@/assets/images/hinh9.jpg";
 import hinh10 from "@/assets/images/hinh10.jpg";
-import hinh11 from "@/assets/images/hinh11.jpg";
+import hinh11 from "@/assets/images/hinh11.JPG";
 import hinh12 from "@/assets/images/hinh12.jpg";
 import hinh13 from "@/assets/images/hinh13.jpg";
 import hinh14 from "@/assets/images/hinh14.jpg";
