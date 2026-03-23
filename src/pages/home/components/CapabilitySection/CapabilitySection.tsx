@@ -10,13 +10,11 @@ type CapabilityItem = {
 
 type CapabilityProps = {
   heading: string;
-  subheading: string;
   items: CapabilityItem[];
 };
 
 const CapabilitySection = ({
   heading,
-  subheading,
   items,
 }: CapabilityProps) => {
   return (
@@ -35,30 +33,30 @@ const CapabilitySection = ({
       <div className={styles.capabilityOverlay} />
 
       {/* CONTENT */}
-      <div className={styles.capabilityContent}>
-        
-        <p className={styles.capabilitySubtitle}>{subheading}</p>
+      <div className={styles.capabilityContentWrapper}>
+        <div className={styles.capabilityContent}>
+          
+          <h2 className={styles.capabilityTitle}>{heading}</h2>
 
-        <h2 className={styles.capabilityTitle}>{heading}</h2>
+          <div className={styles.capabilityGrid}>
+            {items.map((item, i) => (
+              <div key={i} className={styles.capabilityCard}>
+                
+                <div className={styles.capabilityIcon}>
+                  {item.icon}
+                </div>
 
-        <div className={styles.capabilityGrid}>
-          {items.map((item, i) => (
-            <div key={i} className={styles.capabilityCard}>
-              
-              <div className={styles.capabilityIcon}>
-                {item.icon}
+                <h3 className={styles.capabilityCardTitle}>
+                  {item.title}
+                </h3>
+
+                <p className={styles.capabilityDesc}>
+                  {item.desc}
+                </p>
+
               </div>
-
-              <h3 className={styles.capabilityCardTitle}>
-                {item.title}
-              </h3>
-
-              <p className={styles.capabilityDesc}>
-                {item.desc}
-              </p>
-
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 

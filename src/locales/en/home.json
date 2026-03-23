@@ -14,43 +14,48 @@
   "about": {
     "subtitle": "ABOUT US",
     "title": "DELTA SEIKAN OVERVIEW",
-    "desc1": "Founded in 2020, Delta Seikan Corporation is proud to be a pioneer in the field of metal packaging production in Vietnam, serving a variety of needs in the food and beverage industry.",
-    "desc2": "With the philosophy of \"Customer centered\", we constantly improve technology and processes to bring top quality products, contributing to enhancing brand value for partners.",
+    "desc1": "Established in 2020, delta seikan is manufacturer of metal packaging for the food, beverage.",
+    "desc2": "With the motto of considering the customer as the center of perfection, the products following to the philosophy of simplicity but sophistication will meet the high demand of domestic and foreign markets.",
+    "desc3": "And aims to become the leading manufacturer of metal packaging for the food industry  in VIỆT NAM.",
     "tag1": "Metal Packaging",
     "tag2": "High Quality"
   },
   "features": {
+    "title": "Vision - Mission - Value",
     "vision": "Vision",
-    "visionDesc": "To become the leading manufacturer of metal packaging for the food industry in Vietnam.",
+    "visionDesc": "Becoming the leading manufacturer of metal packaging for the food industry  in VIỆT NAM.",
     "mission": "Mission",
-    "missionDesc": "Providing reliable and sustainable solutions to improve quality and service.",
-    "values": "Core Values",
+    "missionDesc": "Offering reliable and sustainable solutions to improve quality and service.",
+    "values": "Values",
     "v1": "Customer Centricity",
     "v2": "Integrity",
-    "v3": "Collaboration & Teamwork",
-    "v4": "Commitment & Proactivity"
+    "v3": "Collaboration and Teamwork",
+    "v4": "Commitment and ownership"
   },
   "capability": {
     "sub": "OPERATIONS",
     "title": "Production Capability",
     "r1": "Product Development",
-    "r1Desc": "Conducting research, development and product testing to meet market needs, improving product quality and efficiency.",
+    "r1Desc": "Carry out research, development and testing the product to meet market needs, improve quality and efficiency of product.",
     "r2": "Production Management",
-    "r2Desc": "Providing products with the best quality to customers with optimal production and management systems.",
-    "r3": "Quality Control",
-    "r3Desc": "We always commit that all products are tested to meet the signed quality standards and comply with the FSSC22000 food safety management system before delivery to customers.",
-    "r4": "Sales",
-    "r4Desc": "Regarding sales activities, we always try to understand customer needs and develop new markets, providing feedback to the R&D team to catch up with market trends to create products of the best quality at competitive prices."
+    "r2Desc": "Providing the best quality products to customer with optimized production and management system.",
+    "r3": "Quality management system",
+    "r3Desc": "We always commit that all products are checked to meet the signed quality standard and comply with food safety management system FSSC22000 before delivering to customer.",
+    "r4": "Sales strategy",
+    "r4Desc": "Regarding sales activities, we always effort to uncover consumer needs and developing new markets, providing feedback to R&D team to catch up market trends to create products with the best quality and competitive price."
   },
   "timeline": {
     "title": "Development Journey",
     "y2020": "Establishment of Delta Seikan",
-    "y2020Desc": "Officially went into operation with the vision of leading the metal packaging industry.",
-    "y2021": "Launch of DRD cans",
-    "y2021Desc": "Successfully implemented high-tech DRD can production line.",
-    "y2022": "Factory Expansion",
-    "y2022Desc": "Upgrading production capacity and modern warehouse.",
-    "y2023": "FSSC 22000 Certification",
-    "y2023Desc": "Achieved international food safety system certification."
+    "y2020Desc": "Officially commenced operations with a vision to become a leader in the metal packaging industry.",
+
+    "y2021": "Launching DRD Can",
+    "y2021Desc": "Successfully introduced an advanced DRD can production line to the market.",
+
+    "y2022": "Achieved ISO 9001:2015 & HACCP Certification",
+    "y2022Desc": "Achieved ISO 9001:2015 and HACCP certifications, ensuring quality and food safety standards.",
+
+    "y2023": "Achieved FSSC 22000 Certification",
+    "y2023Desc": "Obtained FSSC 22000 certification, reinforcing compliance with international food safety systems."
   }
 }

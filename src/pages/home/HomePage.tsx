@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 import { FiActivity, FiTool, FiShield, FiUsers } from "react-icons/fi";
 
-import hinh6 from "@/assets/images/hinh6.JPG";
+import hinh6 from "@/assets/images/hinh6.jpg";
 import mission from "@/assets/images/mission.png";
 import vision from "@/assets/images/vision.png";
 import values from "@/assets/images/values.png";
@@ -34,6 +34,7 @@ const HomePage = () => {
     title: t("about.title"),
     description1: t("about.desc1"),
     description2: t("about.desc2"),
+    description3: t("about.desc3"),
     tags: [t("about.tag1"), t("about.tag2")],
     image: hinh6,
   };
