@@ -1,0 +1,4 @@
+.grid {
+  @apply mt-8 md:mt-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8;
+  display: grid;
+}

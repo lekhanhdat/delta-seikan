@@ -1,0 +1,69 @@
+.wrapper {
+  @apply py-24 bg-white;
+}
+
+/* HEADER */
+.header {
+  @apply max-w-7xl mx-auto px-6 flex justify-between items-end mb-14;
+}
+
+.sub {
+  @apply text-xs uppercase text-blue-600 mb-2 tracking-[0.15em] font-medium;
+}
+
+.title {
+  @apply text-3xl md:text-4xl font-bold text-gray-900;
+}
+
+.more {
+  @apply text-blue-600 font-medium hover:underline transition;
+}
+
+/* GRID */
+.grid {
+  @apply max-w-7xl mx-auto px-6 md:grid-cols-3 gap-10;
+  display: grid;
+}
+
+/* CARD */
+.card {
+  @apply block cursor-pointer transition-transform duration-300;
+}
+
+/* hover nâng card */
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* IMAGE */
+.imageWrapper {
+  @apply relative overflow-hidden rounded-2xl mb-5;
+}
+
+/* overlay nhẹ */
+.imageWrapper::after {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition duration-300;
+}
+
+.card:hover .imageWrapper::after {
+  @apply opacity-100;
+}
+
+.image {
+  @apply w-full h-52 object-cover transition duration-500 group-hover:scale-110;
+}
+
+/* TAG */
+.tag {
+  @apply text-xs text-blue-600 font-semibold mb-2 tracking-wide;
+}
+
+/* TITLE */
+.cardTitle {
+  @apply text-lg font-semibold leading-snug text-gray-900 transition duration-300;
+}
+
+.card:hover .cardTitle {
+  @apply text-blue-600;
+}

@@ -1,0 +1,15 @@
+.wrapper {
+  @apply bg-gray-100 rounded-2xl p-8 flex justify-center transition duration-300;
+}
+
+.wrapper:hover {
+  @apply shadow-2xl;
+}
+
+.image {
+  @apply max-h-[420px] object-contain rounded-lg shadow-lg transition duration-500;
+}
+
+.wrapper:hover .image {
+  transform: scale(1.05);
+}

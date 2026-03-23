@@ -1,0 +1,76 @@
+.timelineSection {
+  @apply py-16 md:py-24 bg-gradient-to-b from-gray-50 to-gray-100;
+}
+
+.timelineContainer {
+  @apply max-w-7xl mx-auto px-4 sm:px-6;
+}
+
+.timelineHeading {
+  @apply text-2xl sm:text-3xl md:text-4xl font-bold text-primary-dark mb-12 md:mb-20 inline-block relative;
+}
+
+/* LINE */
+.timelineWrapper {
+  @apply relative;
+}
+
+.timelineLineDesktop {
+  @apply hidden md:block absolute top-[32px] left-0 w-full h-[2px] bg-blue-300/50;
+}
+
+.timelineLineMobile {
+  @apply md:hidden absolute top-0 left-[32px] w-[2px] h-full bg-blue-300/40;
+}
+
+/* LIST */
+.timelineList {
+  @apply flex flex-col md:flex-row md:justify-between items-start gap-8 md:gap-6;
+}
+
+/* ITEM */
+.timelineItem {
+  @apply relative flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 w-full md:max-w-[240px];
+}
+
+/* DOT */
+.timelineDot {
+  @apply absolute w-5 h-5  border-4 border-white shadow-md;
+}
+
+/* vị trí dot */
+.timelineItem:nth-child(odd) .timelineDot {
+  @apply md:top-[24px] md:left-1/2 md:-translate-x-1/2;
+}
+
+.timelineItem:nth-child(even) .timelineDot {
+  @apply md:top-[24px] md:left-1/2 md:-translate-x-1/2;
+}
+
+/* mobile dot */
+.timelineDot {
+  @apply left-[24px] top-[10px];
+}
+
+/* YEAR */
+.timelineYear {
+  @apply z-10 mb-8 flex items-center justify-center w-16 h-16 rounded-lg text-white font-bold text-sm shrink-0 shadow-lg;
+}
+
+/* CONTENT */
+.timelineContent {
+  @apply bg-white text-center rounded-2xl p-4 md:p-5 shadow-md w-full transition-all duration-300 border border-gray-100;
+}
+
+/* hover effect */
+.timelineItem:hover .timelineContent {
+  @apply shadow-xl -translate-y-1;
+}
+
+.timelineTitle {
+  @apply font-semibold text-[#142a4a] mb-2;
+}
+
+.timelineDesc {
+  @apply text-sm md:text-[15px] text-gray-500 leading-relaxed;
+}

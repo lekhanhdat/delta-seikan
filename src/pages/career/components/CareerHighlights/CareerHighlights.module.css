@@ -1,0 +1,43 @@
+.wrapper {
+  @apply py-20 bg-gray-50;
+}
+
+.jobGrid {
+  @apply max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8;
+}
+
+/* CARD BASE */
+.card {
+  @apply relative p-10 rounded-2xl overflow-hidden;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* NORMAL CARD (mờ nhẹ như UI) */
+.inactive {
+  @apply bg-white text-gray-800 opacity-70 hover:opacity-100 shadow-sm hover:shadow-lg;
+}
+
+/* ACTIVE CARD */
+.active {
+  @apply bg-blue-900 text-white hover:opacity-100 shadow-sm hover:shadow-lg;
+}
+
+/* TITLE */
+.title {
+  @apply text-xl font-semibold mb-4 relative z-10;
+}
+
+/* DESC */
+.desc {
+  @apply text-sm leading-relaxed opacity-80 relative z-10;
+}
+
+/* ICON dưới */
+.icon {
+  @apply mt-6 text-xl opacity-80 relative z-10;
+}
+
+/* BACKGROUND ICON */
+.bgIcon {
+  @apply absolute inset-0 flex items-center justify-center text-[120px] opacity-5;
+}
