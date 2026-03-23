@@ -1,71 +1,82 @@
 .section {
-  @apply grid md:grid-cols-2 gap-10 md:gap-12 items-start;
+  @apply flex flex-col w-full justify-center gap-6 py-[20px];
 }
 
-.left {
-  @apply order-1 rounded-2xl p-5 md:p-6;
+/* HEADER */
+.header {
+  @apply w-full mb-2;
 }
 
 .title {
-  @apply text-3xl md:text-4xl font-bold text-[#0f2f5f] mb-4;
+  @apply text-xl md:text-3xl font-bold text-[#0f2f5f] mb-1;
 }
 
 .line {
-  @apply w-16 h-[3px] bg-blue-600 rounded-full mb-6;
+  @apply w-12 h-[2px] bg-blue-600 rounded-full;
+}
+
+/* GRID LAYOUT */
+.contentGrid {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 w-full items-start;
+}
+
+.contentNoSpec {
+  @apply grid md:grid-cols-2 gap-8 md:gap-12 w-full items-start;
+}
+
+/* TEXT CONTENT */
+.productMainInfo {
+  @apply flex flex-col gap-6 md:col-span-1;
+}
+
+.textContent {
+  @apply p-0;
 }
 
 .description {
-  @apply text-gray-600 leading-relaxed mb-8;
+  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-4;
 }
 
+/* FEATURES */
 .features {
-  @apply grid sm:grid-cols-2 gap-4;
+  @apply grid grid-cols-2 gap-3;
 }
 
 .featureItem {
-  @apply p-4 rounded-xl shadow-sm;
+  @apply p-3 rounded-lg border border-gray-100 bg-gray-50/50;
 }
 
 .featureTitle {
-  @apply text-sm md:text-base font-semibold text-[#1e3a66] mb-1;
+  @apply text-xs md:text-sm font-semibold text-[#1e3a66] mb-1;
 }
 
 .featureDesc {
-  @apply text-xs md:text-sm text-gray-500;
+  @apply text-[10px] md:text-xs text-gray-500;
 }
 
-.right {
-  @apply order-2 grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch;
+/* IMAGE SECTION (FIX CHÍNH Ở ĐÂY) */
+.imageGallery {
+  @apply flex flex-col gap-4 md:col-span-1 mt-2 w-full;
 }
 
-.imageStack {
-  @apply grid gap-4 md:col-span-2;
-}
-
-.imageStackMulti {
-  @apply grid-cols-1 sm:grid-cols-2;
-}
-
-.imageStackSingle {
-  @apply grid-cols-1 md:col-span-2;
-}
-
+/* KHÔNG dùng flex-1 nữa */
 .imageItem {
-  @apply rounded-2xl overflow-hidden shadow-md h-[32svh];
-}
-
-.imageItemSingle {
-  @apply h-[50svh] md:h-[60svh];
+  @apply rounded-2xl overflow-hidden shadow-sm bg-gray-100 w-full aspect-[16/10];
 }
 
 .image {
   @apply w-full h-full object-cover;
 }
 
+/* SPEC SECTION */
+.specSection {
+  @apply w-full flex items-center justify-center p-4 bg-gray-50/30 rounded-3xl lg:col-span-1;
+}
+
 .specWrap {
-  @apply rounded-2xl overflow-hidden shadow-lg h-[32svh] md:h-[40svh];
+  @apply w-full max-h-[60svh] relative flex items-center justify-center;
 }
 
 .specImage {
-  @apply w-full h-full object-contain p-3;
+  @apply w-full h-full object-contain drop-shadow-md;
 }

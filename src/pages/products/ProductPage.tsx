@@ -58,7 +58,7 @@ const sections: Section[] = [
   {
     type: "product",
     tab: "TRÁNG PHỦ",
-    variant: "feature",
+    variant: "classic",
     props: {
       title: "Dịch vụ Tráng phủ Kim loại",
       description:

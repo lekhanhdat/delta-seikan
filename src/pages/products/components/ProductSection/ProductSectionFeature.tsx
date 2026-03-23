@@ -10,64 +10,54 @@ const ProductSectionFeature = ({
   images,
   specImage,
 }: ProductSectionProps) => {
-  const hasSecondaryImage = Boolean(images[1]);
-
   return (
     <section className={styles.section}>
-      <div className={styles.textBlock}>
+      <div className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
-        <p className={styles.description}>{description}</p>
+        <div className={styles.line} />
+      </div>
 
-        {features && (
-          <div className={styles.features}>
-            {features.map((item) => (
-              <div key={item.title} className={styles.featureItem}>
-                <h4 className={styles.featureTitle}>{item.title}</h4>
-                <p className={styles.featureDesc}>{item.desc}</p>
+      <div className={specImage ? styles.contentGrid : styles.contentNoSpec}>
+        <div className={styles.productMainInfo}>
+          <div className={styles.textContent}>
+            <p className={styles.description}>{description}</p>
+
+            {features && (
+              <div className={styles.features}>
+                {features.map((item) => (
+                  <div key={item.title} className={styles.featureItem}>
+                    <h4 className={styles.featureTitle}>{item.title}</h4>
+                    <p className={styles.featureDesc}>{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className={styles.imageGallery}>
+            {images.slice(0, 2).map((img, index) => (
+              <div key={`${img}-${index}`} className={styles.imageItem}>
+                <img
+                  src={img}
+                  alt={`${title} ${index + 1}`}
+                  className={styles.image}
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             ))}
           </div>
-        )}
-      </div>
-
-      <div
-        className={`${styles.mediaBlock} ${
-          !hasSecondaryImage && !specImage ? styles.mediaBlockSingle : ""
-        }`}
-      >
-        <div
-          className={`${styles.mainImageWrap} ${
-            !hasSecondaryImage && !specImage ? styles.mainImageWrapSingle : ""
-          }`}
-        >
-          <img
-            src={images[0]}
-            alt={`${title} main`}
-            className={styles.mainImage}
-            loading="lazy"
-            decoding="async"
-          />
         </div>
 
-        {hasSecondaryImage && (
-          <div className={styles.subImageWrap}>
-            <img
-              src={images[1]}
-              alt={`${title} secondary`}
-              className={styles.subImage}
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        )}
-
         {specImage && (
-          <div className={styles.specCard}>
-            <ImageFullscreenViewer
-              src={specImage}
-              alt={`${title} specification`}
-              imageClassName={styles.specImage}
-            />
+          <div className={styles.specSection}>
+            <div className={styles.specWrap}>
+              <ImageFullscreenViewer
+                src={specImage}
+                alt={`${title} specification`}
+                imageClassName={styles.specImage}
+              />
+            </div>
           </div>
         )}
       </div>

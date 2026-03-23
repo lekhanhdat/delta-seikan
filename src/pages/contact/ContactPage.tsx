@@ -2,6 +2,7 @@ import PageHero from "@/components/sections/PageHero/PageHero";
 import contacthinhanh from "@/assets/images/contacthinhanh.png";
 import ContactContentSection from "@/pages/contact/components/ContactContentSection/ContactContentSection";
 import Footer from "@/components/layout/Footer/Footer";
+import styles from "./ContactPage.module.css";
 
 const ContactPage = () => {
   const heroData = {
@@ -36,7 +37,11 @@ const ContactPage = () => {
   return (
     <div className="page-snap-container">
       <PageHero {...heroData} />
-      <ContactContentSection contactInfo={contactInfoData} mapInfo={mapData} />
+      <div className={styles.contactSection}>
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full ${styles.container}`}>
+          <ContactContentSection contactInfo={contactInfoData} mapInfo={mapData} />
+        </div>
+      </div>
       <Footer />
     </div>
   );

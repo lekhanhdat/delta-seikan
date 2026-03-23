@@ -20,8 +20,6 @@ const ServiceSection = ({
   title,
   description,
   items,
-  badgeText,
-  badgeSubText,
   image,
 }: ServiceSectionProps) => {
   return (
@@ -32,25 +30,6 @@ const ServiceSection = ({
             <h2 className={styles.serviceTitle}>{title}</h2>
 
             <p className={styles.serviceDesc}>{description}</p>
-
-            <div className={styles.serviceGrid}>
-              {items.map((item, index) => (
-                <div key={index} className={styles.serviceCard}>
-                  <div className={styles.serviceIcon}>{item.icon || "✓"}</div>
-
-                  <h4 className={styles.serviceItemTitle}>{item.title}</h4>
-
-                  <p className={styles.serviceItemDesc}>{item.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            {(badgeText || badgeSubText) && (
-              <div className={styles.serviceBadge}>
-                <span className={styles.serviceBadgeText}>{badgeText}</span>
-                <span className={styles.serviceBadgeSub}>{badgeSubText}</span>
-              </div>
-            )}
           </div>
 
           {image && (
@@ -66,6 +45,19 @@ const ServiceSection = ({
           )}
         </div>
 
+        {items && items.length > 0 && (
+          <div className={styles.serviceGrid}>
+            {items.map((item, index) => (
+              <div key={index} className={styles.serviceCard}>
+                <div className={styles.serviceIcon}>{item.icon || "✓"}</div>
+
+                <h4 className={styles.serviceItemTitle}>{item.title}</h4>
+
+                <p className={styles.serviceItemDesc}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
