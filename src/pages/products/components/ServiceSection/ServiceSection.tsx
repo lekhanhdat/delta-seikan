@@ -13,6 +13,7 @@ type ServiceSectionProps = {
   items: ServiceItem[];
   badgeText?: string;
   badgeSubText?: string;
+  image?: string;
 };
 
 const ServiceSection = ({
@@ -21,46 +22,49 @@ const ServiceSection = ({
   items,
   badgeText,
   badgeSubText,
+  image,
 }: ServiceSectionProps) => {
   return (
     <section className={styles.serviceSection}>
-      
       <div className={styles.serviceContainer}>
-        
-        <h2 className={styles.serviceTitle}>{title}</h2>
+        <div className={styles.serviceContent}>
+          <div className={styles.serviceLeft}>
+            <h2 className={styles.serviceTitle}>{title}</h2>
 
-        <p className={styles.serviceDesc}>{description}</p>
+            <p className={styles.serviceDesc}>{description}</p>
 
-        <div className={styles.serviceGrid}>
-          {items.map((item, index) => (
-            <div key={index} className={styles.serviceCard}>
-              
-              <div className={styles.serviceIcon}>
-                {item.icon || "✓"}
-              </div>
+            <div className={styles.serviceGrid}>
+              {items.map((item, index) => (
+                <div key={index} className={styles.serviceCard}>
+                  <div className={styles.serviceIcon}>{item.icon || "✓"}</div>
 
-              <h4 className={styles.serviceItemTitle}>
-                {item.title}
-              </h4>
+                  <h4 className={styles.serviceItemTitle}>{item.title}</h4>
 
-              <p className={styles.serviceItemDesc}>
-                {item.desc}
-              </p>
-
+                  <p className={styles.serviceItemDesc}>{item.desc}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        {(badgeText || badgeSubText) && (
-          <div className={styles.serviceBadge}>
-            <span className={styles.serviceBadgeText}>
-              {badgeText}
-            </span>
-            <span className={styles.serviceBadgeSub}>
-              {badgeSubText}
-            </span>
+            {(badgeText || badgeSubText) && (
+              <div className={styles.serviceBadge}>
+                <span className={styles.serviceBadgeText}>{badgeText}</span>
+                <span className={styles.serviceBadgeSub}>{badgeSubText}</span>
+              </div>
+            )}
           </div>
-        )}
+
+          {image && (
+            <div className={styles.serviceRight}>
+              <img
+                src={image}
+                alt={title}
+                className={styles.serviceImage}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          )}
+        </div>
 
       </div>
     </section>

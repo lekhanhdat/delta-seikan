@@ -1,11 +1,14 @@
 import PageHero from "@/components/sections/PageHero/PageHero";
-import hinh19 from "@/assets/images/hinh19.jpg";
+import newshinhanh from "@/assets/images/newshinhanh.jpg";
+import strategyImage from "@/assets/images/strategyImage.png";
 import news1 from "@/assets/images/news1.png";
 import news2 from "@/assets/images/news2.png";
 import news3 from "@/assets/images/news3.jpg";
 import NewsIntro from "./components/NewsIntro/NewsIntro";
 import NewsGrid from "./components/NewsGrid/NewsGrid";
+import StrategyCard from "./components/StrategyCard/StrategyCard";
 import { type NewsItem } from "./components/NewsCard/NewsCard";
+import Footer from "@/components/layout/Footer/Footer";
 
 const introContent = {
   label: "Bản tin doanh nghiệp",
@@ -41,26 +44,44 @@ const newsItems: NewsItem[] = [
   },
 ];
 
+const strategyContent = {
+  image: strategyImage,
+  title: "Delta Seikan công bố chiến lược chuyển đổi số trong sản xuất bao bì 2025",
+  description:
+    "Định hướng phát triển bền vững kết hợp cùng công nghệ tự động hóa AI giúp tối ưu hóa 25% hiệu năng vận hành và giảm thiểu rác thải kim loại trong quy trình sản xuất lên hai mạnh.",
+  author: "Ban Truyền Thông",
+  date: "20 Tháng 3, 2026",
+  link: "#",
+  };
+
 const NewsPage = () => {
   return (
-    <div>
+    <div className="page-snap-container">
       <PageHero
         title="Tin tức"
-        description="Cập nhật các hoạt động nổi bật, thông tin chứng nhận và xu hướng bao bì kim loại mới nhất từ Delta Seikan."
-        backgroundImage={hinh19}
+        description="Cập nhật những hoạt động nổi bật, thông tin chứng nhận và các xu hướng mới nhất trong lĩnh vực bao bì kim loại từ Delta Seikan."
+        backgroundImage={newshinhanh}
       />
+
+      <section className="w-full px-4 sm:px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <StrategyCard { ...strategyContent } />
+        </div>
+      </section>
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 md:py-20">
         <div className="rounded-3xl bg-gradient-to-b from-[#f7f9ff] to-white p-4 md:p-8">
-        <NewsIntro
-          label={introContent.label}
-          title={introContent.title}
-          description={introContent.description}
-        />
+          <NewsIntro
+            label={introContent.label}
+            title={introContent.title}
+            description={introContent.description}
+          />
 
-        <NewsGrid items={newsItems} />
+          <NewsGrid items={newsItems} />
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

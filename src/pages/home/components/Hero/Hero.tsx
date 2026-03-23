@@ -1,11 +1,11 @@
 import { useEffect, useState, useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 import hinh1 from "@/assets/images/hinh1.jpg";
 import hinh2 from "@/assets/images/hinh2.jpg";
 import hinh3 from "@/assets/images/hinh3.jpg";
 import hinh4 from "@/assets/images/hinh4.jpg";
-import hinh5 from "@/assets/images/hinh2.jpg";
 
 import styles from "./Hero.module.css";
 
@@ -22,7 +22,7 @@ type HeroProps = {
   stats: StatItem[];
 };
 
-const images = [hinh1, hinh2, hinh3, hinh4, hinh5];
+const images = [hinh1, hinh2, hinh3, hinh4];
 
 const Hero = ({
   title,
@@ -52,11 +52,17 @@ const Hero = ({
       <div className={styles.heroBg}>
         <img
           src={images[prevIndex]}
+          alt="Hero background previous"
           className={`${styles.heroImg} ${styles.slideOut}`}
+          loading="lazy"
+          decoding="async"
         />
         <img
           src={images[index]}
+          alt="Hero background current"
           className={`${styles.heroImg} ${styles.slideIn}`}
+          loading="lazy"
+          decoding="async"
         />
       </div>
 
@@ -73,14 +79,14 @@ const Hero = ({
           <p className={styles.heroDesc}>{description}</p>
 
           <div className={styles.heroButtons}>
-            <button className={styles.heroBtnPrimary}>
+            <Link to="/products" className={styles.heroBtnPrimary}>
               {primaryText}
               <FiArrowRight />
-            </button>
+            </Link>
 
-            <button className={styles.heroBtnSecondary}>
+            <Link to="/contact" className={styles.heroBtnSecondary}>
               {secondaryText}
-            </button>
+            </Link>
           </div>
 
         </div>

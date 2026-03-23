@@ -1,43 +1,78 @@
 .wrapper {
-  @apply py-20 bg-gray-50;
+  @apply w-full px-4 sm:px-6 md:px-10 lg:px-14 py-10 md:py-14 bg-gradient-to-b from-[#f6f8fc] to-[#eef3fb];
+}
+
+.header {
+  @apply max-w-6xl mx-auto text-center mb-8 md:mb-12;
+}
+
+.kicker {
+  @apply text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold text-[#3f63d2];
+}
+
+.heading {
+  @apply mt-3 text-3xl md:text-4xl lg:text-5xl font-bold text-[#10213f] leading-tight;
+}
+
+.lead {
+  @apply mt-4 text-base md:text-lg text-[#53627c] max-w-3xl mx-auto leading-relaxed;
 }
 
 .jobGrid {
-  @apply max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8;
+  @apply max-w-[1440px] mx-auto grid gap-6 md:gap-8 lg:gap-10;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .jobGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 /* CARD BASE */
 .card {
-  @apply relative p-10 rounded-2xl overflow-hidden;
-  transition: opacity 0.3s, transform 0.3s;
+  @apply relative rounded-3xl overflow-hidden border border-[#dde3f2];
+  padding: clamp(1.5rem, 2.6vw, 2.4rem);
+  min-height: clamp(220px, 34svh, 340px);
+  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 /* NORMAL CARD (mờ nhẹ như UI) */
 .inactive {
-  @apply bg-white text-gray-800 opacity-70 hover:opacity-100 shadow-sm hover:shadow-lg;
+  @apply bg-white text-[#24324b] opacity-100 shadow-sm;
 }
 
 /* ACTIVE CARD */
 .active {
-  @apply bg-blue-900 text-white hover:opacity-100 shadow-sm hover:shadow-lg;
+  @apply bg-[#33428f] text-white shadow-xl;
+  transform: translateY(-4px) scale(1.01);
 }
 
 /* TITLE */
 .title {
-  @apply text-xl font-semibold mb-4 relative z-10;
+  @apply text-2xl md:text-[2rem] font-semibold mb-4 relative z-10 leading-tight;
 }
 
 /* DESC */
 .desc {
-  @apply text-sm leading-relaxed opacity-80 relative z-10;
+  @apply text-base md:text-xl leading-relaxed opacity-95 relative z-10 max-w-[26ch];
 }
 
 /* ICON dưới */
 .icon {
-  @apply mt-6 text-xl opacity-80 relative z-10;
+  @apply mt-8 text-3xl md:text-4xl opacity-95 relative z-10;
 }
 
 /* BACKGROUND ICON */
 .bgIcon {
-  @apply absolute inset-0 flex items-center justify-center text-[120px] opacity-5;
+  @apply absolute right-2 bottom-0 flex items-end justify-end text-[150px] md:text-[190px] opacity-10;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  @apply shadow-xl;
+}
+
+.active:hover {
+  transform: translateY(-8px) scale(1.015);
 }

@@ -1,5 +1,6 @@
 .pageHero {
   @apply relative w-full h-[240px] sm:h-[300px] md:h-[340px] overflow-hidden;
+  min-height: calc(100svh - var(--header-height));
 }
 
 .pageHeroBg {

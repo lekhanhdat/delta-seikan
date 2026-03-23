@@ -1,0 +1,63 @@
+.header {
+  @apply fixed top-0 left-0 w-full h-[80px] z-50 bg-[#f6f7fb] border-b shadow-sm;
+}
+
+.headerInner {
+  @apply w-full h-full px-4 md:px-6 lg:px-10 flex items-center justify-between;
+}
+
+.logoLink {
+  @apply flex items-center gap-3;
+}
+
+.logoImg {
+  @apply h-10 md:h-12 lg:h-16;
+}
+
+.logoText {
+  @apply text-sm md:text-lg lg:text-xl font-bold tracking-wide text-primary-dark;
+}
+
+.desktopNav {
+  @apply relative hidden md:flex items-center gap-6 lg:gap-8;
+}
+
+.navItem {
+  @apply cursor-pointer font-medium transition text-gray-500 hover:text-primary-dark;
+}
+
+.navItemActive {
+  @apply text-primary-dark;
+}
+
+.rightGroup {
+  @apply flex items-center gap-4 md:gap-6;
+}
+
+.languageSwitch {
+  @apply flex items-center gap-2 text-sm font-medium;
+}
+
+.languageItem {
+  @apply cursor-pointer transition text-gray-500 hover:text-primary-dark;
+}
+
+.languageItemActive {
+  @apply text-primary-dark font-semibold;
+}
+
+.languageDivider {
+  @apply text-gray-400;
+}
+
+.mobileMenuButton {
+  @apply md:hidden;
+}
+
+.mobileMenu {
+  @apply md:hidden px-4 pb-4 border-t bg-[#f6f7fb];
+}
+
+.mobileMenuItem {
+  @apply block w-full text-left py-2;
+}

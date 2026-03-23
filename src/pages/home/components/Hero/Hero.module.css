@@ -1,5 +1,6 @@
 .heroSection {
-  @apply relative w-full h-[260px] sm:h-[320px] md:h-[600px] overflow-hidden flex items-center;
+  @apply relative w-full overflow-hidden flex items-center;
+  min-height: calc(100svh - var(--header-height));
 }
 
 .heroBg {

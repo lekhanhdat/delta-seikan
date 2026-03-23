@@ -1,13 +1,14 @@
 .featureSection {
-  @apply py-14 md:py-20 bg-gray-100;
+  @apply py-14 md:py-20 bg-gray-100 flex items-center;
+  min-height: calc(100svh - var(--header-height));
 }
 
 .featureContainer {
-  @apply max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 px-4 sm:px-6;
+  @apply w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-9 px-4 sm:px-6;
 }
 
 .featureCard {
-  @apply bg-white rounded-2xl p-5 sm:p-6 md:p-8 shadow-md hover:shadow-lg hover:scale-[1.02];
+  @apply bg-white rounded-2xl p-6 sm:p-7 md:p-10 shadow-md hover:shadow-lg hover:scale-[1.02] min-h-[320px] md:min-h-[360px];
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -16,15 +17,15 @@
 }
 
 .featureIcon {
-  @apply w-16 h-16 flex items-center justify-center mb-4 md:mb-6;
+  @apply w-20 h-20 md:w-24 md:h-24 flex items-center justify-center mb-5 md:mb-7;
 }
 
 .featureIcon img {
-  @apply w-16 h-16 object-contain;
+  @apply w-20 h-20 md:w-24 md:h-24 object-contain;
 }
 
 .featureTitle {
-  @apply text-base sm:text-lg font-bold tracking-wide mb-3 md:mb-4 uppercase;
+  @apply text-lg sm:text-xl md:text-2xl font-bold tracking-wide mb-4 md:mb-5 uppercase;
 }
 
 .featureTitleMain {
@@ -36,7 +37,7 @@
 }
 
 .featureDesc {
-  @apply text-gray-600 text-sm md:text-[15px] leading-relaxed mb-4;
+  @apply text-gray-600 text-base md:text-[17px] leading-relaxed mb-5;
 }
 
 .featureTags {
@@ -44,5 +45,5 @@
 }
 
 .featureTag {
-  @apply text-[11px] px-3 py-1 bg-[#eef1f6] text-primary-dark rounded-md font-medium;
+  @apply text-xs md:text-sm px-3 py-1.5 bg-[#eef1f6] text-primary-dark rounded-md font-medium;
 }

@@ -13,6 +13,22 @@
 	/* padding: 32px 16px; */
 }
 
+.page-sections {
+	width: 100%;
+}
+
+.page-sections > section,
+.page-sections > * > section {
+	min-height: calc(100svh - var(--header-height));
+	display: grid;
+	place-items: center;
+}
+
+.page-sections > section > *,
+.page-sections > * > section > * {
+	width: 100%;
+}
+
 .app-shell {
 	width: 100%;
 	max-width: 1080px;

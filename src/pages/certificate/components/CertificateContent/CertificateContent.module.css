@@ -7,11 +7,11 @@
 }
 
 .item {
-  @apply flex gap-4;
+  @apply flex items-start gap-4;
 }
 
 .icon {
-  @apply text-blue-600 text-2xl mt-1;
+  @apply text-blue-600 mt-1 w-8 h-8 shrink-0;
 }
 
 .itemTitle {

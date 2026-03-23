@@ -23,7 +23,13 @@ const CapabilitySection = ({
     <section className={styles.capabilitySection}>
       
       {/* BACKGROUND */}
-      <img src={hinh8} alt="bg" className={styles.capabilityBg} />
+      <img
+        src={hinh8}
+        alt="Capability background"
+        className={styles.capabilityBg}
+        loading="lazy"
+        decoding="async"
+      />
 
       {/* OVERLAY */}
       <div className={styles.capabilityOverlay} />

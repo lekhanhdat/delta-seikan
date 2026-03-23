@@ -20,6 +20,8 @@ const PageHero = ({
           src={backgroundImage}
           alt="hero"
           className={styles.pageHeroImg}
+          loading="lazy"
+          decoding="async"
         />
       </div>
 

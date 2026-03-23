@@ -1,12 +1,11 @@
 import PageHero from "@/components/sections/PageHero/PageHero";
-import hinh19 from "@/assets/images/hinh19.jpg";
+import hinh21 from "@/assets/images/hinh21.jpg";
 
 import CareerHighlights from "./components/CareerHighlights/CareerHighlights";
 import CareerBlog from "./components/CareerBlog/CareerBlog";
-import JobList from "./components/JobList/JobList";
+import Footer from "@/components/layout/Footer/Footer";
 
 const CareerPage = () => {
-
   const highlightsData = [
     {
       title: "Môi trường làm việc",
@@ -45,44 +44,19 @@ const CareerPage = () => {
     },
   ];
 
-  const jobData = [
-  {
-    title: "Kỹ sư Vận hành Máy",
-    desc: "Chịu trách nhiệm giám sát và điều chỉnh hệ thống dây chuyền sản xuất lon nhôm.",
-    location: "TP. Hồ Chí Minh",
-    salary: "Cạnh tranh",
-    type: "TOÀN THỜI GIAN",
-  },
-  {
-    title: "Chuyên viên Kiểm soát Chất lượng (QC)",
-    desc: "Thực hiện kiểm định các tiêu chuẩn kỹ thuật nghiêm ngặt của sản phẩm.",
-    location: "TP. Hồ Chí Minh",
-    salary: "Thỏa thuận",
-    type: "TOÀN THỜI GIAN",
-  },
-  {
-    title: "Trưởng nhóm Điều phối Chuỗi cung ứng",
-    desc: "Quản lý và tối ưu hóa quy trình luân chuyển nguyên vật liệu.",
-    location: "TP. Hồ Chí Minh",
-    salary: "Cạnh tranh",
-    type: "TOÀN THỜI GIAN",
-  },
-];
-
   return (
-    <div>
+    <div className="page-snap-container">
       <PageHero
         title="Tuyển Dụng"
-        description="Chúng tôi luôn tìm kiếm những nhân sự tài năng, nhiệt huyết và sẵn sàng phát triển cùng doanh nghiệp."
-        backgroundImage={hinh19}
+        description="Chúng tôi luôn chào đón những cá nhân tài năng, nhiệt huyết và sẵn sàng đồng hành cùng doanh nghiệp trên hành trình phát triển bền vững. Đây là nơi bạn có thể phát huy năng lực và xây dựng sự nghiệp lâu dài."
+        backgroundImage={hinh21}
       />
 
       <CareerHighlights data={highlightsData} />
 
-      {/* 👉 truyền data vào */}
       <CareerBlog data={blogData} />
 
-      <JobList data={jobData} />
+      <Footer />
     </div>
   );
 };

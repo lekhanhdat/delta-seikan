@@ -3,6 +3,7 @@ import AboutSection from "../home/components/AboutSection/AboutSection";
 import FeatureCards from "../home/components/FeatureCards/FeatureCards";
 import CapabilitySection from "../home/components/CapabilitySection/CapabilitySection";
 import TimelineSection from "../home/components/TimelineSection/TimelineSection";
+import Footer from "@/components/layout/Footer/Footer";
 
 import { FiActivity, FiTool, FiShield, FiUsers } from "react-icons/fi";
 
@@ -29,7 +30,7 @@ const heroContent = {
 
 const HomePage = () => {
   return (
-    <div className="home-page z-0">
+    <div className="page-snap-container">
       
       <Hero {...heroContent} />
 
@@ -124,6 +125,8 @@ const HomePage = () => {
           },
         ]}
       />
+
+      <Footer />
     </div>
   );
 };

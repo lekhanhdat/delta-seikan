@@ -32,7 +32,13 @@ const CareerBlog = ({ data }: Props) => {
             className={`${styles.card} group`}
           >
             <div className={styles.imageWrapper}>
-              <img src={item.image} className={styles.image} />
+              <img
+                src={item.image}
+                alt={item.title}
+                className={styles.image}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             <p className={styles.tag}>{item.tag}</p>
