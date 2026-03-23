@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Products & Services",
+    "description": "Delta Seikan provides comprehensive metal packaging solutions, from 2-piece and 3-piece aluminum cans to high-tech coating services, meeting the strictest food industry standards."
+  },
+  "sections": {
+    "trangPhu": {
+      "tab": "COATING",
+      "title": "Metal Coating Service",
+      "desc": "Delta Seikan provides metal coating services with modern technology from KBA - LTG (Germany), ensuring high adhesion, superior corrosion resistance, and food safety. Products meet strict international standards such as BPA-NI, PFAS-free, suitable for the food and beverage industry."
+    },
+    "lon2manh": {
+      "tab": "2-PIECE CAN (DRD)",
+      "title": "2-Piece Cans – DRD Technology",
+      "desc": "2-piece cans (DRD – Drawn & Redrawn) are manufactured using advanced deep-drawing technology, optimizing mechanical strength, minimizing seams, and ensuring absolute airtightness. Suitable for canned food, providing high preservation efficiency and production cost optimization."
+    },
+    "lon3manh": {
+      "tab": "3-PIECE CAN",
+      "title": "3-Piece Cans",
+      "desc": "3-piece cans consist of body, bottom, and lid, joined by modern welding technology, ensuring high tightness and durability. Flexible solutions in size and capacity, suitable for many products from food to industrial chemicals."
+    },
+    "napEOE": {
+      "tab": "EOE LIDS",
+      "title": "EOE Lids (Easy Open End)",
+      "desc": "Easy-open end lids (EOE) provide maximum convenience for consumers. Manufactured from high-quality materials, ensuring absolute airtightness and easy opening without tools."
+    },
+    "dichVu": {
+      "tab": "PACKAGING & DISTRIBUTION",
+      "title": "Packaging & Distribution Solutions",
+      "desc": "Delta Seikan provides comprehensive packaging and distribution solutions, optimizing the supply chain, enhancing operational efficiency, and ensuring product quality throughout storage and transport.",
+      "badge": "24/7",
+      "badgeSub": "Customer Support",
+      "i1": "Absolute Safety",
+      "i1Desc": "Strict control process, ensuring product quality and safety.",
+      "i2": "Operational Optimization",
+      "i2Desc": "Flexible design, easy to integrate into production systems.",
+      "i3": "Sustainability",
+      "i3Desc": "Solutions aimed at minimizing environmental impact."
+    }
+  }
+}

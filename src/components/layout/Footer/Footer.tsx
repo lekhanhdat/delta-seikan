@@ -1,93 +1,48 @@
 import { FiAward, FiLink } from "react-icons/fi";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
-  const location = useLocation();
-  const pathname = location.pathname;
-  const lang = pathname.startsWith("/en") ? "en" : "vi";
-
-  const content = {
-    vi: {
-      desc: "Dẫn đầu trong công nghệ đóng gói kim loại và lon nhôm 2 mảnh tại thị trường Việt Nam.",
-      explore: "KHÁM PHÁ",
-      products: "SẢN PHẨM",
-      location: "ĐỊA ĐIỂM",
-      exploreList: ["Giới thiệu", "Sản phẩm", "Chứng nhận", "Tin tức"],
-      productList: ["Lon 2 mảnh", "Lon 3 mảnh", "Nắp EOE", "Tráng phủ"],
-      office: "HCMC Office",
-      factory: "Factory",
-    },
-    en: {
-      desc: "Leading in metal packaging technology and 2-piece aluminum cans in Vietnam market.",
-      explore: "EXPLORE",
-      products: "PRODUCTS",
-      location: "LOCATION",
-      exploreList: ["About", "Products", "Certificates", "News"],
-      productList: ["2-piece cans", "3-piece cans", "EOE lids", "Coating"],
-      office: "HCMC Office",
-      factory: "Factory",
-    },
-  };
-
-  const t = content[lang];
-  const basePath = lang === "en" ? "/en" : "";
+  const { t } = useTranslation("footer");
 
   const exploreLinks = [
-    { label: t.exploreList[0], to: `${basePath}/` },
-    { label: t.exploreList[1], to: `${basePath}/products` },
-    { label: t.exploreList[2], to: "/certificates" },
-    { label: t.exploreList[3], to: "/news" },
+    { label: t("about"), to: "/" },
+    { label: t("product"), to: "/products" },
+    { label: t("certificate"), to: "/certificates" },
+    { label: t("news"), to: "/news" },
   ];
 
   const productLinks = [
-    { label: t.productList[0], to: `${basePath}/products` },
-    { label: t.productList[1], to: `${basePath}/products` },
-    { label: t.productList[2], to: `${basePath}/products` },
-    { label: t.productList[3], to: `${basePath}/products` },
+    { label: t("lon2manh"), to: "/products" },
+    { label: t("lon3manh"), to: "/products" },
+    { label: t("napEOE"), to: "/products" },
+    { label: t("trangPhu"), to: "/products" },
   ];
 
   return (
     <footer className={`${styles.footer} snap-section`}>
-      
-      {/* TOP */}
       <div className={styles.top}>
-        
-        {/* Column 1 */}
+        {/* Column 1: Brand Info */}
         <div className={styles.colPrimary}>
-          <h2 className={styles.brandTitle}>
-            DELTA SEIKAN
-          </h2>
-
-          <p className={styles.brandDesc}>
-            {t.desc}
-          </p>
-
+          <h2 className={styles.brandTitle}>DELTA SEIKAN</h2>
+          <p className={styles.brandDesc}>{t("desc")}</p>
           <div className={styles.iconList}>
             {[FiAward, FiLink].map((Icon, i) => (
-              <div
-                key={i}
-                className={styles.iconButton}
-              >
+              <div key={i} className={styles.iconButton}>
                 <Icon />
               </div>
             ))}
           </div>
         </div>
 
-        {/* Column 2 */}
+        {/* Column 2: Explore Links */}
         <div className={styles.colLink}>
-          <h3 className={styles.colHeading}>
-            {t.explore}
-          </h3>
-
+          <h3 className={styles.colHeading}>{t("explore")}</h3>
           <ul className={styles.linkList}>
             {exploreLinks.map((item) => (
               <li key={item.label}>
-                <Link
-                  to={item.to}
-                  className={styles.linkItem}
-                >
+                <Link to={item.to} className={styles.linkItem}>
                   {item.label}
                 </Link>
               </li>
@@ -95,19 +50,13 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 3 */}
+        {/* Column 3: Product Links */}
         <div className={styles.colLink}>
-          <h3 className={styles.colHeading}>
-            {t.products}
-          </h3>
-
+          <h3 className={styles.colHeading}>{t("products")}</h3>
           <ul className={styles.linkList}>
             {productLinks.map((item) => (
               <li key={item.label}>
-                <Link
-                  to={item.to}
-                  className={styles.linkItem}
-                >
+                <Link to={item.to} className={styles.linkItem}>
                   {item.label}
                 </Link>
               </li>
@@ -115,38 +64,25 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 4 */}
+        {/* Column 4: Location Info */}
         <div className={styles.colLocation}>
-          <h3 className={styles.colHeading}>
-            {t.location}
-          </h3>
-
-          <div className={styles.locationList}>
-            <div>
-              <p className={styles.locationName}>{t.office}</p>
-              <p className={styles.locationAddress}>
-                602/32 Điện Biên Phủ, Phường 22, Bình Thạnh, HCMC
-              </p>
+          <h3 className={styles.colHeading}>{t("location")}</h3>
+          <div className={styles.locationGroup}>
+            <div className={styles.locationItem}>
+              <h4 className={styles.locationLabel}>{t("office")}</h4>
+              <p className={styles.locationText}>{t("officeAddress")}</p>
             </div>
-
-            <div>
-              <p className={styles.locationName}>{t.factory}</p>
-              <p className={styles.locationAddress}>
-                Lot A, Tam Lap Industrial Cluster, Binh Duong
-              </p>
+            <div className={styles.locationItem}>
+              <h4 className={styles.locationLabel}>{t("factory")}</h4>
+              <p className={styles.locationText}>{t("factoryAddress")}</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* DIVIDER */}
-      <div className={styles.divider}></div>
-
-      {/* BOTTOM */}
       <div className={styles.bottom}>
-        
         <p className={styles.copyright}>
-          © 2026 DELTA SEIKAN CORPORATION. ALL RIGHTS RESERVED.
+          © 2026 Delta Seikan. {t("allRightsReserved") || "All rights reserved."}
         </p>
       </div>
     </footer>

@@ -63,13 +63,13 @@
 }
 
 .specSection {
-  @apply w-full flex items-center justify-center p-4 bg-gray-50/30 rounded-3xl h-full lg:col-span-1;
+  @apply w-full flex items-center justify-center bg-gray-50/10 rounded-3xl h-full lg:col-span-1;
 }
 
 .specWrap {
-  @apply w-full h-full max-h-[60svh] relative flex items-center justify-center;
+  @apply w-full h-full relative flex items-center justify-center;
 }
 
 .specImage {
-  @apply w-full h-full object-contain drop-shadow-md;
+  @apply w-full h-auto max-h-none object-contain drop-shadow-md;
 }

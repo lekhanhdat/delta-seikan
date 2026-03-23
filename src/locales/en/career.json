@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Careers",
+    "description": "We are always looking for talented, enthusiastic individuals ready to join us on our journey of sustainable development. This is a place where you can unleash your potential and build a long-term career."
+  },
+  "sections": {
+    "highlights": {
+      "kicker": "Company Culture",
+      "heading": "Career Values at Delta Seikan",
+      "lead": "Each highlight below is designed to give you a clearer view of the development path, work environment, and long-term learning opportunities."
+    }
+  },
+  "highlights": [
+    {
+      "title": "Work Environment",
+      "desc": "Creating a professional space where innovation and discipline coexist."
+    },
+    {
+      "title": "Growth Opportunities",
+      "desc": "Transparent career paths along with specialized training."
+    },
+    {
+      "title": "Career Handbook",
+      "desc": "A source of inspiration and practical knowledge."
+    }
+  ],
+  "blog": {
+    "sectionTitle": "Career Handbook",
+    "items": [
+      {
+        "title": "6 factors to compensate for lack of experience",
+        "tag": "SOFT SKILLS"
+      },
+      {
+        "title": "Understanding Millennials & Gen Z in manufacturing",
+        "tag": "GENERATIONS"
+      },
+      {
+        "title": "Understanding yourself to choose the right job",
+        "tag": "DEVELOPMENT"
+      }
+    ]
+  }
+}

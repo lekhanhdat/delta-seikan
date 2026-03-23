@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "title": "Latest News from Delta Seikan",
+    "description": "We continuously update information on production capacity, quality standards, and collaborative activities to provide safe, sustainable metal packaging solutions for our customers."
+  },
+  "intro": {
+    "label": "Corporate News"
+  },
+  "readMore": "Read more",
+  "items": [
+    {
+      "title": "6 packaging trends set to dominate 2026",
+      "tag": "Trend",
+      "date": "March 2026",
+      "desc": "A roundup of prominent packaging trends such as sustainability, smart packaging, and personalization shaping the global market."
+    },
+    {
+      "title": "Global Metal Packaging Market Report",
+      "tag": "Market",
+      "date": "February 2026",
+      "desc": "Analyzing the size, growth rate, and key drivers of the metal packaging industry in the coming period."
+    },
+    {
+      "title": "Establishment of grassroots trade union at Delta Seikan",
+      "tag": "Corporate",
+      "date": "January 2026",
+      "desc": "Phu Giao District Labor Federation announced the establishment of the grassroots trade union, marking a new step in internal activities."
+    }
+  ]
+}
