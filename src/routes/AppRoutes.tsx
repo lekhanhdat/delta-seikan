@@ -6,7 +6,7 @@ import CertificatePage from '../pages/certificate/CertificatePage'
 import ContactPage from '../pages/contact/ContactPage'
 import HomePage from '../pages/home/HomePage'
 import NewsPage from '../pages/news/NewsPage'
-import HomePageEN from '../pages/en/HomePage'
+import HomePageEN from '../pages/en/homePage'
 import ProductPage from '../pages/products/ProductPage'
 
 export const appRouter = createBrowserRouter([
