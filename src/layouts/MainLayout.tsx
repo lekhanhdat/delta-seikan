@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import Footer from "@/components/layout/Footer/Footer";
 import Header from "@/components/layout/Header/Header";
 import "./MainLayout.css";
 
