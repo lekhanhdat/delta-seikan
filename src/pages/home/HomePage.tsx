@@ -39,28 +39,31 @@ const HomePage = () => {
     image: hinh6,
   };
 
-  const featureData = [
-    {
-      title: t("features.vision"),
-      desc: t("features.visionDesc"),
-      image: mission,
-    },
-    {
-      title: t("features.mission"),
-      desc: t("features.missionDesc"),
-      image: vision,
-    },
-    {
-      title: t("features.values"),
-      image: values,
-      tags: [
-        t("features.v1"),
-        t("features.v2"),
-        t("features.v3"),
-        t("features.v4"),
-      ],
-    },
-  ];
+  const featureData = {
+    title: t("features.title"),
+    items: [
+      {
+        title: t("features.vision"),
+        desc: t("features.visionDesc"),
+        image: mission,
+      },
+      {
+        title: t("features.mission"),
+        desc: t("features.missionDesc"),
+        image: vision,
+      },
+      {
+        title: t("features.values"),
+        image: values,
+        tags: [
+          t("features.v1"),
+          t("features.v2"),
+          t("features.v3"),
+          t("features.v4"),
+        ],
+      },
+    ],
+  };
 
   const capabilityData = {
     subheading: t("capability.sub"),
@@ -119,7 +122,7 @@ const HomePage = () => {
     <div className="page-snap-container">
       <Hero {...heroData} />
       <AboutSection {...aboutData} />
-      <FeatureCards items={featureData} />
+      <FeatureCards {...featureData} />
       <CapabilitySection {...capabilityData} />
       <TimelineSection {...timelineData} />
       <Footer />
