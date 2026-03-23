@@ -2,8 +2,8 @@ import { useEffect, useState, useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-import hinh1 from "@/assets/images/hinh1.jpg";
-import hinh2 from "@/assets/images/hinh2.jpg";
+import hinh1 from "@/assets/images/hinh1.JPG";
+import hinh2 from "@/assets/images/hinh2.JPG";
 import hinh3 from "@/assets/images/hinh3.jpg";
 import hinh4 from "@/assets/images/hinh4.jpg";
 

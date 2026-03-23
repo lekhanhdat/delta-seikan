@@ -20,7 +20,7 @@ import hinh15 from "@/assets/images/hinh15.jpg";
 import hinh16 from "@/assets/images/hinh16.jpg";
 import hinh17 from "@/assets/images/hinh17.jpg";
 import hinh18 from "@/assets/images/hinh18.jpg";
-import hinh19 from "@/assets/images/hinh19.jpg";
+import hinh19 from "@/assets/images/hinh19.JPG";
 
 import styles from "./ProductPage.module.css";
 
