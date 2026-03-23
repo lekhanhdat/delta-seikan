@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import hinh1 from "@/assets/images/hinh1.JPG";
 import hinh2 from "@/assets/images/hinh2.JPG";
@@ -31,6 +31,8 @@ const Hero = ({
   secondaryText,
   stats,
 }: HeroProps) => {
+  const { pathname } = useLocation();
+  const basePath = pathname.startsWith("/en") ? "/en" : "";
   const [index, setIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(0);
   const indexRef = useRef(0);
@@ -79,12 +81,12 @@ const Hero = ({
           <p className={styles.heroDesc}>{description}</p>
 
           <div className={styles.heroButtons}>
-            <Link to="/products" className={styles.heroBtnPrimary}>
+            <Link to={`${basePath}/products`} className={styles.heroBtnPrimary}>
               {primaryText}
               <FiArrowRight />
             </Link>
 
-            <Link to="/contact" className={styles.heroBtnSecondary}>
+            <Link to={`${basePath}/contact`} className={styles.heroBtnSecondary}>
               {secondaryText}
             </Link>
           </div>

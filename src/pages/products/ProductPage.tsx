@@ -53,6 +53,8 @@ type ServiceSectionType = {
 
 type Section = ProductSectionType | ServiceSectionType;
 
+// ================= DATA =================
+
 // ================= COMPONENT =================
 
 const ProductPage = () => {

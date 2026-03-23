@@ -21,8 +21,9 @@ import viCareer from "./locales/vi/career.json";
 import viNews from "./locales/vi/news.json";
 import viContact from "./locales/vi/contact.json";
 
-// lấy ngôn ngữ đã lưu
-const savedLang = localStorage.getItem("lang") || "vi";
+const savedLang = localStorage.getItem("lang");
+const routeLang = window.location.pathname.startsWith("/en") ? "en" : null;
+const initialLang = routeLang ?? savedLang ?? "vi";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -48,7 +49,7 @@ i18n.use(initReactI18next).init({
     },
   },
 
-  lng: savedLang,
+  lng: initialLang,
   fallbackLng: "en",
 
   ns: ["header", "footer", "contact", "home", "product", "certificate", "career", "news"],     // 👈 namespace
