@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Liên hệ",
+    "description": "Liên hệ với Delta Seikan để được tư vấn nhanh chóng về các giải pháp bao bì kim loại và nhận hỗ trợ thông tin từ đội ngũ chuyên gia của chúng tôi."
+  },
+  "info": {
+    "title": "Thông tin liên hệ",
+    "factoryLabel": "Nhà máy",
+    "factoryAddress": "Lô A, cụm công nghiệp Tam Lập, xã Phú Giáo, Thành phố Hồ Chí Minh, Việt Nam",
+    "officeLabel": "Văn phòng",
+    "officeAddress": "602/32 Điện Biên Phủ, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh, Việt Nam",
+    "emailLabel": "Email",
+    "phoneLabel": "Số điện thoại liên hệ",
+    "taxCodeLabel": "Mã số thuế"
+  },
+  "map": {
+    "note": "Địa chỉ nhà máy: Lô A, cụm công nghiệp Tam Lập, xã Phú Giáo, Thành phố Hồ Chí Minh, Việt Nam."
+  }
+}

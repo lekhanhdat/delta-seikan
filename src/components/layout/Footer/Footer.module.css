@@ -1,41 +1,41 @@
 .footer {
-  @apply w-full bg-primary-dark text-white;
+  @apply w-full bg-[var(--primary-dark)] text-white border-t border-white/5;
 }
 
 .top {
-  @apply w-full px-4 sm:px-6 md:px-10 py-12 md:py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-10 gap-8 md:gap-10 lg:gap-12;
+  @apply max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8;
 }
 
 .colPrimary {
-  @apply lg:col-span-3;
+  @apply pr-0 md:pr-4 lg:pr-8;
 }
 
 .brandTitle {
-  @apply font-bold text-lg sm:text-xl mb-3 md:mb-4 tracking-wide;
+  @apply font-bold text-lg mb-4 tracking-tight text-white;
 }
 
 .brandDesc {
-  @apply text-white/70 leading-relaxed mb-5 md:mb-6 text-sm md:text-[15px];
+  @apply text-white leading-relaxed mb-6 text-[13px] font-light;
 }
 
 .iconList {
-  @apply flex gap-4;
+  @apply flex gap-3;
 }
 
 .iconButton {
-  @apply w-10 h-10 border border-white/30 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-white/10 hover:border-[var(--primary)] hover:text-[var(--primary)];
+  @apply w-10 h-10 bg-white/5 border border-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-500 hover:bg-[var(--primary)] hover:border-[var(--primary)] hover:scale-110 hover:-translate-y-1 shadow-sm text-white;
 }
 
 .colLink {
-  @apply lg:col-span-2;
+  @apply flex flex-col;
 }
 
 .colLocation {
-  @apply lg:col-span-3;
+  @apply flex flex-col;
 }
 
 .colHeading {
-  @apply font-semibold mb-5 tracking-widest text-xs text-white/80;
+  @apply font-bold mb-6 tracking-widest text-[11px] uppercase text-white;
 }
 
 .linkList {
@@ -43,29 +43,42 @@
 }
 
 .linkItem {
-  @apply inline-block text-white transition-all duration-200 hover:text-[var(--primary)] hover:translate-x-1;
+  @apply text-white transition-all duration-300 hover:text-[var(--primary)] text-[13px] font-medium flex items-center gap-2;
 }
 
-.locationList {
-  @apply space-y-4 text-white;
+.linkItem::before {
+  content: "";
+  @apply w-0 h-[1.5px] bg-[var(--primary)] transition-all duration-300;
 }
 
-.locationName {
-  @apply font-semibold mb-1;
+.linkItem:hover::before {
+  @apply w-2;
 }
 
-.locationAddress {
-  @apply text-white/70 text-sm;
+.locationGroup {
+  @apply space-y-5;
+}
+
+.locationItem {
+  @apply relative pl-0 transition-all duration-300;
+}
+
+.locationLabel {
+  @apply font-bold text-[13px] text-[var(--primary)] mb-1 block uppercase tracking-wider;
+}
+
+.locationText {
+  @apply text-white text-[13px] leading-relaxed font-light hover:text-[var(--primary)] transition-colors duration-300;
 }
 
 .divider {
-  @apply h-[1px] w-full bg-gradient-to-r from-transparent via-white/30 to-transparent;
+  @apply h-[1px] w-full bg-white/10;
 }
 
 .bottom {
-  @apply px-4 sm:px-6 md:px-10 py-5 md:py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-xs sm:text-sm text-white/70;
+  @apply max-w-7xl mx-auto px-6 md:px-12 py-5 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-white/10;
 }
 
 .copyright {
-  @apply text-left md:text-center;
+  @apply text-[13px] text-white font-light;
 }

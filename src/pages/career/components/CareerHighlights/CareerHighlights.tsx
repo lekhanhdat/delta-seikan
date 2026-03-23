@@ -1,6 +1,7 @@
 import { FiBookOpen, FiTrendingUp, FiHome } from "react-icons/fi";
 import styles from "./CareerHighlights.module.css";
 import { memo } from "react";
+import { useTranslation } from "react-i18next";
 
 type HighlightItem = {
   title: string;
@@ -15,15 +16,14 @@ type Props = {
 const icons = [FiHome, FiTrendingUp, FiBookOpen];
 
 const CareerHighlights = ({ data }: Props) => {
+  const { t } = useTranslation("career");
+
   return (
     <section className={styles.wrapper}>
       <div className={styles.header}>
-        <p className={styles.kicker}>Văn hóa công ty</p>
-        <h2 className={styles.heading}>Giá trị nghề nghiệp tại Delta Seikan</h2>
-        <p className={styles.lead}>
-          Mỗi điểm nhấn dưới đây được thiết kế để bạn nhìn rõ hơn con đường
-          phát triển, môi trường làm việc và cơ hội học hỏi dài hạn.
-        </p>
+        <p className={styles.kicker}>{t("sections.highlights.kicker")}</p>
+        <h2 className={styles.heading}>{t("sections.highlights.heading")}</h2>
+        <p className={styles.lead}>{t("sections.highlights.lead")}</p>
       </div>
 
       <div className={styles.jobGrid}>

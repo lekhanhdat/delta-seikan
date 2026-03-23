@@ -1,5 +1,6 @@
 import styles from "./NewsCard.module.css";
 import { FiArrowUpRight } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
 
 export type NewsItem = {
   title: string;
@@ -15,6 +16,8 @@ type NewsCardProps = {
 };
 
 const NewsCard = ({ item }: NewsCardProps) => {
+  const { t } = useTranslation("news");
+
   return (
     <article className={styles.card}>
       <div className={styles.imageWrap}>
@@ -41,7 +44,7 @@ const NewsCard = ({ item }: NewsCardProps) => {
         rel="noopener noreferrer"
         className={styles.link}
       >
-        Đọc bài viết
+        {t("readMore")}
         <FiArrowUpRight />
       </a>
     </article>

@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "title": "Certifications",
+    "description": "International certifications are evidence of our commitment to maintaining quality standards, safety, and sustainable development throughout the metal packaging production process."
+  },
+  "sections": {
+    "quality": {
+      "heading": "Core Quality Control",
+      "items": {
+        "iso": {
+          "title": "ISO 9001:2015",
+          "desc": "Operating procedures are standardized from raw material input to finished products, ensuring consistent quality."
+        },
+        "fssc": {
+          "title": "FSSC 22000 Ver 6.0",
+          "desc": "International food safety standards, risk control, and ensuring products meet strict requirements."
+        },
+        "haccp": {
+          "title": "HACCP",
+          "desc": "HACCP is a preventive approach food safety management system, focusing on hazard identification and control at critical control points (CCP) throughout the food contact packaging production process."
+        }
+      },
+      "tags": [
+        "ISO 9001:2015",
+        "FSSC 22000",
+        "HACCP",
+        "Active Production"
+      ]
+    },
+    "highlights": {
+      "heading": "Comprehensive Quality Assurance Capacity",
+      "subheading": "Operating Standards",
+      "items": {
+        "control": {
+          "title": "Quality Control",
+          "desc": "High-precision automated measurement system, controlling tolerances at the micron level for each batch of 2-piece and 3-piece cans."
+        },
+        "safety": {
+          "title": "Food Safety",
+          "desc": "Internal coating complies with safety standards, BPA-free, ensuring compatibility for food and beverages."
+        },
+        "compliance": {
+          "title": "Standard Compliance",
+          "desc": "Full compliance with technical requirements and international trade regulations for exported metal packaging."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to elevate your product standards?",
+      "description": "Delta Seikan accompanies businesses in meeting strict requirements for quality, safety, and export capability.",
+      "primaryLabel": "Contact for Consultation",
+      "secondaryLabel": "View Products"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.newsSection {
+  min-height: calc(100svh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background-color: white;
+}
+
+.container {
+  @apply flex-1 flex flex-col;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.inner {
+  @apply flex-1 rounded-3xl bg-gradient-to-b from-[#f7f9ff] to-white p-4 md:p-8;
+}

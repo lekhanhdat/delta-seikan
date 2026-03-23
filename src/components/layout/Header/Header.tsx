@@ -1,88 +1,75 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
 import logoColor from "@/assets/images/logoColor.jpg";
 import styles from "./Header.module.css";
 
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const pathname = location.pathname;
-  const lang = pathname.startsWith("/en") ? "en" : "vi";
+  const { t, i18n } = useTranslation();
 
+  const pathname = location.pathname;
   const [openMenu, setOpenMenu] = useState(false);
 
-  const menu = useMemo(
-    () => ({
-      vi: [
-        { label: "Giới thiệu", path: "/" },
-        { label: "Sản phẩm", path: "/products" },
-        { label: "Chứng nhận", path: "/certificates" },
-        { label: "Tuyển dụng", path: "/careers" },
-        { label: "Tin tức", path: "/news" },
-        { label: "Liên hệ", path: "/contact" },
-      ],
-      en: [
-        { label: "About", path: "/en" },
-        { label: "Products", path: "/en/products" },
-        { label: "Certificates", path: "/en" },
-        { label: "Careers", path: "/en" },
-        { label: "News", path: "/en" },
-        { label: "Contact Us", path: "/en" },
-      ],
-    }),
+  // ✅ menu dùng key
+  const menuItems = useMemo(
+    () => [
+      { key: "about", path: "/" },
+      { key: "product", path: "/products" },
+      { key: "certificate", path: "/certificates" },
+      { key: "career", path: "/careers" },
+      { key: "news", path: "/news" },
+      { key: "contact", path: "/contact" },
+    ],
     []
   );
 
-  const menuItems = menu[lang];
   const active = useMemo(
-    () => Math.max(menuItems.findIndex((item) => item.path === pathname), 0),
+    () =>
+      Math.max(
+        menuItems.findIndex((item) => item.path === pathname),
+        0
+      ),
     [menuItems, pathname]
   );
 
-  const getSwitchLink = useCallback((targetLang: "vi" | "en") => {
-    if (targetLang === "en") {
-      if (pathname.startsWith("/en")) return pathname;
-      return pathname === "/" ? "/en" : `/en${pathname}`;
-    }
-    return pathname.replace(/^\/en/, "") || "/";
-  }, [pathname]);
+  // ✅ đổi ngôn ngữ (GLOBAL)
+  const changeLang = (lang: "vi" | "en") => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("lang", lang);
+  };
 
   return (
     <header className={styles.header}>
       <div className={styles.headerInner}>
         {/* LOGO */}
-        <a
+        <div
           className={styles.logoLink}
-          href={lang === "en" ? "/en" : "/"}
-          onClick={(e) => {
-            e.preventDefault();
-            navigate(lang === "en" ? "/en" : "/");
-          }}
+          onClick={() => navigate("/")}
         >
           <img
             src={logoColor}
             alt="Delta Seikan"
             className={styles.logoImg}
-            loading="lazy"
-            decoding="async"
           />
           <span className={styles.logoText}>
             DELTA SEIKAN
           </span>
-        </a>
+        </div>
 
         {/* NAV DESKTOP */}
         <nav className={styles.desktopNav}>
           {menuItems.map((item, index) => (
             <div
               key={index}
-              onClick={() => {
-                navigate(item.path);
-              }}
-              className={`${styles.navItem} ${active === index ? styles.navItemActive : ""}`}
+              onClick={() => navigate(item.path)}
+              className={`${styles.navItem} ${
+                active === index ? styles.navItemActive : ""
+              }`}
             >
-              {item.label}
+              {t(item.key)} {/* 🔥 */}
             </div>
           ))}
         </nav>
@@ -92,8 +79,12 @@ const Header = () => {
           {/* LANGUAGE SWITCH */}
           <div className={styles.languageSwitch}>
             <span
-              onClick={() => navigate(getSwitchLink("vi"))}
-              className={`${styles.languageItem} ${lang === "vi" ? styles.languageItemActive : ""}`}
+              onClick={() => changeLang("vi")}
+              className={`${styles.languageItem} ${
+                i18n.language === "vi"
+                  ? styles.languageItemActive
+                  : ""
+              }`}
             >
               Tiếng Việt
             </span>
@@ -101,20 +92,22 @@ const Header = () => {
             <span className={styles.languageDivider}>|</span>
 
             <span
-              onClick={() => navigate(getSwitchLink("en"))}
-              className={`${styles.languageItem} ${lang === "en" ? styles.languageItemActive : ""}`}
+              onClick={() => changeLang("en")}
+              className={`${styles.languageItem} ${
+                i18n.language === "en"
+                  ? styles.languageItemActive
+                  : ""
+              }`}
             >
               English
             </span>
           </div>
 
-          {/* CTA */}
-          {/* <button className="hidden md:block bg-primary-dark text-white px-4 py-2 rounded-md hover:bg-primary transition">
-            {lang === 'en' ? 'Contact us' : 'Liên hệ tư vấn'}
-          </button> */}
-
           {/* MOBILE MENU */}
-          <button className={styles.mobileMenuButton} onClick={() => setOpenMenu(!openMenu)}>
+          <button
+            className={styles.mobileMenuButton}
+            onClick={() => setOpenMenu(!openMenu)}
+          >
             {openMenu ? <FiX /> : <FiMenu />}
           </button>
         </div>
@@ -132,13 +125,9 @@ const Header = () => {
               }}
               className={styles.mobileMenuItem}
             >
-              {item.label}
+              {t(item.key)} {/* 🔥 */}
             </button>
           ))}
-
-          {/* <button className="mt-3 w-full bg-primary-dark text-white px-4 py-2 rounded-md">
-            {lang === 'en' ? 'Contact us' : 'Liên hệ tư vấn'}
-          </button> */}
         </div>
       )}
     </header>

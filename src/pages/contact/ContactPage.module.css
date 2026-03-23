@@ -1,0 +1,18 @@
+.contactSection {
+  min-height: calc(100svh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background-color: white;
+}
+
+.container {
+  @apply flex-1 flex flex-col justify-center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.gridWrapper {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10;
+}
