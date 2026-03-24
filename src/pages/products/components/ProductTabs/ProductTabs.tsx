@@ -10,7 +10,32 @@ type Props = {
 
 const ProductTabs = ({ categories, active, onChange }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [useDropdown, setUseDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const tabsListRef = useRef<HTMLDivElement>(null);
+
+  // Check if tabs overflow and need to switch to dropdown
+  useEffect(() => {
+  const checkOverflow = () => {
+    if (!tabsListRef.current) return;
+
+    const el = tabsListRef.current;
+    console.log(el.scrollWidth, el.clientWidth); // debug log to check dimensions
+    
+    const hasOverflow = el.scrollWidth > el.clientWidth ;
+
+    setUseDropdown(hasOverflow);
+  };
+
+  const raf = requestAnimationFrame(checkOverflow);
+
+  window.addEventListener("resize", checkOverflow);
+
+  return () => {
+    cancelAnimationFrame(raf);
+    window.removeEventListener("resize", checkOverflow);
+  };
+}, [categories]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -31,8 +56,11 @@ const ProductTabs = ({ categories, active, onChange }: Props) => {
   return (
     <div className={styles.productTabs} data-product-tabs="true">
       <div className={styles.productTabsContainer}>
-        {/* Mobile Dropdown */}
-        <div className={styles.mobileDropdown} ref={dropdownRef}>
+        {/* Mobile Dropdown or Overflowing Dropdown */}
+        <div 
+          className={`${styles.mobileDropdown} ${useDropdown ? styles.forceShowDropdown : ""}`} 
+          ref={dropdownRef}
+        >
           <button 
             className={styles.dropdownToggle}
             onClick={() => setIsOpen(!isOpen)}
@@ -56,9 +84,9 @@ const ProductTabs = ({ categories, active, onChange }: Props) => {
           )}
         </div>
 
-        {/* Desktop Tabs */}
-        <div className={styles.productTabsWrapper}>
-          <div className={styles.productTabsList}>
+        {/* Desktop Tabs / Regular Tabs */}
+        <div className={`${styles.productTabsWrapper} ${useDropdown ? styles.forceHideTabs : ""}`}>
+          <div className={styles.productTabsList} ref={tabsListRef}>
             {categories.map((item, index) => {
               const isActive = active === index;
 

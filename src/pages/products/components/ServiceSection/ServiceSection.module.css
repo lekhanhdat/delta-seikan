@@ -40,6 +40,13 @@
   @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-2;
 }
 
+/* For tablet where it's 2 columns, make the 3rd item (last child) center span */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .serviceGrid > *:last-child:nth-child(odd) {
+    @apply sm:col-span-2 sm:w-[calc(50%-12px)] sm:mx-auto;
+  }
+}
+
 .serviceCard {
   @apply rounded-xl p-3 shadow-sm border border-[#d9e6ff] bg-white flex flex-col gap-1;
 }

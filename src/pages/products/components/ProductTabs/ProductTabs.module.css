@@ -16,7 +16,11 @@
 
 /* MOBILE DROPDOWN */
 .mobileDropdown {
-  @apply md:hidden relative py-2;
+  @apply lg:hidden relative py-2;
+}
+
+.forceShowDropdown {
+  @apply block !important;
 }
 
 .dropdownToggle {
@@ -53,7 +57,11 @@
 
 /* DESKTOP TABS */
 .productTabsWrapper {
-  @apply hidden md:flex justify-center;
+  @apply hidden lg:flex justify-center;
+}
+
+.forceHideTabs {
+  @apply hidden !important;
 }
 
 .productTabsList {

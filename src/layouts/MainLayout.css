@@ -17,11 +17,13 @@
 	width: 100%;
 }
 
-.page-sections > section,
-.page-sections > * > section {
-	min-height: calc(100svh - var(--header-height));
-	display: grid;
-	place-items: center;
+@media (min-width: 1024px) {
+  .page-sections > section,
+  .page-sections > * > section {
+    min-height: calc(100svh - var(--header-height));
+    display: grid;
+    place-items: center;
+  }
 }
 
 .page-sections > section > *,

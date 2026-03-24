@@ -36,7 +36,7 @@
 
 /* ITEM */
 .timelineItem {
-  @apply relative flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 w-full md:max-w-[240px] md:h-full;
+  @apply relative flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 w-full md:max-w-[240px];
 }
 
 /* DOT */
@@ -65,12 +65,7 @@
 
 /* CONTENT */
 .timelineContent {
-  @apply bg-white text-center rounded-2xl p-4 md:p-5 shadow-md w-full transition-all duration-300 border border-gray-100 md:h-full md:min-h-[200px] flex flex-col justify-center;
-}
-
-/* hover effect */
-.timelineItem:hover .timelineContent {
-  @apply shadow-xl -translate-y-1;
+  @apply bg-white text-center rounded-2xl p-4 md:p-5 shadow-md w-full transition-all duration-300 border border-gray-100 flex flex-col flex-1;
 }
 
 .timelineTitle {
@@ -78,5 +73,10 @@
 }
 
 .timelineDesc {
-  @apply text-sm md:text-[15px] text-gray-500 leading-relaxed mt-auto;
+  @apply text-sm md:text-[15px] text-gray-500 leading-relaxed;
+}
+
+/* hover effect */
+.timelineItem:hover .timelineContent {
+  @apply shadow-xl -translate-y-1;
 }

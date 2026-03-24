@@ -19,7 +19,7 @@
 }
 
 .desktopNav {
-  @apply relative hidden md:flex items-center gap-6 lg:gap-8;
+  @apply relative hidden lg:flex items-center gap-6 lg:gap-8;
 }
 
 .navItem {
@@ -51,11 +51,11 @@
 }
 
 .mobileMenuButton {
-  @apply md:hidden;
+  @apply lg:hidden;
 }
 
 .mobileMenu {
-  @apply md:hidden px-4 pb-4 border-t bg-[#f6f7fb];
+  @apply lg:hidden px-4 pb-4 border-t bg-[#f6f7fb];
 }
 
 .mobileMenuItem {

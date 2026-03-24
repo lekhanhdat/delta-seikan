@@ -20,6 +20,13 @@
   @apply w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-9;
 }
 
+/* On screens where it's 2 columns (sm to lg), make the 3rd item (last child) center span */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .cardsWrapper > *:last-child:nth-child(odd) {
+    @apply sm:col-span-2 sm:w-[calc(50%-18px)] sm:mx-auto;
+  }
+}
+
 .featureCard {
   @apply bg-white rounded-2xl p-6 sm:p-7 md:p-10 shadow-md hover:shadow-lg hover:scale-[1.02] min-h-[320px] md:min-h-[360px];
   transition: transform 0.3s, box-shadow 0.3s;
