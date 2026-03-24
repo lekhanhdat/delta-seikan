@@ -24,7 +24,7 @@
 }
 
 .card {
-  @apply bg-white p-8 md:p-10 shadow-sm transition;
+  @apply bg-white p-8 md:p-10 shadow-sm transition text-center flex flex-col items-center;
 }
 
 .card + .card {

@@ -74,9 +74,21 @@
 }
 
 .specWrap {
-  @apply w-full max-h-[60svh] relative flex items-center justify-center;
+  @apply w-full relative flex items-center justify-center;
+}
+
+@media (min-width: 1024px) {
+  .specWrap {
+    max-h:[60svh];
+  }
 }
 
 .specImage {
-  @apply w-full h-full object-contain drop-shadow-md;
+  @apply w-full h-auto object-contain drop-shadow-md;
+}
+
+@media (min-width: 1024px) {
+  .specImage {
+    @apply h-full;
+  }
 }

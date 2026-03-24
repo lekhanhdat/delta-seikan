@@ -1,6 +1,11 @@
 .aboutSection {
   @apply py-14 md:py-20 lg:py-24 bg-[#f6f7fb];
-  min-height: calc(100svh - var(--header-height));
+}
+
+@media (min-width: 1024px) {
+  .aboutSection {
+    min-height: calc(100svh - var(--header-height));
+  }
 }
 
 .aboutContainer {

@@ -1,6 +1,11 @@
 .featureSection {
   @apply py-14 md:py-20 bg-gray-100 flex items-center;
-  min-height: calc(100svh - var(--header-height));
+}
+
+@media (min-width: 1024px) {
+  .featureSection {
+    min-height: calc(100svh - var(--header-height));
+  }
 }
 
 .featureContainer {

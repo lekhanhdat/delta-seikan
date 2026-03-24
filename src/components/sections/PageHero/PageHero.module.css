@@ -1,6 +1,18 @@
 .pageHero {
-  @apply relative w-full h-[240px] sm:h-[300px] md:h-[340px] overflow-hidden;
-  min-height: calc(100svh - var(--header-height));
+  @apply relative w-full overflow-hidden flex items-center;
+}
+
+@media (min-width: 1024px) {
+  .pageHero {
+    min-height: calc(100svh - var(--header-height));
+  }
+}
+
+@media (max-width: 1023px) {
+  .pageHero {
+    min-height: 400px;
+    padding: 60px 0;
+  }
 }
 
 .pageHeroBg {

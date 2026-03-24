@@ -1,7 +1,12 @@
 .capabilitySection {
   @apply relative py-10 md:py-16 text-center overflow-hidden flex items-center justify-center;
-  height: calc(100svh - var(--header-height));
-  min-height: 600px; /* Đảm bảo không quá nhỏ trên màn hình thấp */
+}
+
+@media (min-width: 1024px) {
+  .capabilitySection {
+    height: calc(100svh - var(--header-height));
+    min-height: 600px; /* Đảm bảo không quá nhỏ trên màn hình thấp */
+  }
 }
 
 .capabilityBg {

@@ -54,20 +54,32 @@
   }
 }
 
-/* Page Snap Scroll Container */
-.page-snap-container {
-  height: calc(100svh - var(--header-height));
-  overflow-y: auto;
-  overscroll-behavior-y: contain;
-  scroll-snap-type: y mandatory;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
+/* Page Snap Scroll Container - Desktop only */
+@media (min-width: 1024px) {
+  .page-snap-container {
+    height: calc(100svh - var(--header-height));
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .page-snap-container > section,
+  .page-snap-container .snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
 }
 
-.page-snap-container > section,
-.page-snap-container .snap-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+/* On Mobile/Tablet: Disable Snap, Normal Height */
+@media (max-width: 1023px) {
+  .page-snap-container {
+    height: auto;
+    overflow-y: visible;
+    scroll-snap-type: none;
+    scroll-behavior: smooth;
+  }
 }
 
 .page-snap-container .snap-section {
