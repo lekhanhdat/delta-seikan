@@ -34,32 +34,32 @@ const ProductSectionFeature = ({
             )}
           </div>
 
-          <div className={styles.imageGallery}>
-            {images.slice(0, 2).map((img, index) => (
-              <div key={`${img}-${index}`} className={styles.imageItem}>
-                <img
-                  src={img}
-                  alt={`${title} ${index + 1}`}
-                  className={styles.image}
-                  loading="lazy"
-                  decoding="async"
+          {specImage && (
+            <div className={styles.specSection}>
+              <div className={styles.specWrap}>
+                <ImageFullscreenViewer
+                  src={specImage}
+                  alt={`${title} specification`}
+                  imageClassName={styles.specImage}
                 />
               </div>
-            ))}
-          </div>
+            </div>
+          )}
         </div>
 
-        {specImage && (
-          <div className={styles.specSection}>
-            <div className={styles.specWrap}>
-              <ImageFullscreenViewer
-                src={specImage}
-                alt={`${title} specification`}
-                imageClassName={styles.specImage}
+        <div className={styles.imageGallery}>
+          {images.slice(0, 2).map((img, index) => (
+            <div key={`${img}-${index}`} className={styles.imageItem}>
+              <img
+                src={img}
+                alt={`${title} ${index + 1}`}
+                className={styles.image}
+                loading="lazy"
+                decoding="async"
               />
             </div>
-          </div>
-        )}
+          ))}
+        </div>
       </div>
     </section>
   );

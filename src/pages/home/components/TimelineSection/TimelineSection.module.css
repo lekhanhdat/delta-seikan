@@ -65,11 +65,30 @@
 
 /* CONTENT */
 .timelineContent {
-  @apply bg-white text-center rounded-2xl p-4 md:p-5 shadow-md w-full transition-all duration-300 border border-gray-100 flex flex-col flex-1;
+  @apply bg-white text-center rounded-2xl p-4 md:p-5 shadow-md w-full transition-all duration-300 border border-gray-100 flex flex-col flex-1 h-full;
 }
 
 .timelineTitle {
   @apply font-semibold text-[#142a4a] mb-2;
+}
+
+@media (min-width: 1024px) {
+  .timelineTitle {
+    @apply font-semibold text-[#142a4a] mb-2 text-center;
+    min-height: 3.5rem; /* Reserve space for about 3 lines to maintain alignment */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .timelineTitle {
+    @apply font-semibold text-[#142a4a] mb-2;
+    min-height: 4.5rem;
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .timelineDesc {

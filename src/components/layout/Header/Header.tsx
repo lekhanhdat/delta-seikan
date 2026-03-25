@@ -22,7 +22,7 @@ const normalizePath = (path: string) =>
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation("header");
 
   const pathname = location.pathname;
   const routeLang: "vi" | "en" = pathname.startsWith("/en") ? "en" : "vi";
@@ -64,8 +64,8 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.headerInner}>
         <div className={styles.logoLink} onClick={() => navigate(homePath)}>
-          <img src={logoColor} alt="Delta Seikan" className={styles.logoImg} />
-          <span className={styles.logoText}>DELTA SEIKAN</span>
+          <img src={logoColor} alt={t("brandName")} className={styles.logoImg} />
+          <span className={styles.logoText}>{t("brandName")}</span>
         </div>
 
         <nav className={styles.desktopNav}>

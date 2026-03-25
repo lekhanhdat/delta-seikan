@@ -28,7 +28,7 @@ const Footer = () => {
       <div className={styles.top}>
         {/* Column 1: Brand Info */}
         <div className={styles.colPrimary}>
-          <h2 className={styles.brandTitle}>DELTA SEIKAN</h2>
+          <h2 className={styles.brandTitle}>{t("brandName")}</h2>
           <p className={styles.brandDesc}>{t("desc")}</p>
           <div className={styles.iconList}>
             {[FiAward, FiLink].map((Icon, i) => (

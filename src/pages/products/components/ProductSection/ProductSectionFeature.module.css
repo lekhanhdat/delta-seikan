@@ -1,75 +1,74 @@
 .section {
-  @apply flex flex-col w-full h-full justify-center gap-6 py-[12px];
+  @apply flex flex-col w-full justify-center gap-4 py-[10px];
+  min-height: auto;
 }
 
 .header {
-  @apply w-full mb-2;
+  @apply w-full mb-3;
 }
 
 .title {
-  @apply text-2xl md:text-3xl font-bold text-[#0f2f5f] mb-2;
+  @apply text-xl md:text-3xl font-bold text-[#0f2f5f] mb-1;
+  text-transform: uppercase;
 }
 
 .line {
-  @apply w-12 h-[3px] bg-blue-600 rounded-full;
+  @apply w-12 h-[2px] bg-blue-600 rounded-full;
 }
 
 .contentGrid {
-  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 items-stretch w-full;
+  @apply grid md:grid-cols-3 gap-4 md:gap-8 items-stretch w-full;
 }
 
 .contentNoSpec {
-  @apply w-full;
+  @apply grid md:grid-cols-2 gap-4 md:gap-8 items-stretch w-full;
 }
 
 .productMainInfo {
-  @apply flex flex-col gap-6 lg:col-span-2 h-full;
-}
-
-.textContent {
-  @apply p-0 flex-none;
+  @apply flex flex-col gap-4 h-full md:col-span-2;
 }
 
 .description {
-  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-4;
+  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-2;
 }
 
 .features {
-  @apply grid grid-cols-2 gap-3 mb-4;
+  @apply grid grid-cols-2 gap-2 mb-2;
 }
 
 .featureItem {
-  @apply p-3 rounded-lg border border-gray-100 bg-gray-50/50;
+  @apply p-2 rounded-lg border border-gray-100 bg-gray-50/50;
 }
 
 .featureTitle {
-  @apply text-xs md:text-sm font-semibold text-[#1e3a66] mb-1;
+  @apply text-xs md:text-sm font-semibold text-[#1e3a66] mb-0.5;
 }
 
 .featureDesc {
   @apply text-[10px] md:text-xs text-gray-500;
 }
 
-.imageGallery {
-  @apply grid grid-cols-2 gap-4 mt-2;
-}
-
-.imageItem {
-  @apply rounded-xl overflow-hidden shadow-sm h-40 md:h-48 bg-gray-100;
-}
-
-.image {
-  @apply w-full h-full object-cover;
-}
-
 .specSection {
-  @apply w-full flex items-center justify-center bg-gray-50/10 rounded-3xl h-full lg:col-span-1;
+  @apply w-full flex items-center justify-center bg-gray-50/10 rounded-2xl p-1 h-auto;
 }
 
 .specWrap {
-  @apply w-full h-full relative flex items-center justify-center;
+  @apply w-full h-auto relative flex items-center justify-center;
+  max-height: 50svh;
 }
 
 .specImage {
-  @apply w-full h-auto max-h-none object-contain drop-shadow-md;
+  @apply w-full h-auto object-contain drop-shadow-md max-h-[50svh];
+}
+
+.imageGallery {
+  @apply grid grid-cols-1 gap-3 mt-1 md:col-span-1;
+}
+
+.imageItem {
+  @apply rounded-xl overflow-hidden shadow-md bg-gray-100 w-full flex-1 max-h-[220px];
+}
+
+.image {
+  @apply w-full h-full object-cover bg-white;
 }

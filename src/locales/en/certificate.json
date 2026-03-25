@@ -20,28 +20,23 @@
           "desc": "HACCP is a preventive approach food safety management system, focusing on hazard identification and control at critical control points (CCP) throughout the food contact packaging production process."
         }
       },
-      "tags": [
-        "ISO 9001:2015",
-        "FSSC 22000",
-        "HACCP",
-        "Active Production"
-      ]
+      "tags": ["ISO 9001:2015", "FSSC 22000", "HACCP", "Active Production"]
     },
     "highlights": {
-      "heading": "Comprehensive Quality Assurance Capacity",
-      "subheading": "Operating Standards",
+      "heading": "Comprehensive Quality Assurance Capabilities",
+      "subheading": "Operational Standards",
       "items": {
         "control": {
           "title": "Quality Control",
-          "desc": "High-precision automated measurement system, controlling tolerances at the micron level for each batch of 2-piece and 3-piece cans."
+          "desc": "High-precision automated measurement systems ensure micron-level tolerance control for each production batch."
         },
         "safety": {
           "title": "Food Safety",
-          "desc": "Internal coating complies with safety standards, BPA-free, ensuring compatibility for food and beverages."
+          "desc": "BPA-free internal coatings ensure safety and compatibility for food and beverage applications."
         },
         "compliance": {
-          "title": "Standard Compliance",
-          "desc": "Full compliance with technical requirements and international trade regulations for exported metal packaging."
+          "title": "Standards Compliance",
+          "desc": "Fully compliant with international technical standards and regulatory requirements for metal packaging exports."
         }
       }
     },

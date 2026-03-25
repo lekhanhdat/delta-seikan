@@ -21,9 +21,9 @@
     "tag2": "Chất lượng cao"
   },
   "features": {
-    "title": "Tầm nhìn - Sứ mệnh - Giá trị",
+    "title": "TẦM NHÌN - SỨ MỆNH - GIÁ TRỊ",
     "vision": "Tầm nhìn",
-    "visionDesc": "Trở thành nhà sản xuất bao bì kim loại dung trong ngành thực phẩm hàng đầu tại Việt Nam.",
+    "visionDesc": "Trở thành nhà sản xuất bao bì kim loại dùng trong ngành thực phẩm hàng đầu tại Việt Nam.",
     "mission": "Sứ mệnh",
     "missionDesc": "Cung cấp các giải pháp đáng tin cậy và bền vững để nâng cao chất lượng và dịch vụ.",
     "values": "Giá trị",
@@ -33,7 +33,7 @@
     "v4": "Cam kết và chủ động"
   },
   "capability": {
-    "title": "Hoạt động sản xuất",
+    "title": "HOẠT ĐỘNG SẢN XUẤT",
     "r1": "Phát triển sản phẩm",
     "r1Desc": "Tiến hành nghiên cứu, phát triển và thử nghiệm sản phẩm để đáp ứng nhu cầu thị trường, nâng cao chất lượng và hiệu quả của sản phẩm.",
     "r2": "Quản lý sản xuất",
@@ -44,7 +44,7 @@
     "r4Desc": "Về hoạt động bán hàng, chúng tôi luôn cố gắng tìm hiểu nhu cầu của khách hàng và phát triển thị trường mới, cung cấp phản hồi cho nhóm R&D để bắt kịp xu hướng thị trường nhằm tạo ra các sản phẩm có chất lượng tốt nhất với giá cả cạnh tranh."
   },
   "timeline": {
-    "title": "Hành trình phát triển",
+    "title": "LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN",
     "y2020": "Thành lập công ty cổ phần Delta Seikan",
     "y2020Desc": "Chính thức đi vào hoạt động với tầm nhìn dẫn đầu ngành bao bì kim loại.",
     "y2021": "Lon DRD Đầu tiên được xuất bán ra thị trường",

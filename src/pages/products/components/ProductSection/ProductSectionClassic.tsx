@@ -12,13 +12,13 @@ const ProductSectionClassic = ({
 }: ProductSectionProps) => {
   return (
     <section className={styles.section}>
-      <div className={styles.header}>
-        <h2 className={styles.title}>{title}</h2>
-        <div className={styles.line} />
-      </div>
-
       <div className={specImage ? styles.contentGrid : styles.contentNoSpec}>
         <div className={styles.productMainInfo}>
+          <div className={styles.header}>
+            <h2 className={styles.title}>{title}</h2>
+            <div className={styles.line} />
+          </div>
+          
           <div className={styles.textContent}>
             <p className={styles.description}>{description}</p>
 

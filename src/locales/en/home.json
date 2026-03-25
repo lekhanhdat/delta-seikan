@@ -21,7 +21,7 @@
     "tag2": "High Quality"
   },
   "features": {
-    "title": "Vision - Mission - Value",
+    "title": "VISION - MISSION - VALUES",
     "vision": "Vision",
     "visionDesc": "Becoming the leading manufacturer of metal packaging for the food industry in VIỆT NAM.",
     "mission": "Mission",
@@ -34,7 +34,7 @@
   },
   "capability": {
     "sub": "OPERATIONS",
-    "title": "Production",
+    "title": "PRODUCTION",
     "r1": "Product Development",
     "r1Desc": "Carry out research, development and testing the product to meet market needs, improve quality and efficiency of product.",
     "r2": "Production Management",
@@ -45,7 +45,7 @@
     "r4Desc": "Regarding sales activities, we always effort to uncover consumer needs and developing new markets, providing feedback to R&D team to catch up market trends to create products with the best quality and competitive price."
   },
   "timeline": {
-    "title": "Development history",
+    "title": "DEVELOPMENT HISTORY",
     "y2020": "Establishment of Delta Seikan",
     "y2020Desc": "Officially commenced operations with a vision to become a leader in the metal packaging industry.",
 

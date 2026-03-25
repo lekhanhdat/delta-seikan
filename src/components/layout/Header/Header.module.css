@@ -15,7 +15,7 @@
 }
 
 .logoText {
-  @apply text-sm md:text-lg lg:text-xl font-bold tracking-wide text-primary-dark;
+  @apply text-sm md:text-[16px] lg:text-[18px] font-bold tracking-wide text-primary-dark;
 }
 
 .desktopNav {
