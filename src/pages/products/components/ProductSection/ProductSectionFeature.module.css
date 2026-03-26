@@ -70,11 +70,11 @@
 }
 
 .imageGallery {
-  @apply grid grid-cols-1 gap-3 mt-1 md:col-span-1;
+  @apply flex flex-col gap-3 mt-1 md:col-span-1 h-full;
 }
 
 .imageItem {
-  @apply rounded-xl overflow-hidden shadow-md bg-gray-100 w-full flex-1 max-h-[220px];
+  @apply rounded-xl overflow-hidden shadow-md bg-gray-100 w-full flex-1 min-h-[150px] md:min-h-0;
 }
 
 .image {
