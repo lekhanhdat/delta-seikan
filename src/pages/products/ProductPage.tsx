@@ -90,7 +90,7 @@ const ProductPage = () => {
     {
       type: "product",
       tab: t("sections.lon3manh.tab"),
-      variant: "reverse",
+      variant: "stacked",
       props: {
         title: t("sections.lon3manh.title"),
         description: t("sections.lon3manh.desc"),
