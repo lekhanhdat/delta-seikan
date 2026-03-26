@@ -22,7 +22,7 @@
 }
 
 .lead {
-  @apply mt-4 text-base md:text-lg text-[#53627c] max-w-3xl mx-auto leading-relaxed text-center;
+  @apply mt-4 text-base md:text-lg text-[#53627c] max-w-3xl mx-auto leading-relaxed;
 }
 
 .jobGrid {
@@ -38,7 +38,7 @@
 
 /* CARD BASE */
 .card {
-  @apply relative rounded-3xl overflow-hidden border border-[#dde3f2] flex flex-col;
+  @apply relative rounded-3xl overflow-hidden border border-[#dde3f2];
   padding: clamp(1.5rem, 2.6vw, 2.4rem);
   min-height: clamp(220px, 34svh, 340px);
   transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -57,18 +57,17 @@
 
 /* TITLE */
 .title {
-  @apply text-2xl md:text-[26px] font-semibold mb-4 relative z-10 leading-tight text-center min-h-[3.5rem];
+  @apply text-2xl md:text-[2rem] font-semibold mb-4 relative z-10 leading-tight;
 }
 
 /* DESC */
 .desc {
-  @apply text-base md:text-xl leading-relaxed opacity-95 relative z-10 max-w-[26ch] text-justify mx-auto mb-10;
+  @apply text-base md:text-xl leading-relaxed opacity-95 relative z-10 max-w-[26ch];
 }
 
 /* ICON dưới */
 .icon {
-  @apply mt-6 text-3xl md:text-4xl opacity-95 relative z-10;
-  margin-top: auto; /* Đẩy icon xuống đáy thẻ */
+  @apply mt-8 text-3xl md:text-4xl opacity-95 relative z-10;
 }
 
 /* BACKGROUND ICON */
