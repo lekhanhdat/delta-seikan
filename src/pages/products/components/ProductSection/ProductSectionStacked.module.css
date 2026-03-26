@@ -4,7 +4,11 @@
 }
 
 .header {
-  @apply w-full mb-3;
+  @apply w-full mb-2;
+}
+
+.badge {
+  @apply inline-flex px-3 py-1 rounded-full text-[#1a4b95] text-[10px] md:text-xs font-semibold uppercase tracking-wide mb-1 bg-blue-50;
 }
 
 .title {
@@ -25,7 +29,7 @@
 }
 
 .productMainInfo {
-  @apply flex flex-col gap-4 h-full md:col-span-2;
+  @apply flex flex-col gap-4 h-full md:order-1 md:col-span-2;
 }
 
 .description {
@@ -49,7 +53,7 @@
 }
 
 .specSection {
-  @apply w-full flex items-center justify-center bg-gray-50/10 rounded-2xl p-1 h-auto;
+  @apply w-full flex items-center justify-center bg-gray-50/10 rounded-2xl p-1;
 }
 
 .specWrap {
@@ -62,13 +66,13 @@
 }
 
 .imageGallery {
-  @apply grid grid-cols-1 gap-3 mt-1 md:col-span-1;
+  @apply flex flex-col gap-3 mt-1 md:order-2 md:col-span-1 h-full;
 }
 
 .imageItem {
-  @apply rounded-xl overflow-hidden shadow-sm h-32 md:h-auto bg-gray-100 aspect-video max-h-[160px];
+  @apply rounded-xl overflow-hidden shadow-sm bg-gray-100 flex-1 min-h-[150px] border border-gray-100;
 }
 
 .image {
-  @apply w-full h-full object-contain bg-white;
+  @apply w-full h-full object-cover bg-white;
 }
