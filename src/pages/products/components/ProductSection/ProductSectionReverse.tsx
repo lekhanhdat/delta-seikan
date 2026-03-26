@@ -13,6 +13,20 @@ const ProductSectionReverse = ({
   return (
     <section className={styles.section}>
       <div className={specImage ? styles.contentGrid : styles.contentNoSpec}>
+        <div className={styles.imageGallery}>
+          {images.map((img, index) => (
+            <div key={`${img}-${index}`} className={styles.imageItem}>
+              <img
+                src={img}
+                alt={`${title} ${index + 1}`}
+                className={styles.image}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          ))}
+        </div>
+
         <div className={styles.productMainInfo}>
           <div className={styles.header}>
             <h2 className={styles.title}>{title}</h2>
@@ -46,20 +60,7 @@ const ProductSectionReverse = ({
             </div>
           )}
         </div>
-
-        <div className={styles.imageGallery}>
-          {images.map((img, index) => (
-            <div key={`${img}-${index}`} className={styles.imageItem}>
-              <img
-                src={img}
-                alt={`${title} ${index + 1}`}
-                className={styles.image}
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          ))}
-        </div>
+       
       </div>
     </section>
   );
