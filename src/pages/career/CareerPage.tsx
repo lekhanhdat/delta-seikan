@@ -6,6 +6,7 @@ import CareerBlog from "./components/CareerBlog/CareerBlog";
 import Footer from "@/components/layout/Footer/Footer";
 import { useTranslation } from "react-i18next";
 import { useMemo } from "react";
+import styles from "./CareerPage.module.css";
 
 const CareerPage = () => {
   const { t } = useTranslation("career");
@@ -49,7 +50,7 @@ const CareerPage = () => {
   ], [t]);
 
   return (
-    <div className="page-snap-container">
+    <div className={`page-snap-container ${styles.page}`}>
       <PageHero
         title={t("hero.title")}
         description={t("hero.description")}

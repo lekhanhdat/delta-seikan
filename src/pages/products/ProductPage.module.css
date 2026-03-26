@@ -29,6 +29,10 @@
 }
 
 .productPage {
+  background-color: #ffffff;
+  color: #1f2937;
+  color-scheme: only light;
+  forced-color-adjust: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -36,6 +40,7 @@
 /* TABS */
 .productTabs {
   @apply sticky z-40 border-b bg-white;
+  color: #1f2937;
   top: var(--header-height);
   margin-top: -1px;
 }
@@ -81,11 +86,14 @@
 /* CONTENT */
 .productContent {
   @apply max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full flex-1;
+  background-color: #ffffff;
+  color: #1f2937;
 }
 
 /* scroll offset */
 .productSectionOffset {
-  background-color: white;
+  background-color: #ffffff;
+  color: #1f2937;
   position: relative;
   display: flex;
   flex-direction: column;

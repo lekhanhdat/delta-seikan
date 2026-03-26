@@ -58,15 +58,23 @@
 }
 
 .specImage {
-  @apply w-full h-auto object-contain drop-shadow-md max-h-[50svh];
+  @apply w-full h-auto object-contain drop-shadow-md max-h-[50svh] rounded-xl border border-gray-200 bg-white;
+}
+
+.specSectionDesktop {
+  @apply hidden md:flex;
+}
+
+.specSectionMobile {
+  @apply flex md:hidden md:col-span-3;
 }
 
 .imageGallery {
-  @apply grid grid-cols-1 gap-3 mt-1 md:col-span-1;
+  @apply flex flex-col gap-3 mt-1 md:col-span-1 h-full;
 }
 
 .imageItem {
-  @apply rounded-xl overflow-hidden shadow-md bg-gray-100 w-full flex-1 max-h-[220px];
+  @apply rounded-xl overflow-hidden shadow-md bg-gray-100 w-full flex-1 min-h-[150px] md:min-h-0;
 }
 
 .image {

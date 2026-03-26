@@ -90,7 +90,7 @@ const ProductPage = () => {
     {
       type: "product",
       tab: t("sections.lon3manh.tab"),
-      variant: "reverse",
+      variant: "stacked",
       props: {
         title: t("sections.lon3manh.title"),
         description: t("sections.lon3manh.desc"),
@@ -101,7 +101,7 @@ const ProductPage = () => {
     {
       type: "product",
       tab: t("sections.napEOE.tab"),
-      variant: "feature",
+      variant: "stacked",
       props: {
         title: t("sections.napEOE.title"),
         description: t("sections.napEOE.desc"),

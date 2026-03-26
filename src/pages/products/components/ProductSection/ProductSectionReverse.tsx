@@ -13,6 +13,20 @@ const ProductSectionReverse = ({
   return (
     <section className={styles.section}>
       <div className={specImage ? styles.contentGrid : styles.contentNoSpec}>
+        <div className={styles.imageGallery}>
+          {images.map((img, index) => (
+            <div key={`${img}-${index}`} className={styles.imageItem}>
+              <img
+                src={img}
+                alt={`${title} ${index + 1}`}
+                className={styles.image}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          ))}
+        </div>
+
         <div className={styles.productMainInfo}>
           <div className={styles.header}>
             <h2 className={styles.title}>{title}</h2>
@@ -35,7 +49,7 @@ const ProductSectionReverse = ({
           </div>
 
           {specImage && (
-            <div className={styles.specSection}>
+            <div className={`${styles.specSection} ${styles.specSectionDesktop}`}>
               <div className={styles.specWrap}>
                 <ImageFullscreenViewer
                   src={specImage}
@@ -47,19 +61,18 @@ const ProductSectionReverse = ({
           )}
         </div>
 
-        <div className={styles.imageGallery}>
-          {images.map((img, index) => (
-            <div key={`${img}-${index}`} className={styles.imageItem}>
-              <img
-                src={img}
-                alt={`${title} ${index + 1}`}
-                className={styles.image}
-                loading="lazy"
-                decoding="async"
+        {specImage && (
+          <div className={`${styles.specSection} ${styles.specSectionMobile}`}>
+            <div className={styles.specWrap}>
+              <ImageFullscreenViewer
+                src={specImage}
+                alt={`${title} specification`}
+                imageClassName={styles.specImage}
               />
             </div>
-          ))}
-        </div>
+          </div>
+        )}
+       
       </div>
     </section>
   );

@@ -12,10 +12,10 @@ const ProductSectionStacked = ({
 }: ProductSectionProps) => {
   return (
     <section className={styles.section}>
+      <h2 className={styles.title}>{title}</h2>
       <div className={specImage ? styles.contentGrid : styles.contentNoSpec}>
         <div className={styles.productMainInfo}>
           <div className={styles.header}>
-            <h2 className={styles.title}>{title}</h2>
             <div className={styles.line} />
           </div>
 
@@ -35,7 +35,9 @@ const ProductSectionStacked = ({
           </div>
 
           {specImage && (
-            <div className={styles.specSection}>
+            <div
+              className={`${styles.specSection} ${styles.specSectionDesktop}`}
+            >
               <div className={styles.specWrap}>
                 <ImageFullscreenViewer
                   src={specImage}
@@ -60,6 +62,18 @@ const ProductSectionStacked = ({
             </div>
           ))}
         </div>
+
+        {specImage && (
+          <div className={`${styles.specSection} ${styles.specSectionMobile}`}>
+            <div className={styles.specWrap}>
+              <ImageFullscreenViewer
+                src={specImage}
+                alt={`${title} specification`}
+                imageClassName={styles.specImage}
+              />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
