@@ -1,10 +1,27 @@
 
-.productPage {
-  height: calc(100svh - var(--header-height));
-  overflow-y: auto;
-  overscroll-behavior-y: contain;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+@media (min-width: 1024px) {
+  .productPage {
+    height: calc(100svh - var(--header-height));
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .productPage > section,
+  .productPage > footer {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+@media (max-width: 1023px) {
+  .productPage {
+    height: auto;
+    overflow-y: visible;
+    scroll-snap-type: none;
+    scroll-behavior: smooth;
+  }
 }
 
 .productPage::-webkit-scrollbar {
@@ -14,12 +31,6 @@
 .productPage {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-.productPage > section,
-.productPage > footer {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 /* TABS */
@@ -74,19 +85,35 @@
 
 /* scroll offset */
 .productSectionOffset {
-  scroll-margin-top: calc(var(--header-height) - 24px); /* Fix pixel gap */
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  height: calc(100svh - var(--header-height) - 56px);
-  min-height: calc(100svh - var(--header-height) - 56px);
-  max-height: calc(100svh - var(--header-height) - 56px);
+  background-color: white;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 12px 0;
-  overflow: hidden;
-  position: relative;
-  background-color: white;
+}
+
+@media (min-width: 1024px) {
+  .productSectionOffset {
+    scroll-margin-top: calc(var(--header-height) - 24px); /* Fix pixel gap cho desktop slide */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: calc(100svh - var(--header-height) - 56px);
+    min-height: calc(100svh - var(--header-height) - 56px);
+    max-height: calc(100svh - var(--header-height) - 56px);
+    justify-content: center;
+    padding: 12px 0;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1023px) {
+  .productSectionOffset {
+    scroll-margin-top: calc(var(--header-height) + 60px); /* Margin cho mobile khi hít header */
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    padding: 40px 0;
+    overflow: visible;
+  }
 }
 
 .productSectionOffset::before {

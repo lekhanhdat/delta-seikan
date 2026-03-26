@@ -7,9 +7,12 @@ import hinh20 from "@/assets/images/hinh20.jpg";
 import Footer from "@/components/layout/Footer/Footer";
 import { useTranslation } from "react-i18next";
 import { useMemo } from "react";
+import { useLocation } from "react-router-dom";
 
 const CertificatePage = () => {
+  const { pathname } = useLocation();
   const { t } = useTranslation("certificate");
+  const basePath = pathname.startsWith("/en") ? "/en" : "";
 
   const certificateSectionData = useMemo(() => ({
     heading: t("sections.quality.heading"),
@@ -56,10 +59,10 @@ const CertificatePage = () => {
     title: t("sections.cta.title"),
     description: t("sections.cta.description"),
     primaryLabel: t("sections.cta.primaryLabel"),
-    primaryTo: "/contact",
+    primaryTo: `${basePath}/contact`,
     secondaryLabel: t("sections.cta.secondaryLabel"),
-    secondaryTo: "/products",
-  }), [t]);
+    secondaryTo: `${basePath}/products`,
+  }), [basePath, t]);
 
   return (
     <div className="page-snap-container">

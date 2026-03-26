@@ -7,27 +7,27 @@
     "trangPhu": {
       "tab": "COATING",
       "title": "Metal Coating Service",
-      "desc": "Delta Seikan provides metal coating services with modern technology from KBA - LTG (Germany), ensuring high adhesion, superior corrosion resistance, and food safety. Products meet strict international standards such as BPA-NI, PFAS-free, suitable for the food and beverage industry."
+      "desc": "Delta Seikan provides metal coating services using advanced technology from KBA - LTG (Germany), ensuring high adhesion, superior corrosion resistance, and food safety. The products meet strict international standards such as BPA-NI and PFAS-free, making them suitable for the food and beverage industry."
     },
     "lon2manh": {
-      "tab": "2-PIECE CAN (DRD)",
-      "title": "2-Piece Cans – DRD Technology",
-      "desc": "2-piece cans (DRD – Drawn & Redrawn) are manufactured using advanced deep-drawing technology, optimizing mechanical strength, minimizing seams, and ensuring absolute airtightness. Suitable for canned food, providing high preservation efficiency and production cost optimization."
+      "tab": "2-PIECES CAN - DRD CAN",
+      "title": "2-Pieces Can – DRD can",
+      "desc": "2-pieces can (DRD – Drawn & Redrawn) are manufactured using advanced deep-drawing technology, optimizing mechanical strength, minimizing seams, and ensuring absolute airtightness. Suitable for canned food, providing high preservation efficiency and production cost optimization."
     },
     "lon3manh": {
-      "tab": "3-PIECE CAN",
-      "title": "3-Piece Cans",
-      "desc": "3-piece cans consist of body, bottom, and lid, joined by modern welding technology, ensuring high tightness and durability. Flexible solutions in size and capacity, suitable for many products from food to industrial chemicals."
+      "tab": "3-PIECES CAN",
+      "title": "3-Pieces Can",
+      "desc": "3-pieces can consist of body, bottom, and lid, joined by modern welding technology, ensuring high tightness and durability. Flexible solutions in size and capacity, suitable for many products from food to industrial chemicals."
     },
     "napEOE": {
-      "tab": "EOE LIDS",
-      "title": "EOE Lids (Easy Open End)",
-      "desc": "Easy-open end lids (EOE) provide maximum convenience for consumers. Manufactured from high-quality materials, ensuring absolute airtightness and easy opening without tools."
+      "tab": "EOE LID",
+      "title": "EOE Lid",
+      "desc": "Easy-open end lid (EOE) provide maximum convenience for consumers. Manufactured from high-quality materials, ensuring absolute airtightness and easy opening without tools."
     },
     "dichVu": {
-      "tab": "PACKAGING & DISTRIBUTION",
-      "title": "Packaging & Distribution Solutions",
-      "desc": "Delta Seikan provides comprehensive packaging and distribution solutions, optimizing the supply chain, enhancing operational efficiency, and ensuring product quality throughout storage and transport.",
+      "tab": "PACKAGING AND DISTRIBUTION",
+      "title": "PACKAGING AND DISTRIBUTION",
+      "desc": "To ensure the quality and safety of finished goods during storage and transportation , professional packing solutions that are easy for operation and environmental friendliness are provided.",
       "badge": "24/7",
       "badgeSub": "Customer Support",
       "i1": "Absolute Safety",

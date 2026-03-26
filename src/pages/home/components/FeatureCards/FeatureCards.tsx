@@ -9,6 +9,7 @@ type Card = {
 };
 
 type FeatureProps = {
+  title?: string;
   items: Card[];
 };
 
@@ -23,11 +24,13 @@ const splitTitle = (text: string) => {
   };
 };
 
-const FeatureCards = ({ items }: FeatureProps) => {
+const FeatureCards = ({ title, items }: FeatureProps) => {
   return (
     <section className={styles.featureSection}>
       <div className={styles.featureContainer}>
-        {items.map((item, i) => {
+        {title && <h2 className={styles.sectionTitle}>{title}</h2>}
+        <div className={styles.cardsWrapper}>
+          {items.map((item, i) => {
           const { first, second } = splitTitle(item.title);
 
           return (
@@ -76,6 +79,7 @@ const FeatureCards = ({ items }: FeatureProps) => {
             </div>
           );
         })}
+        </div>
       </div>
     </section>
   );

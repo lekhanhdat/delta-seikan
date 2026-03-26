@@ -8,12 +8,12 @@
     "factoryLabel": "Factory",
     "factoryAddress": "Lot A, Tam Lap Industrial Park, Phu Giao Commune, Ho Chi Minh City, Vietnam",
     "officeLabel": "Office",
-    "officeAddress": "602/32 Dien Bien Phu, Thanh My Tay Ward, Ho Chi Minh City, Vietnam",
+    "officeAddress": "602/32 Dien Bien Phu, Thanh My Tay Ward, Ho Chi Minh City, Viet Nam",
     "emailLabel": "Email",
     "phoneLabel": "Phone Number",
     "taxCodeLabel": "Tax Code"
   },
   "map": {
-    "note": "Factory address: Lot A, Tam Lap Industrial Cluster, Phu Giao Commune, Ho Chi Minh City, Vietnam."
+    "note": "Factory address: Lot A, Tam Lap Industrial Cluster, Phu Giao Commune, Ho Chi Minh City, Viet Nam."
   }
 }

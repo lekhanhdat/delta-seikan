@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Sản phẩm & Dịch vụ",
-    "description": "Delta Seikan cung cấp các giải pháp bao bì kim loại toàn diện, từ lon nhôm 2 mảnh, 3 mảnh đến dịch vụ tráng phủ công nghệ cao, đáp ứng các tiêu chuẩn khát khe nhất của ngành thực phẩm."
+    "description": "Delta Seikan cung cấp các giải pháp bao bì kim loại toàn diện, từ lon 2 mảnh, 3 mảnh đến dịch vụ tráng phủ công nghệ cao, đáp ứng các tiêu chuẩn khắt khe nhất của ngành thực phẩm."
   },
   "sections": {
     "trangPhu": {
@@ -10,7 +10,7 @@
       "desc": "Delta Seikan cung cấp dịch vụ tráng phủ kim loại với công nghệ hiện đại từ KBA - LTG (Đức), đảm bảo độ bám dính cao, khả năng chống ăn mòn vượt trội và an toàn cho thực phẩm. Các sản phẩm đáp ứng các tiêu chuẩn quốc tế nghiêm ngặt như BPA-NI, PFAS-free, phù hợp cho ngành thực phẩm và đồ uống."
     },
     "lon2manh": {
-      "tab": "LON 2 MẢNH (DRD)",
+      "tab": "LON 2 MẢNH - LON DRD",
       "title": "Lon 2 mảnh – Công nghệ DRD",
       "desc": "Lon 2 mảnh (DRD – Drawn & Redrawn) được sản xuất bằng công nghệ dập vuốt tiên tiến, giúp tối ưu độ bền cơ học, giảm thiểu mối ghép và đảm bảo tính kín tuyệt đối. Sản phẩm phù hợp cho các loại thực phẩm đóng hộp, mang lại hiệu quả bảo quản cao và tối ưu chi phí sản xuất."
     },
@@ -21,13 +21,13 @@
     },
     "napEOE": {
       "tab": "NẮP EOE",
-      "title": "Nắp EOE (Easy Open End)",
+      "title": "Nắp EOE",
       "desc": "Nắp EOE được thiết kế với cơ chế mở dễ dàng, mang lại trải nghiệm tiện lợi cho người dùng mà vẫn đảm bảo độ kín và an toàn sản phẩm. Sản phẩm được sản xuất theo tiêu chuẩn quốc tế, phù hợp cho nhiều loại lon thực phẩm và đồ uống."
     },
     "dichVu": {
-      "tab": "ĐÓNG GÓI & PHÂN PHỐI",
-      "title": "Giải pháp Đóng gói & Phân phối",
-      "desc": "Delta Seikan cung cấp giải pháp đóng gói và phân phối toàn diện, giúp tối ưu chuỗi cung ứng, nâng cao hiệu quả vận hành và đảm bảo chất lượng sản phẩm trong suốt quá trình lưu trữ và vận chuyển.",
+      "tab": "ĐÓNG GÓI VÀ PHÂN PHỐI",
+      "title": "ĐÓNG GÓI VÀ PHÂN PHỐI",
+      "desc": "Để đảm bảo chất lượng và an toàn cho hàng hóa trong suốt quá trình bảo quản và vận chuyển đến khách hàng, các giải pháp đóng gói chuyên nghiệp, dễ dàng cho quá trình vận hành khi sử dụng, thân thiện với môi trường được cung cấp.",
       "badge": "24/7",
       "badgeSub": "Hỗ trợ khách hàng",
       "i1": "An toàn tuyệt đối",

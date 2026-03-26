@@ -1,6 +1,19 @@
 .pageHero {
-  @apply relative w-full h-[240px] sm:h-[300px] md:h-[340px] overflow-hidden;
-  min-height: calc(100svh - var(--header-height));
+  @apply relative w-full overflow-hidden flex items-center;
+}
+
+@media (min-width: 1024px) {
+  .pageHero {
+    min-height: calc(100svh - var(--header-height));
+  }
+}
+
+@media (max-width: 1023px) {
+  .pageHero {
+    min-height: calc(100svh - var(--header-height));
+    padding: 60px 0;
+    border-radius: 10px;
+  }
 }
 
 .pageHeroBg {
@@ -32,5 +45,5 @@
 }
 
 .pageHeroDesc {
-  @apply text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)];
+  @apply text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] text-justify;
 }

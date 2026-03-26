@@ -2,6 +2,12 @@
   @apply py-14 md:py-20 bg-gradient-to-b from-[#eef3fb] to-[#f7f9fd];
 }
 
+@media (max-width: 1023px) {
+  .section {
+    border-radius: 10px;
+  }
+}
+
 .container {
   @apply max-w-7xl mx-auto px-4 sm:px-6 md:px-12;
 }
@@ -24,7 +30,7 @@
 }
 
 .card {
-  @apply bg-white p-8 md:p-10 shadow-sm transition;
+  @apply bg-white p-8 md:p-10 shadow-sm transition text-center flex flex-col items-center;
 }
 
 .card + .card {

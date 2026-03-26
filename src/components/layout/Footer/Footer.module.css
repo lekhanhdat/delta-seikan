@@ -6,16 +6,20 @@
   @apply max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8;
 }
 
+.linksGroup {
+  @apply grid grid-cols-2 gap-4 col-span-1 md:col-span-2 lg:contents;
+}
+
 .colPrimary {
   @apply pr-0 md:pr-4 lg:pr-8;
 }
 
 .brandTitle {
-  @apply font-bold text-lg mb-4 tracking-tight text-white;
+  @apply font-bold text-[24px] mb-4 tracking-tight text-white;
 }
 
 .brandDesc {
-  @apply text-white leading-relaxed mb-6 text-[13px] font-light;
+  @apply text-white leading-relaxed mb-6 text-[13px] font-light text-justify;
 }
 
 .iconList {
@@ -35,7 +39,7 @@
 }
 
 .colHeading {
-  @apply font-bold mb-6 tracking-widest text-[11px] uppercase text-white;
+  @apply font-bold mb-6 tracking-widest text-[11px] uppercase text-white pl-0;
 }
 
 .linkList {
@@ -46,14 +50,6 @@
   @apply text-white transition-all duration-300 hover:text-[var(--primary)] text-[13px] font-medium flex items-center gap-2;
 }
 
-.linkItem::before {
-  content: "";
-  @apply w-0 h-[1.5px] bg-[var(--primary)] transition-all duration-300;
-}
-
-.linkItem:hover::before {
-  @apply w-2;
-}
 
 .locationGroup {
   @apply space-y-5;

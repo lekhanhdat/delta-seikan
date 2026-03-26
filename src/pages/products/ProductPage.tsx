@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 import hinh3 from "@/assets/images/hinh3.jpg";
 import hinh9 from "@/assets/images/hinh9.jpg";
 import hinh10 from "@/assets/images/hinh10.jpg";
-import hinh11 from "@/assets/images/hinh11.JPG";
+import hinh11 from "@/assets/images/hinh11.jpg";
 import hinh12 from "@/assets/images/hinh12.jpg";
 import hinh13 from "@/assets/images/hinh13.jpg";
 import hinh14 from "@/assets/images/hinh14.jpg";
@@ -21,7 +21,7 @@ import hinh15 from "@/assets/images/hinh15.jpg";
 import hinh16 from "@/assets/images/hinh16.jpg";
 import hinh17 from "@/assets/images/hinh17.jpg";
 import hinh18 from "@/assets/images/hinh18.jpg";
-import hinh19 from "@/assets/images/hinh19.JPG";
+import hinh19 from "@/assets/images/hinh19.jpg";
 
 import styles from "./ProductPage.module.css";
 
@@ -54,9 +54,6 @@ type ServiceSectionType = {
 type Section = ProductSectionType | ServiceSectionType;
 
 // ================= DATA =================
-
-// Empty array as we moved it inside the component for i18n
-const _sections_deprecated: Section[] = [];
 
 // ================= COMPONENT =================
 
@@ -145,66 +142,96 @@ const ProductPage = () => {
   const categories = sections.map((s) => s.tab);
 
   const handleTabChange = (index: number) => {
-    lockActiveUntilRef.current = Date.now() + 600;
+    // Lock auto-update while manual scrolling
+    lockActiveUntilRef.current = Date.now() + 1000;
     setActive(index);
 
-    sectionRefs.current[index]?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    const target = sectionRefs.current[index];
+    if (target) {
+      const isDesktop = window.innerWidth >= 1024;
+      if (isDesktop) {
+        // Smooth scroll within the container for desktop
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      } else {
+        // For mobile/tablet, we need to account for fixed header + sticky tabs
+        const HEADER_HEIGHT = 80;
+        const TABS_HEIGHT = 56;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - (HEADER_HEIGHT + TABS_HEIGHT);
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
   };
 
   useEffect(() => {
-    const scrollContainer = pageRef.current;
-    if (!scrollContainer) return;
-
-    let ticking = false;
-
+    // Determine the scroll container: the window for mobile/tablet, the div.productPage for desktop.
     const updateActiveSection = () => {
-      if (Date.now() < lockActiveUntilRef.current) {
-        ticking = false;
-        return;
-      }
+      // Don't update during manual tab click scroll
+      if (Date.now() < lockActiveUntilRef.current) return;
 
-      const sections = sectionRefs.current;
-      const tabsElement = scrollContainer.querySelector<HTMLElement>(
-        '[data-product-tabs="true"]',
-      );
-      const tabsHeight = tabsElement?.offsetHeight ?? 0;
-      const containerTop = scrollContainer.getBoundingClientRect().top;
-      const offsetTop = containerTop + tabsHeight + 24;
+      const HEADER_HEIGHT = 80;
+      const TABS_HEIGHT = 56;
+      // Intersection observer-like logic: find the section that is currently crossing the threshold
+      const threshold = HEADER_HEIGHT + TABS_HEIGHT + 100;
 
-      let nextActive = 0;
-      let nearestDistance = Number.POSITIVE_INFINITY;
-
-      for (let i = 0; i < sections.length; i += 1) {
-        const el = sections[i];
+      let currentActive = 0;
+      
+      // We iterate through sections to find the one that is currently "active"
+      // A section is active if its top is above the threshold
+      for (let i = 0; i < sectionRefs.current.length; i++) {
+        const el = sectionRefs.current[i];
         if (!el) continue;
 
-        const { top } = el.getBoundingClientRect();
-        const distance = Math.abs(top - offsetTop);
-
-        if (distance < nearestDistance) {
-          nearestDistance = distance;
-          nextActive = i;
+        const rect = el.getBoundingClientRect();
+        
+        // If the top of the section has passed the threshold, it's a candidate
+        if (rect.top <= threshold) {
+          currentActive = i;
+        } else {
+          // Since sections are in order, once we find one below the threshold, 
+          // we don't need to check further ones
+          break;
         }
       }
 
-      setActive((prev) => (prev === nextActive ? prev : nextActive));
-      ticking = false;
+      setActive(currentActive);
     };
 
+    let ticking = false;
     const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(updateActiveSection);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateActiveSection();
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    scrollContainer.addEventListener("scroll", onScroll, { passive: true });
+    const desktopContainer = pageRef.current;
+    
+    // Always listen to global window scroll for mobile/tablet behavior
+    window.addEventListener("scroll", onScroll, { passive: true });
+    // Also listen to the specific desktop container if it's the one scrolling
+    if (desktopContainer) {
+      desktopContainer.addEventListener("scroll", onScroll, { passive: true });
+    }
+
+    // Initial check
     updateActiveSection();
 
     return () => {
-      scrollContainer.removeEventListener("scroll", onScroll);
+      window.removeEventListener("scroll", onScroll);
+      if (desktopContainer) {
+        desktopContainer.removeEventListener("scroll", onScroll);
+      }
     };
   }, []);
 

@@ -5,7 +5,7 @@
   },
   "sections": {
     "quality": {
-      "heading": "Kiểm soát chất lượng cơ bản",
+      "heading": "HỆ THỐNG QUẢN LÝ CHẤT LƯỢNG",
       "items": {
         "iso": {
           "title": "ISO 9001:2015",
@@ -20,12 +20,7 @@
           "desc": "HACCP là hệ thống quản lý an toàn thực phẩm theo phương pháp phòng ngừa, tập trung vào nhận diện mối nguy và kiểm soát tại các điểm kiểm soát tới hạn (CCP) trong toàn bộ quy trình sản xuất bao bì tiếp xúc thực phẩm."
         }
       },
-      "tags": [
-        "ISO 9001:2015",
-        "FSSC 22000",
-        "HACCP",
-        "Sản xuất chủ động"
-      ]
+      "tags": ["ISO 9001:2015", "FSSC 22000", "HACCP", "Sản xuất chủ động"]
     },
     "highlights": {
       "heading": "Năng lực đảm bảo chất lượng toàn diện",
@@ -33,21 +28,21 @@
       "items": {
         "control": {
           "title": "Kiểm soát chất lượng",
-          "desc": "Hệ thống đo lường tự động có độ chính xác cao, kiểm soát dung sai ở mức micron cho từng lô sản phẩm lon 2 mảnh và 3 mảnh."
+          "desc": "Hệ thống đo lường chính xác cao, kiểm soát dung sai ở mức micron."
         },
         "safety": {
           "title": "An toàn thực phẩm",
-          "desc": "Lớp phủ tráng mặt trong tuân thủ tiêu chuẩn an toàn, không chứa BPA, đảm bảo tính tương thích cho thực phẩm và đồ uống."
+          "desc": "Lớp phủ không chứa BPA, an toàn cho thực phẩm và đồ uống."
         },
         "compliance": {
           "title": "Tuân thủ tiêu chuẩn",
-          "desc": "Tuân thủ đầy đủ các yêu cầu kỹ thuật và quy định thương mại quốc tế cho bao bì kim loại xuất khẩu."
+          "desc": "Đáp ứng đầy đủ các tiêu chuẩn kỹ thuật và quy định quốc tế."
         }
       }
     },
     "cta": {
       "title": "Sẵn sàng nâng tầm tiêu chuẩn sản phẩm của bạn?",
-      "description": "Delta Seikan đồng hành cùng doanh nghiệp trong các yêu cầu khắt khe về chất lượng, an toàn và khả năng xuất khẩu.",
+      "description": "Delta seikan đồng hành cùng doanh nghiệp trong các yêu cầu khắt khe về chất lượng và an toàn thực phẩm, với giá cả cạnh tranh nhất.",
       "primaryLabel": "Liên hệ tư vấn",
       "secondaryLabel": "Xem sản phẩm"
     }

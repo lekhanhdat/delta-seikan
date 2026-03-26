@@ -1,10 +1,30 @@
 .featureSection {
   @apply py-14 md:py-20 bg-gray-100 flex items-center;
-  min-height: calc(100svh - var(--header-height));
+}
+
+@media (min-width: 1024px) {
+  .featureSection {
+    min-height: calc(100svh - var(--header-height));
+  }
 }
 
 .featureContainer {
-  @apply w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-9 px-4 sm:px-6;
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center;
+}
+
+.sectionTitle {
+  @apply text-3xl md:text-4xl font-bold text-primary-dark mb-10 md:mb-14 text-center;
+}
+
+.cardsWrapper {
+  @apply w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-9;
+}
+
+/* On screens where it's 2 columns (sm to lg), make the 3rd item (last child) center span */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .cardsWrapper > *:last-child:nth-child(odd) {
+    @apply sm:col-span-2 sm:w-[calc(50%-18px)] sm:mx-auto;
+  }
 }
 
 .featureCard {
@@ -37,11 +57,11 @@
 }
 
 .featureDesc {
-  @apply text-gray-600 text-base md:text-[17px] leading-relaxed mb-5;
+  @apply text-gray-600 text-base md:text-[17px] leading-relaxed mb-5 text-justify;
 }
 
 .featureTags {
-  @apply flex flex-wrap gap-2 mt-2;
+  @apply flex flex-wrap gap-2 mt-2 justify-center;
 }
 
 .featureTag {

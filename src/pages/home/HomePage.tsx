@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 import { FiActivity, FiTool, FiShield, FiUsers } from "react-icons/fi";
 
-import hinh6 from "@/assets/images/hinh6.JPG";
+import hinh6 from "@/assets/images/hinh6.jpg";
 import mission from "@/assets/images/mission.png";
 import vision from "@/assets/images/vision.png";
 import values from "@/assets/images/values.png";
@@ -34,32 +34,36 @@ const HomePage = () => {
     title: t("about.title"),
     description1: t("about.desc1"),
     description2: t("about.desc2"),
+    description3: t("about.desc3"),
     tags: [t("about.tag1"), t("about.tag2")],
     image: hinh6,
   };
 
-  const featureData = [
-    {
-      title: t("features.vision"),
-      desc: t("features.visionDesc"),
-      image: mission,
-    },
-    {
-      title: t("features.mission"),
-      desc: t("features.missionDesc"),
-      image: vision,
-    },
-    {
-      title: t("features.values"),
-      image: values,
-      tags: [
-        t("features.v1"),
-        t("features.v2"),
-        t("features.v3"),
-        t("features.v4"),
-      ],
-    },
-  ];
+  const featureData = {
+    title: t("features.title"),
+    items: [
+      {
+        title: t("features.vision"),
+        desc: t("features.visionDesc"),
+        image: mission,
+      },
+      {
+        title: t("features.mission"),
+        desc: t("features.missionDesc"),
+        image: vision,
+      },
+      {
+        title: t("features.values"),
+        image: values,
+        tags: [
+          t("features.v1"),
+          t("features.v2"),
+          t("features.v3"),
+          t("features.v4"),
+        ],
+      },
+    ],
+  };
 
   const capabilityData = {
     subheading: t("capability.sub"),
@@ -118,7 +122,7 @@ const HomePage = () => {
     <div className="page-snap-container">
       <Hero {...heroData} />
       <AboutSection {...aboutData} />
-      <FeatureCards items={featureData} />
+      <FeatureCards {...featureData} />
       <CapabilitySection {...capabilityData} />
       <TimelineSection {...timelineData} />
       <Footer />

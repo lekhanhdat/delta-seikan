@@ -1,18 +1,28 @@
 .newsSection {
-  min-height: calc(100svh - var(--header-height));
+  @apply py-6 md:py-8 lg:py-12;
   display: flex;
   flex-direction: column;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   background-color: white;
+}
+
+@media (min-width: 1024px) {
+  .newsSection {
+    height: calc(100svh - var(--header-height));
+    min-height: calc(100svh - var(--header-height));
+    max-height: calc(100svh - var(--header-height));
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    overflow: hidden;
+  }
 }
 
 .container {
   @apply flex-1 flex flex-col;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  min-height: 0; 
 }
 
 .inner {
-  @apply flex-1 rounded-3xl bg-gradient-to-b from-[#f7f9ff] to-white p-4 md:p-8;
+  @apply flex-1 rounded-3xl bg-gradient-to-b from-[#f7f9ff] to-white p-4 md:p-6 lg:p-8 overflow-y-auto;
 }
