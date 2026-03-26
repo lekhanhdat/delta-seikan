@@ -1,5 +1,8 @@
 .section {
   @apply py-14 md:py-20 bg-gradient-to-b from-[#eef3fb] to-[#f7f9fd];
+  color: #1f2937;
+  color-scheme: only light;
+  forced-color-adjust: none;
 }
 
 @media (max-width: 1023px) {
