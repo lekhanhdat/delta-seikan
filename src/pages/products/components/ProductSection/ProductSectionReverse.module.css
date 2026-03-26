@@ -62,7 +62,7 @@
 }
 
 .specImage {
-  @apply w-full h-auto object-contain drop-shadow-md max-h-[50svh] rounded-xl border border-gray-200 bg-white;
+  @apply w-full h-auto object-contain drop-shadow-md max-h-[50svh] rounded-xl mx-auto;
 }
 
 .specSectionDesktop {
