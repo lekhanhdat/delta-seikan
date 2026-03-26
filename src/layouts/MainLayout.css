@@ -95,9 +95,6 @@
 }
 
 @media (max-width: 768px) {
-	.layout-main {
-		padding-bottom: 24px;
-	}
 
 	.app-header .app-shell,
 	.app-footer .app-shell {
