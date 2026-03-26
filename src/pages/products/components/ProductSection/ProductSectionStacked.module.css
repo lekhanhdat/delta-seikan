@@ -97,3 +97,20 @@
     min-height: 0;
   }
 }
+
+@media (min-width: 1024px) {
+  .section {
+    min-height: 100%;
+  }
+
+  .contentGrid,
+  .contentNoSpec {
+    height: 100%;
+  }
+
+  .imageGallery {
+    margin-top: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+}
