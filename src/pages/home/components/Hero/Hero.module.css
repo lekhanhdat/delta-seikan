@@ -32,7 +32,7 @@
 }
 
 .heroDesc {
-  @apply text-white/90 text-sm sm:text-base mb-6 md:mb-8;
+  @apply text-white/90 text-sm sm:text-base mb-6 md:mb-8 text-justify;
 }
 
 .heroButtons {

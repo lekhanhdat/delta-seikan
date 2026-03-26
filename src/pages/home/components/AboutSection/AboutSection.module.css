@@ -30,7 +30,7 @@
 }
 
 .aboutDesc {
-  @apply text-gray-600 text-sm sm:text-base leading-relaxed;
+  @apply text-gray-600 text-sm sm:text-base leading-relaxed text-justify;
 }
 
 /* paragraph spacing */

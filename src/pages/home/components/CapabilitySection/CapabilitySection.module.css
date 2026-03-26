@@ -38,9 +38,9 @@
 }
 
 .capabilityCard {
-  @apply rounded-2xl p-5 md:p-6 lg:p-7 text-left
+  @apply rounded-2xl p-5 md:p-6 lg:p-7 text-center
          bg-white/10 backdrop-blur-xl border border-white/20
-         shadow-[0_8px_30px_rgba(0,0,0,0.2)] h-full flex flex-col;
+         shadow-[0_8px_30px_rgba(0,0,0,0.2)] h-full flex flex-col items-center;
   transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 

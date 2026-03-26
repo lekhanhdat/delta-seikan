@@ -3,27 +3,27 @@
 }
 
 .headerInner {
-  @apply w-full h-full px-4 md:px-6 lg:px-10 flex items-center justify-between;
+  @apply w-full h-full px-4 md:px-6 lg:px-10 flex items-center justify-between gap-4;
 }
 
 .logoLink {
-  @apply flex items-center gap-3;
+  @apply flex items-center gap-2 md:gap-3 shrink-0 cursor-pointer;
 }
 
 .logoImg {
-  @apply h-10 md:h-12 lg:h-16;
+  @apply h-8 md:h-12 lg:h-14;
 }
 
 .logoText {
-  @apply text-sm md:text-[16px] lg:text-[18px] font-bold tracking-wide text-primary-dark;
+  @apply text-xs sm:text-sm lg:text-[18px] font-bold tracking-tight lg:tracking-wide text-primary-dark max-w-[120px] sm:max-w-none leading-tight;
 }
 
 .desktopNav {
-  @apply relative hidden lg:flex items-center gap-6 lg:gap-8;
+  @apply relative hidden lg:flex items-center gap-4 xl:gap-8 shrink-0;
 }
 
 .navItem {
-  @apply cursor-pointer font-medium transition text-gray-500 hover:text-primary-dark;
+  @apply cursor-pointer font-medium transition text-gray-500 hover:text-primary-dark whitespace-nowrap text-sm xl:text-base;
 }
 
 .navItemActive {
@@ -31,11 +31,11 @@
 }
 
 .rightGroup {
-  @apply flex items-center gap-4 md:gap-6;
+  @apply flex items-center gap-3 md:gap-6 shrink-0;
 }
 
 .languageSwitch {
-  @apply flex items-center gap-2 text-sm font-medium;
+  @apply flex items-center gap-1.5 md:gap-2 text-[10px] sm:text-xs md:text-sm font-medium whitespace-nowrap;
 }
 
 .languageItem {

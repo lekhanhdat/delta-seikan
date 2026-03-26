@@ -45,5 +45,5 @@
 }
 
 .pageHeroDesc {
-  @apply text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)];
+  @apply text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] text-justify;
 }

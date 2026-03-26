@@ -57,7 +57,7 @@
 }
 
 .featureDesc {
-  @apply text-gray-600 text-base md:text-[17px] leading-relaxed mb-5;
+  @apply text-gray-600 text-base md:text-[17px] leading-relaxed mb-5 text-justify;
 }
 
 .featureTags {

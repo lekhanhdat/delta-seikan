@@ -29,7 +29,7 @@
 }
 
 .description {
-  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-2;
+  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-2 text-justify;
 }
 
 .features {
@@ -62,13 +62,13 @@
 }
 
 .imageGallery {
-  @apply flex flex-col gap-3 mt-1 md:col-span-1 h-full;
+  @apply grid grid-cols-1 gap-3 mt-1 md:col-span-1;
 }
 
 .imageItem {
-  @apply rounded-xl overflow-hidden shadow-sm bg-gray-100 flex-1 min-h-[120px];
+  @apply rounded-xl overflow-hidden shadow-sm h-32 md:h-auto bg-gray-100 aspect-video max-h-[160px];
 }
 
 .image {
-  @apply w-full h-full object-cover bg-white;
+  @apply w-full h-full object-contain bg-white;
 }

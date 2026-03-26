@@ -33,7 +33,7 @@
 }
 
 .serviceDesc {
-  @apply text-sm md:text-base text-gray-500 leading-relaxed font-normal;
+  @apply text-sm md:text-base text-gray-500 leading-relaxed font-normal text-justify;
 }
 
 .serviceGrid {
@@ -60,7 +60,7 @@
 }
 
 .serviceItemDesc {
-  @apply text-[11px] md:text-xs text-gray-500 leading-normal;
+  @apply text-[11px] md:text-sm text-gray-500 leading-normal;
 }
 
 .serviceBadge {

@@ -33,7 +33,7 @@
 }
 
 .description {
-  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-2;
+  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-2 text-justify;
 }
 
 .features {
