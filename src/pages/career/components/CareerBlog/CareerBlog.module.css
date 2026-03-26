@@ -1,5 +1,8 @@
 .wrapper {
   @apply py-24 bg-white;
+  color: #1f2937;
+  color-scheme: only light;
+  forced-color-adjust: none;
 }
 
 /* HEADER */

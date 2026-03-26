@@ -1,5 +1,8 @@
 .wrapper {
   @apply w-full px-4 sm:px-6 md:px-10 lg:px-14 py-10 md:py-14 bg-gradient-to-b from-[#f6f8fc] to-[#eef3fb];
+  color: #1f2937;
+  color-scheme: only light;
+  forced-color-adjust: none;
 }
 
 @media (max-width: 1023px) {
