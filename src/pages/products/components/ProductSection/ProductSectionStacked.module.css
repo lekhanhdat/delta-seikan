@@ -66,7 +66,7 @@
 }
 
 .imageGallery {
-  @apply flex flex-col gap-3 mt-1 md:order-2 md:col-span-1 h-full;
+  @apply flex flex-col gap-3 mt-1 md:order-2 md:col-span-1 h-full md:self-start;
 }
 
 .imageItem {
@@ -75,4 +75,21 @@
 
 .image {
   @apply w-full h-full object-cover bg-white;
+}
+
+@media (min-width: 768px) {
+  .imageGallery {
+    max-height: 90svh;
+  }
+
+  .imageItem {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .imageGallery {
+    height: min(74svh, calc(100svh - 180px));
+    max-height: 74svh;
+  }
 }

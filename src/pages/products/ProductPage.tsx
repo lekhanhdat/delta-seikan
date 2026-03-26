@@ -101,7 +101,7 @@ const ProductPage = () => {
     {
       type: "product",
       tab: t("sections.napEOE.tab"),
-      variant: "feature",
+      variant: "stacked",
       props: {
         title: t("sections.napEOE.title"),
         description: t("sections.napEOE.desc"),
