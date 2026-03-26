@@ -86,7 +86,7 @@
 }
 
 .specImage {
-  @apply w-full h-auto object-contain drop-shadow-md;
+  @apply w-full h-auto object-contain drop-shadow-md rounded-xl border border-gray-200 bg-white;
 }
 
 @media (min-width: 1024px) {

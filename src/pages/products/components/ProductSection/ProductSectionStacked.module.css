@@ -58,11 +58,18 @@
 
 .specWrap {
   @apply w-full h-auto relative flex items-center justify-center;
-  max-height: 50svh;
 }
 
 .specImage {
-  @apply w-full h-auto object-contain drop-shadow-md max-h-[50svh];
+  @apply w-full h-auto object-contain drop-shadow-md rounded-xl border border-gray-200 bg-white;
+}
+
+.specSectionDesktop {
+  @apply hidden md:flex;
+}
+
+.specSectionMobile {
+  @apply flex md:hidden md:col-span-3;
 }
 
 .imageGallery {
@@ -78,6 +85,14 @@
 }
 
 @media (min-width: 768px) {
+  .specWrap {
+    max-height: 50svh;
+  }
+
+  .specImage {
+    max-height: 50svh;
+  }
+
   .imageGallery {
     max-height: 90svh;
   }

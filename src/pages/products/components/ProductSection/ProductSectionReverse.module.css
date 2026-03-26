@@ -29,7 +29,7 @@
 }
 
 .productMainInfo {
-  @apply flex flex-col gap-4 h-full md:col-span-2;
+  @apply order-1 flex flex-col gap-4 h-full md:order-2 md:col-span-2;
 }
 
 .description {
@@ -62,11 +62,19 @@
 }
 
 .specImage {
-  @apply w-full h-auto object-contain drop-shadow-md max-h-[50svh];
+  @apply w-full h-auto object-contain drop-shadow-md max-h-[50svh] rounded-xl border border-gray-200 bg-white;
+}
+
+.specSectionDesktop {
+  @apply hidden md:flex;
+}
+
+.specSectionMobile {
+  @apply order-3 flex md:hidden md:col-span-3;
 }
 
 .imageGallery {
-  @apply flex flex-col gap-3 mt-1 md:col-span-1 h-full;
+  @apply order-2 flex flex-col gap-3 mt-1 md:order-1 md:col-span-1 h-full;
 }
 
 .imageItem {
