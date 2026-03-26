@@ -14,43 +14,44 @@
   "about": {
     "subtitle": "VỀ CHÚNG TÔI",
     "title": "TỔNG QUAN DELTA SEIKAN",
-    "desc1": "Được thành lập vào năm 2020, Delta Seikan Corporation tự hào là đơn vị tiên phong trong lĩnh vực sản xuất bao bì kim loại tại Việt Nam, phục vụ đa dạng các nhu cầu trong ngành thực phẩm và đồ uống.",
-    "desc2": "Với triết lý \"Khách hàng là trọng tâm\", chúng tôi không ngừng cải tiến công nghệ và quy trình để mang đến những sản phẩm đạt chất lượng đỉnh cao, góp phần nâng tầm giá trị thương hiệu cho đối tác.",
+    "desc1": "Được thành lập vào năm 2020, công ty Delta Seikan chuyên sản xuất bao bì kim loại dùng cho ngành thực phẩm. Với phương châm lấy khách hàng làm trọng tâm, các sản phẩm của chúng tôi theo triết lý đơn giản mà tinh tế sẽ đáp ứng tiêu chuẩn cao của thị trường trong và ngoài nước và hướng đến mục tiêu trở thành nhà sản xuất bao bì kim loại dùng cho ngành thực phẩm hàng đầu Việt Nam.",
+    "desc2": "",
+    "desc3": "",
     "tag1": "Bao bì kim loại",
     "tag2": "Chất lượng cao"
   },
   "features": {
+    "title": "TẦM NHÌN - SỨ MỆNH - GIÁ TRỊ",
     "vision": "Tầm nhìn",
-    "visionDesc": "Trở thành nhà sản xuất bao bì kim loại dung trong ngành thực phẩm hàng đầu tại Việt Nam.",
+    "visionDesc": "Trở thành nhà sản xuất bao bì kim loại dùng trong ngành thực phẩm hàng đầu tại Việt Nam.",
     "mission": "Sứ mệnh",
     "missionDesc": "Cung cấp các giải pháp đáng tin cậy và bền vững để nâng cao chất lượng và dịch vụ.",
-    "values": "Giá trị cốt lõi",
+    "values": "Giá trị",
     "v1": "Khách hàng là trung tâm",
     "v2": "Trung thực",
     "v3": "Hợp tác và làm việc nhóm",
     "v4": "Cam kết và chủ động"
   },
   "capability": {
-    "sub": "HOẠT ĐỘNG",
-    "title": "Năng lực sản xuất",
+    "title": "HOẠT ĐỘNG SẢN XUẤT",
     "r1": "Phát triển sản phẩm",
     "r1Desc": "Tiến hành nghiên cứu, phát triển và thử nghiệm sản phẩm để đáp ứng nhu cầu thị trường, nâng cao chất lượng và hiệu quả của sản phẩm.",
     "r2": "Quản lý sản xuất",
     "r2Desc": "Cung cấp các sản phẩm với chất lượng tốt nhất cho khách hàng với hệ thống sản xuất và quản lý tối ưu.",
-    "r3": "Kiểm soát chất lượng",
+    "r3": "Kiểm soát chất lượng - ATTP",
     "r3Desc": "Chúng tôi luôn cam kết rằng tất cả các sản phẩm đều được kiểm tra để đáp ứng tiêu chuẩn chất lượng đã ký kết và tuân thủ hệ thống quản lý an toàn thực phẩm FSSC22000 trước khi giao hàng cho khách hàng.",
-    "r4": "Bán hàng",
+    "r4": "Chiến lược bán hàng",
     "r4Desc": "Về hoạt động bán hàng, chúng tôi luôn cố gắng tìm hiểu nhu cầu của khách hàng và phát triển thị trường mới, cung cấp phản hồi cho nhóm R&D để bắt kịp xu hướng thị trường nhằm tạo ra các sản phẩm có chất lượng tốt nhất với giá cả cạnh tranh."
   },
   "timeline": {
-    "title": "Hành trình phát triển",
-    "y2020": "Thành lập công ty Delta Seikan",
+    "title": "LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN",
+    "y2020": "Thành lập công ty cổ phần Delta Seikan",
     "y2020Desc": "Chính thức đi vào hoạt động với tầm nhìn dẫn đầu ngành bao bì kim loại.",
-    "y2021": "Ra mắt dòng lon DRD",
+    "y2021": "Lon DRD đầu tiên được xuất bán ra thị trường",
     "y2021Desc": "Thành công triển khai dây chuyền sản xuất lon DRD công nghệ cao.",
-    "y2022": "Mở rộng nhà máy",
+    "y2022": "Đạt chứng nhận ISO 9001:2015, HACCP",
     "y2022Desc": "Nâng cấp năng lực sản xuất và kho bãi hiện đại.",
-    "y2023": "Chứng nhận FSSC 22000",
+    "y2023": "Đạt Chứng nhận FSSC 22000",
     "y2023Desc": "Đạt chứng nhận hệ thống an toàn thực phẩm quốc tế."
   }
 }

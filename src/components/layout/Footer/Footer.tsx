@@ -28,7 +28,7 @@ const Footer = () => {
       <div className={styles.top}>
         {/* Column 1: Brand Info */}
         <div className={styles.colPrimary}>
-          <h2 className={styles.brandTitle}>DELTA SEIKAN</h2>
+          <h2 className={styles.brandTitle}>{t("brandName")}</h2>
           <p className={styles.brandDesc}>{t("desc")}</p>
           <div className={styles.iconList}>
             {[FiAward, FiLink].map((Icon, i) => (
@@ -39,32 +39,35 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Column 2: Explore Links */}
-        <div className={styles.colLink}>
-          <h3 className={styles.colHeading}>{t("explore")}</h3>
-          <ul className={styles.linkList}>
-            {exploreLinks.map((item) => (
-              <li key={item.label}>
-                <Link to={item.to} className={styles.linkItem}>
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Links Group for Mobile: Explore & Products side by side */}
+        <div className={styles.linksGroup}>
+          {/* Column 2: Explore Links */}
+          <div className={styles.colLink}>
+            <h3 className={styles.colHeading}>{t("explore")}</h3>
+            <ul className={styles.linkList}>
+              {exploreLinks.map((item) => (
+                <li key={item.label}>
+                  <Link to={item.to} className={styles.linkItem}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Column 3: Product Links */}
-        <div className={styles.colLink}>
-          <h3 className={styles.colHeading}>{t("products")}</h3>
-          <ul className={styles.linkList}>
-            {productLinks.map((item) => (
-              <li key={item.label}>
-                <Link to={item.to} className={styles.linkItem}>
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {/* Column 3: Product Links */}
+          <div className={styles.colLink}>
+            <h3 className={styles.colHeading}>{t("products")}</h3>
+            <ul className={styles.linkList}>
+              {productLinks.map((item) => (
+                <li key={item.label}>
+                  <Link to={item.to} className={styles.linkItem}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Column 4: Location Info */}

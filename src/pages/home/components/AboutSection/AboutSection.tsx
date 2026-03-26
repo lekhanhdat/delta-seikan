@@ -8,6 +8,7 @@ type AboutProps = {
   subtitle: string;
   description1: string;
   description2: string;
+  description3?: string;
   tags: string[];
   image: string;
 };
@@ -17,6 +18,7 @@ const AboutSection = ({
   subtitle,
   description1,
   description2,
+  description3,
   tags,
   image,
 }: AboutProps) => {
@@ -43,6 +45,7 @@ const AboutSection = ({
 
           <p className={styles.aboutDesc}>{description1}</p>
           <p className={styles.aboutDesc}>{description2}</p>
+          <p className={styles.aboutDesc}>{description3}</p>
 
           {/* TAGS */}
           <div className={styles.aboutTags}>

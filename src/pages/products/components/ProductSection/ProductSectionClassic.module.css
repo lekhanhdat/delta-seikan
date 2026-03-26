@@ -1,14 +1,16 @@
 .section {
-  @apply flex flex-col w-full justify-center gap-6 py-[20px];
+  @apply flex flex-col w-full justify-center gap-4 py-[5px];
+  min-height: 100svh;
 }
 
 /* HEADER */
 .header {
-  @apply w-full mb-2;
+  @apply w-full mb-6;
 }
 
 .title {
   @apply text-xl md:text-3xl font-bold text-[#0f2f5f] mb-1;
+  text-transform: uppercase;
 }
 
 .line {
@@ -17,24 +19,24 @@
 
 /* GRID LAYOUT */
 .contentGrid {
-  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 w-full items-start;
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 w-full items-stretch;
 }
 
 .contentNoSpec {
-  @apply grid md:grid-cols-2 gap-8 md:gap-12 w-full items-start;
+  @apply grid md:grid-cols-2 gap-8 md:gap-12 w-full items-stretch;
 }
 
 /* TEXT CONTENT */
 .productMainInfo {
-  @apply flex flex-col gap-6 md:col-span-1;
+  @apply flex flex-col gap-6 md:col-span-1 h-full justify-center;
 }
 
 .textContent {
-  @apply p-0;
+  @apply p-0 flex flex-col justify-center h-full;
 }
 
 .description {
-  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-4;
+  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-4 text-justify;
 }
 
 /* FEATURES */
@@ -56,12 +58,12 @@
 
 /* IMAGE SECTION (FIX CHÍNH Ở ĐÂY) */
 .imageGallery {
-  @apply flex flex-col gap-4 md:col-span-1 mt-2 w-full;
+  @apply flex flex-col gap-4 md:col-span-1 mt-2 w-full h-full;
 }
 
 /* KHÔNG dùng flex-1 nữa */
 .imageItem {
-  @apply rounded-2xl overflow-hidden shadow-sm bg-gray-100 w-full aspect-[16/10];
+  @apply rounded-2xl overflow-hidden shadow-sm bg-gray-100 w-full flex-1;
 }
 
 .image {
@@ -74,9 +76,21 @@
 }
 
 .specWrap {
-  @apply w-full max-h-[60svh] relative flex items-center justify-center;
+  @apply w-full relative flex items-center justify-center;
+}
+
+@media (min-width: 1024px) {
+  .specWrap {
+    max-height: 80svh;
+  }
 }
 
 .specImage {
-  @apply w-full h-full object-contain drop-shadow-md;
+  @apply w-full h-auto object-contain drop-shadow-md;
+}
+
+@media (min-width: 1024px) {
+  .specImage {
+    @apply h-full max-h-[75svh];
+  }
 }

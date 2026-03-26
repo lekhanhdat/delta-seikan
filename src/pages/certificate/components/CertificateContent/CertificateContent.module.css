@@ -19,7 +19,7 @@
 }
 
 .itemDesc {
-  @apply text-gray-600 text-sm leading-relaxed;
+  @apply text-gray-600 text-sm leading-relaxed text-justify;
 }
 
 .tags {
