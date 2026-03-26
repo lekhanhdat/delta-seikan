@@ -1,14 +1,9 @@
 .section {
   @apply flex flex-col w-full justify-center gap-4 py-[5px];
-  min-height: 100svh;
 }
 
 .header {
   @apply w-full mb-2;
-}
-
-.badge {
-  @apply inline-flex px-3 py-1 rounded-full text-[#1a4b95] text-[10px] md:text-xs font-semibold uppercase tracking-wide mb-1 bg-blue-50;
 }
 
 .title {
@@ -21,15 +16,21 @@
 }
 
 .contentGrid {
-  @apply grid md:grid-cols-3 gap-4 md:gap-8 items-stretch w-full;
+  @apply grid gap-4 md:gap-8 w-full;
 }
 
 .contentNoSpec {
-  @apply grid md:grid-cols-2 gap-4 md:gap-8 items-stretch w-full;
+  @apply grid gap-4 md:gap-8 w-full;
 }
 
 .productMainInfo {
-  @apply flex flex-col gap-4 h-full md:order-1 md:col-span-2;
+  @apply flex flex-col gap-4;
+  min-width: 0;
+  min-height: 0;
+}
+
+.textContent {
+  @apply flex flex-col;
 }
 
 .description {
@@ -57,60 +58,103 @@
 }
 
 .specWrap {
-  @apply w-full h-auto relative flex items-center justify-center;
+  @apply w-full relative flex items-center justify-center;
 }
 
 .specImage {
   @apply h-auto object-contain drop-shadow-md rounded-xl mx-auto;
+  max-width: 100%;
+  display: block;
 }
 
 .specSectionDesktop {
-  @apply hidden md:flex;
+  @apply hidden;
 }
 
 .specSectionMobile {
-  @apply flex md:hidden md:col-span-3;
+  @apply flex;
 }
 
 .imageGallery {
-  @apply flex flex-col gap-3 mt-1 md:order-2 md:col-span-1 h-full;
+  @apply flex flex-col gap-3;
+}
+
+@media (min-width: 1024px) {
+  .imageGallery {
+    max-height: 60vh;
+  }
 }
 
 .imageItem {
-  @apply rounded-xl overflow-hidden shadow-sm bg-gray-100 flex-1 min-h-[150px] border border-gray-100;
+  @apply rounded-[24px] overflow-hidden shadow-sm bg-[#f7f7f7] border border-gray-100 relative;
+  min-height: 260px;
 }
 
 .image {
-  @apply w-full h-full object-cover bg-white;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.08);
+  transition: transform 0.4s ease;
+  background: white;
 }
 
 @media (min-width: 768px) {
+  .contentGrid {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    align-items: stretch;
+    min-height: 45vh;
+    max-height: calc(100vh - 180px);
+  }
+
+  .contentNoSpec {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
+    min-height: 45vh;
+    max-height: calc(100vh - 180px);
+  }
+
+  .specSectionDesktop {
+    @apply flex;
+  }
+
+  .specSectionMobile {
+    @apply hidden;
+  }
+
   .specWrap {
-    max-height: 50svh;
+    max-height: 40vh;
   }
 
   .specImage {
-    max-height: 50svh;
+    max-height: 40vh;
+  }
+
+  .imageGallery {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    height: 100%;
+    min-height: 0;
+    align-self: stretch;
   }
 
   .imageItem {
     min-height: 0;
+    height: 100%;
   }
 }
 
 @media (min-width: 1024px) {
-  .section {
-    min-height: 100%;
-  }
-
   .contentGrid,
   .contentNoSpec {
-    height: 100%;
+    align-items: stretch;
   }
 
+  .productMainInfo,
   .imageGallery {
-    margin-top: 0;
-    min-height: 0;
-    overflow: hidden;
+    height: 100%;
   }
 }
