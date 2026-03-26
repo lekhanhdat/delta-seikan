@@ -16,26 +16,24 @@ const ProductTabs = ({ categories, active, onChange }: Props) => {
 
   // Check if tabs overflow and need to switch to dropdown
   useEffect(() => {
-  const checkOverflow = () => {
-    if (!tabsListRef.current) return;
+    const checkOverflow = () => {
+      if (!tabsListRef.current) return;
 
-    const el = tabsListRef.current;
-    console.log(el.scrollWidth, el.clientWidth); // debug log to check dimensions
-    
-    const hasOverflow = el.scrollWidth > el.clientWidth ;
+      const el = tabsListRef.current;
+      const hasOverflow = el.scrollWidth > el.clientWidth;
 
-    setUseDropdown(hasOverflow);
-  };
+      setUseDropdown(hasOverflow);
+    };
 
-  const raf = requestAnimationFrame(checkOverflow);
+    const raf = requestAnimationFrame(checkOverflow);
 
-  window.addEventListener("resize", checkOverflow);
+    window.addEventListener("resize", checkOverflow);
 
-  return () => {
-    cancelAnimationFrame(raf);
-    window.removeEventListener("resize", checkOverflow);
-  };
-}, [categories]);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", checkOverflow);
+    };
+  }, [categories]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
