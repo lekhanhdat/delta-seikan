@@ -86,3 +86,43 @@
 .active:hover {
   transform: translateY(-8px) scale(1.015);
 }
+
+@media (max-width: 767px) {
+  .wrapper {
+    @apply px-5 py-12;
+  }
+
+  .kicker {
+    @apply text-sm;
+  }
+
+  .heading {
+    @apply text-[2.1rem];
+    line-height: 1.15;
+  }
+
+  .lead {
+    @apply text-lg;
+    line-height: 1.7;
+  }
+
+  .card {
+    @apply rounded-[28px];
+    padding: 2rem 1.6rem;
+    min-height: 260px;
+  }
+
+  .title {
+    @apply text-[2rem] mb-5;
+  }
+
+  .desc {
+    @apply text-xl;
+    line-height: 1.65;
+    max-width: 28ch;
+  }
+
+  .icon {
+    @apply mt-10 text-4xl;
+  }
+}
