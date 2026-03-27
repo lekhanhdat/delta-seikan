@@ -1,6 +1,5 @@
 import PageHero from "@/components/sections/PageHero/PageHero";
 import newshinhanh from "@/assets/images/newshinhanh.jpg";
-import news1 from "@/assets/images/news1.png";
 import news2 from "@/assets/images/news2.png";
 import news3 from "@/assets/images/news3.jpg";
 import NewsGrid from "./components/NewsGrid/NewsGrid";
@@ -19,22 +18,14 @@ const NewsPage = () => {
       tag: t("items.0.tag"),
       date: t("items.0.date"),
       desc: t("items.0.desc"),
-      link: "https://reads.alibaba.com/vi/unwrapping-the-future-6-packaging-trends-set-to-dominate-2026/",
-      image: news1,
+      link: "https://www.mordorintelligence.com/industry-reports/metal-packaging-market",
+      image: news2,
     },
     {
       title: t("items.1.title"),
       tag: t("items.1.tag"),
       date: t("items.1.date"),
       desc: t("items.1.desc"),
-      link: "https://www.mordorintelligence.com/industry-reports/metal-packaging-market",
-      image: news2,
-    },
-    {
-      title: t("items.2.title"),
-      tag: t("items.2.tag"),
-      date: t("items.2.date"),
-      desc: t("items.2.desc"),
       link: "https://accbinhduong.vn/lien-doan-lao-dong-huyen-phu-giao-thanh-lap-cong-doan-co-so-tai-cong-ty-co-phan-delta-seikan/",
       image: news3,
     },
