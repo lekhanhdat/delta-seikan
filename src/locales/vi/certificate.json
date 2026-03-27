@@ -14,13 +14,9 @@
         "fssc": {
           "title": "FSSC 22000 Ver 6.0",
           "desc": "Tiêu chuẩn an toàn thực phẩm quốc tế, kiểm soát rủi ro và đảm bảo sản phẩm đáp ứng yêu cầu nghiêm ngặt."
-        },
-        "haccp": {
-          "title": "HACCP",
-          "desc": "HACCP là hệ thống quản lý an toàn thực phẩm theo phương pháp phòng ngừa, tập trung vào nhận diện mối nguy và kiểm soát tại các điểm kiểm soát tới hạn (CCP) trong toàn bộ quy trình sản xuất bao bì tiếp xúc thực phẩm."
         }
       },
-      "tags": ["ISO 9001:2015", "FSSC 22000", "HACCP", "Sản xuất chủ động"]
+      "tags": ["ISO 9001:2015", "FSSC 22000", "Sản xuất chủ động"]
     },
     "highlights": {
       "heading": "Năng lực đảm bảo chất lượng toàn diện",

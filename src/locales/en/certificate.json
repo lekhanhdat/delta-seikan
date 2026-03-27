@@ -14,13 +14,9 @@
         "fssc": {
           "title": "FSSC 22000 Ver 6.0",
           "desc": "International food safety standards, risk control, and ensuring products meet strict requirements."
-        },
-        "haccp": {
-          "title": "HACCP",
-          "desc": "HACCP is a preventive approach food safety management system, focusing on hazard identification and control at critical control points (CCP) throughout the food contact packaging production process."
         }
       },
-      "tags": ["ISO 9001:2015", "FSSC 22000", "HACCP", "Active Production"]
+      "tags": ["ISO 9001:2015", "FSSC 22000", "Active Production"]
     },
     "highlights": {
       "heading": "Comprehensive Quality Assurance Capabilities",
