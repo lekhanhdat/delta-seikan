@@ -25,11 +25,7 @@ const CertificatePage = () => {
       {
         title: t("sections.quality.items.fssc.title"),
         desc: t("sections.quality.items.fssc.desc"),
-      },
-      {
-        title: t("sections.quality.items.haccp.title"),
-        desc: t("sections.quality.items.haccp.desc"),
-      },
+      }
     ],
     tags: t("sections.quality.tags", { returnObjects: true }) as string[],
   }), [t]);

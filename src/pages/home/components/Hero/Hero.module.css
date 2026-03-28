@@ -24,7 +24,7 @@
 }
 
 .heroContainer {
-  @apply max-w-xl;
+  @apply max-w-[700px];
 }
 
 .heroTitle {

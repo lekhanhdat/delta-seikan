@@ -1,5 +1,5 @@
 .section {
-  @apply flex flex-col w-full justify-center gap-4 py-[5px];
+  @apply flex flex-col w-full justify-center;
 }
 
 .header {
@@ -7,7 +7,7 @@
 }
 
 .title {
-  @apply text-xl md:text-3xl font-bold text-[#0f2f5f] mb-1;
+  @apply text-xl md:text-2xl font-bold text-[#0f2f5f] mb-1;
   text-transform: uppercase;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .productMainInfo {
-  @apply flex flex-col gap-4;
+  @apply flex flex-col;
   min-width: 0;
   min-height: 0;
 }
@@ -34,7 +34,7 @@
 }
 
 .description {
-  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-2 text-justify;
+  @apply text-sm md:text-sm text-gray-600 leading-relaxed mb-2 text-justify;
 }
 
 .features {
@@ -54,16 +54,17 @@
 }
 
 .specSection {
-  @apply w-full flex items-center justify-center bg-gray-50/10 rounded-2xl p-1;
+   @apply flex items-center justify-center;
 }
 
 .specWrap {
-  @apply w-full relative flex items-center justify-center;
+  @apply relative flex items-center justify-start ;
 }
 
 .specImage {
-  @apply h-auto object-contain drop-shadow-md rounded-xl mx-auto;
-  max-width: 100%;
+  @apply h-auto object-contain drop-shadow-sm mx-0 rounded-lg;
+  width: 100%;
+  max-width: none;
   display: block;
 }
 
@@ -81,7 +82,7 @@
 
 @media (min-width: 1024px) {
   .imageGallery {
-    max-height: 60vh;
+    max-height: 70vh;
   }
 }
 
@@ -125,11 +126,11 @@
   }
 
   .specWrap {
-    max-height: 40vh;
+    max-height: 60vh;
   }
 
   .specImage {
-    max-height: 40vh;
+    max-height: 60vh;
   }
 
   .imageGallery {
