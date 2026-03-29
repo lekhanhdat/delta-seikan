@@ -98,19 +98,20 @@
   min-height: 0;
 }
 
+/* Trong ProductSectionFeature.module.css */
+
 .imageItem {
   @apply rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200 flex items-center justify-center;
+  /* Thay đổi: Đảm bảo có chiều cao tối thiểu và không bị sập */
+  flex: 1; 
   height: 100%;
-  min-height: 0;
-  max-height: 100%;
+  min-height: 200px; /* Thêm min-height để dự phòng */
 }
 
 .specAsGalleryImage {
-  @apply bg-white p-2;
-  height: 100%;
-  width: auto;
-  max-width: min(42vw, 680px);
+  @apply bg-white p-2 w-full h-full; /* Thay đổi width/height thành full */
   object-fit: contain;
+  /* Bỏ max-width linh hoạt nếu nó gây xung đột trên mobile */
 }
 
 /* TABLET / MOBILE */
