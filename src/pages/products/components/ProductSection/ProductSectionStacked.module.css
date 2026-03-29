@@ -62,7 +62,7 @@
 }
 
 .specImage {
-  @apply h-auto object-contain drop-shadow-sm mx-0 rounded-lg;
+  @apply h-auto object-contain mx-0 rounded-lg bg-white p-2 shadow-lg border border-gray-100;
   width: 100%;
   max-width: none;
   display: block;
