@@ -10,6 +10,8 @@ const ProductSectionFeature = ({
   images,
   specImage,
 }: ProductSectionProps) => {
+  const displayImages = images?.slice(0, 2) || [];
+
   return (
     <section className={styles.section}>
       <div className={specImage ? styles.contentGrid : styles.contentNoSpec}>
@@ -34,40 +36,32 @@ const ProductSectionFeature = ({
             )}
           </div>
 
-          {specImage && (
-            <div className={`${styles.specSection} ${styles.specSectionDesktop}`}>
-              <div className={styles.specWrap}>
-                <ImageFullscreenViewer
-                  src={specImage}
-                  alt={`${title} specification`}
-                  imageClassName={styles.specImage}
-                />
+          {/* Khu spec cũ giờ đổi thành nơi hiển thị 2 ảnh thường */}
+          {displayImages.length > 0 && (
+            <div className={styles.specSection}>
+              <div className={styles.specGrid}>
+                {displayImages.map((img, index) => (
+                  <div key={`${img}-${index}`} className={styles.specGridItem}>
+                    <ImageFullscreenViewer
+                      src={img}
+                      alt={`${title} image ${index + 1}`}
+                      imageClassName={styles.specGridImage}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           )}
         </div>
 
-        <div className={styles.imageGallery}>
-          {images.slice(0, 2).map((img, index) => (
-            <div key={`${img}-${index}`} className={styles.imageItem}>
-              <img
-                src={img}
-                alt={`${title} ${index + 1}`}
-                className={styles.image}
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          ))}
-        </div>
-
+        {/* Cột phải giờ chỉ hiển thị specImage như ảnh bình thường */}
         {specImage && (
-          <div className={`${styles.specSection} ${styles.specSectionMobile}`}>
-            <div className={styles.specWrap}>
+          <div className={styles.imageGallery}>
+            <div className={styles.imageItem}>
               <ImageFullscreenViewer
                 src={specImage}
                 alt={`${title} specification`}
-                imageClassName={styles.specImage}
+                imageClassName={styles.specAsGalleryImage}
               />
             </div>
           </div>

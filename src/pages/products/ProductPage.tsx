@@ -79,7 +79,7 @@ const ProductPage = () => {
     {
       type: "product",
       tab: t("sections.lon2manh.tab"),
-      variant: "stacked",
+      variant: "feature",
       props: {
         title: t("sections.lon2manh.title"),
         description: t("sections.lon2manh.desc"),

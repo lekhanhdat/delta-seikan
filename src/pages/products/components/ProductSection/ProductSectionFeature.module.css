@@ -1,37 +1,61 @@
 .section {
-  @apply flex flex-col w-full justify-center gap-4 py-[10px];
-  min-height: auto;
+  @apply flex flex-col w-full gap-4 py-2;
+  height: calc(100vh - 136px);
+  min-height: calc(100vh - 136px);
+  min-width: 0;
 }
 
+/* HEADER */
 .header {
-  @apply w-full mb-3;
+  @apply w-full mb-4 md:mb-6;
+  flex-shrink: 0;
 }
 
 .title {
-  @apply text-xl md:text-3xl font-bold text-[#0f2f5f] mb-1;
+  @apply text-xl md:text-2xl font-bold text-[#0f2f5f];
   text-transform: uppercase;
 }
 
 .line {
-  @apply w-12 h-[2px] bg-blue-600 rounded-full;
+  @apply w-12 h-[2px] bg-blue-600 rounded-full mt-2;
 }
 
+/* GRID */
 .contentGrid {
-  @apply grid md:grid-cols-3 gap-4 md:gap-8 items-stretch w-full;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: stretch;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
 }
 
 .contentNoSpec {
-  @apply grid md:grid-cols-2 gap-4 md:gap-8 items-stretch w-full;
+  @apply grid gap-4 w-full;
+  grid-template-columns: minmax(0, 1fr);
+  flex: 1;
+  min-height: 0;
 }
 
+/* LEFT COLUMN */
 .productMainInfo {
-  @apply flex flex-col gap-4 h-full md:col-span-2;
+  @apply flex flex-col h-full;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* TEXT */
+.textContent {
+  @apply flex flex-col;
+  flex-shrink: 0;
 }
 
 .description {
-  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-2 text-justify;
+  @apply text-sm md:text-sm text-gray-600 leading-relaxed mb-2 text-justify;
 }
 
+/* FEATURES */
 .features {
   @apply grid grid-cols-2 gap-2 mb-2;
 }
@@ -48,35 +72,80 @@
   @apply text-[10px] md:text-xs text-gray-500;
 }
 
+/* 2 ảnh thường */
 .specSection {
-  @apply w-full flex items-center justify-center bg-gray-50/10 rounded-2xl p-1 h-auto;
+  @apply w-full rounded-2xl p-1;
+  flex: 1;
+  min-height: 0;
 }
 
-.specWrap {
-  @apply w-full h-auto relative flex items-center justify-center;
-  max-height: 50svh;
+.specGrid {
+  @apply grid grid-cols-1 gap-3 w-full h-full;
 }
 
-.specImage {
-  @apply w-full h-auto object-contain drop-shadow-md max-h-[50svh] rounded-xl border border-gray-200 bg-white;
+.specGridItem {
+  @apply rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200 flex;
+  min-height: 0;
 }
 
-.specSectionDesktop {
-  @apply hidden md:flex;
+.specGridImage {
+  @apply w-full h-full object-cover bg-white;
 }
 
-.specSectionMobile {
-  @apply flex md:hidden md:col-span-3;
-}
-
+/* RIGHT COLUMN */
 .imageGallery {
-  @apply flex flex-col gap-3 mt-1 md:col-span-1 h-full;
+  @apply flex flex-col h-full;
+  min-height: 0;
 }
 
 .imageItem {
-  @apply rounded-xl overflow-hidden shadow-md bg-gray-100 w-full flex-1 min-h-[150px] md:min-h-0;
+  @apply rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200 flex items-center justify-center;
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
 }
 
-.image {
-  @apply w-full h-full object-cover bg-white;
+.specAsGalleryImage {
+  @apply bg-white p-2;
+  height: 100%;
+  width: auto;
+  max-width: min(42vw, 680px);
+  object-fit: contain;
+}
+
+/* TABLET / MOBILE */
+@media (max-width: 1023px) {
+  .section {
+    height: auto;
+    min-height: auto;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    flex: unset;
+  }
+
+  .contentNoSpec {
+    flex: unset;
+  }
+
+  .imageGallery {
+    width: 100%;
+  }
+
+  .imageItem {
+    min-height: 260px;
+  }
+
+  .specAsGalleryImage {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .specGrid {
+    @apply grid-cols-1;
+    height: auto;
+  }
 }
