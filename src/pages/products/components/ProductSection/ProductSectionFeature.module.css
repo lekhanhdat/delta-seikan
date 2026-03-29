@@ -115,7 +115,7 @@
 }
 
 .imageItem {
-  @apply rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200;
+  @apply rounded-xl overflow-hidden shadow-md bg-white border border-gray-200;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,16 +144,18 @@
   }
 
   .contentGrid {
-    grid-template-columns: 1fr;
+    @apply flex flex-col;
     gap: 1.25rem;
     flex: unset;
   }
 
-  .contentNoSpec {
-    flex: unset;
+  /* Đảm bảo thứ tự hiển thị: Nội dung văn bản -> 2 ảnh thường -> specImage */
+  .productMainInfo {
+    order: 1;
   }
 
   .imageGallery {
+    order: 2;
     width: 100%;
   }
 
@@ -174,6 +176,4 @@
     @apply grid-cols-1;
     height: auto;
   }
-
-  
 }

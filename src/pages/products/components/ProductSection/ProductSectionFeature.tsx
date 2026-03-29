@@ -24,7 +24,7 @@ const ProductSectionFeature = ({
           <div className={styles.textContent}>
             <p className={styles.description}>{description}</p>
 
-            {features && (
+            {features && features.length > 0 && (
               <div className={styles.features}>
                 {features.map((item) => (
                   <div key={item.title} className={styles.featureItem}>
