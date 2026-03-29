@@ -36,16 +36,17 @@ const ProductSectionFeature = ({
             )}
           </div>
 
-          {/* Khu spec cũ giờ đổi thành nơi hiển thị 2 ảnh thường */}
           {displayImages.length > 0 && (
             <div className={styles.specSection}>
               <div className={styles.specGrid}>
                 {displayImages.map((img, index) => (
                   <div key={`${img}-${index}`} className={styles.specGridItem}>
-                    <ImageFullscreenViewer
+                    <img
                       src={img}
                       alt={`${title} image ${index + 1}`}
-                      imageClassName={styles.specGridImage}
+                      className={styles.specGridImage}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))}
@@ -54,7 +55,6 @@ const ProductSectionFeature = ({
           )}
         </div>
 
-        {/* Cột phải giờ chỉ hiển thị specImage như ảnh bình thường */}
         {specImage && (
           <div className={styles.imageGallery}>
             <div className={styles.imageItem}>
