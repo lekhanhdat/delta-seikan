@@ -22,6 +22,8 @@ import hinh16 from "@/assets/images/hinh16.jpg";
 import hinh17 from "@/assets/images/hinh17.jpg";
 import hinh18 from "@/assets/images/hinh18.jpg";
 import hinh19 from "@/assets/images/hinh19.JPG";
+import lon3manh1 from "@/assets/images/lon3manh1.jpg";
+import lon3manh2 from "@/assets/images/lon3manh2.jpg";
 
 import styles from "./ProductPage.module.css";
 
@@ -90,11 +92,11 @@ const ProductPage = () => {
     {
       type: "product",
       tab: t("sections.lon3manh.tab"),
-      variant: "stacked",
+      variant: "reverse",
       props: {
         title: t("sections.lon3manh.title"),
         description: t("sections.lon3manh.desc"),
-        images: [hinh13, hinh14],
+        images: [lon3manh1, lon3manh2, hinh13, hinh14],
         specImage: hinh15,
       },
     },

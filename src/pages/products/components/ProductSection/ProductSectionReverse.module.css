@@ -1,41 +1,71 @@
 .section {
-  @apply flex flex-col w-full justify-center gap-4 py-[5px];
-  min-height: 100svh;
+  @apply flex flex-col w-full gap-4 py-2;
+  height: calc(100svh - 136px);
+  min-height: calc(100svh - 136px);
+  min-width: 0;
 }
 
+@supports (height: 100dvh) {
+  .section {
+    height: calc(100dvh - 136px);
+    min-height: calc(100dvh - 136px);
+  }
+}
+
+/* HEADER */
 .header {
-  @apply w-full mb-2;
-}
-
-.badge {
-  @apply inline-flex px-3 py-1 rounded-full text-[#1a4b95] text-[10px] md:text-xs font-semibold uppercase tracking-wide mb-1 bg-blue-50;
+  @apply w-full mb-4 md:mb-6;
+  flex-shrink: 0;
 }
 
 .title {
-  @apply text-xl md:text-3xl font-bold text-[#0f2f5f] mb-1;
+  @apply text-xl md:text-2xl font-bold text-[#0f2f5f];
   text-transform: uppercase;
 }
 
 .line {
-  @apply w-12 h-[2px] bg-blue-600 rounded-full;
+  @apply w-12 h-[2px] bg-blue-600 rounded-full mt-2;
 }
 
+/* GRID */
 .contentGrid {
-  @apply grid md:grid-cols-3 gap-4 md:gap-8 items-stretch w-full;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: stretch;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
 }
 
 .contentNoSpec {
-  @apply grid md:grid-cols-2 gap-4 md:gap-8 items-stretch w-full;
+  @apply grid gap-4 w-full;
+  grid-template-columns: minmax(0, 1fr);
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
 }
 
+/* LEFT COLUMN */
 .productMainInfo {
-  @apply order-1 flex flex-col gap-4 h-full md:order-2 md:col-span-2;
+  @apply flex flex-col h-full;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* TEXT */
+.textContent {
+  @apply flex flex-col;
+  flex-shrink: 0;
+  min-width: 0;
 }
 
 .description {
-  @apply text-sm md:text-base text-gray-600 leading-relaxed mb-2 text-justify;
+  @apply text-sm md:text-sm text-gray-600 leading-relaxed mb-2 text-justify;
 }
 
+/* FEATURES */
 .features {
   @apply grid grid-cols-2 gap-2 mb-2;
 }
@@ -52,35 +82,115 @@
   @apply text-[10px] md:text-xs text-gray-500;
 }
 
+/* ẢNH THƯỜNG */
 .specSection {
-  @apply w-full flex items-center justify-center bg-gray-50/10 rounded-2xl p-1;
+  @apply w-full rounded-2xl p-1;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
 }
 
-.specWrap {
-  @apply w-full h-auto relative flex items-center justify-center;
-  max-height: 50svh;
+.specGrid {
+  @apply grid grid-cols-2 gap-3 w-full h-full;
+  min-height: 0;
 }
 
-.specImage {
-  @apply w-full h-auto object-contain drop-shadow-md max-h-[50svh] rounded-xl mx-auto;
+.specGridItem {
+  @apply rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200;
+  display: flex;
+  min-height: 0;
+  min-width: 0;
 }
 
-.specSectionDesktop {
-  @apply hidden md:flex;
+.specGridImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: white;
 }
 
-.specSectionMobile {
-  @apply order-3 flex md:hidden md:col-span-3;
-}
-
+/* RIGHT COLUMN */
 .imageGallery {
-  @apply order-2 flex flex-col gap-3 mt-1 md:order-1 md:col-span-1 h-full;
+  @apply flex flex-col h-full;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .imageItem {
-  @apply rounded-xl overflow-hidden shadow-sm bg-gray-100 flex-1 min-h-[150px] border border-gray-100;
+  @apply rounded-xl overflow-hidden shadow-md bg-white border border-gray-200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  max-height: 100%;
+  flex: 1;
 }
 
-.image {
-  @apply w-full h-full object-cover bg-white;
+.specAsGalleryImage {
+  @apply bg-white p-2;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(35vw, 550px);
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* TABLET / MOBILE */
+@media (max-width: 1023px) {
+  .section {
+    height: auto;
+    min-height: auto;
+  }
+
+  .contentGrid {
+    @apply flex flex-col;
+    gap: 1.25rem;
+    flex: unset;
+  }
+
+  .productMainInfo {
+    order: 1;
+  }
+
+  .imageGallery {
+    order: 2;
+    width: 100%;
+  }
+
+  .imageItem {
+    min-height: 260px;
+    height: auto;
+    flex: unset;
+  }
+
+  .specAsGalleryImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .specGrid {
+    @apply grid-cols-1;
+    height: auto;
+  }
+
+  .specGridItem {
+    aspect-ratio: 4 / 3;
+  }
+
+  .specGridImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
