@@ -10,23 +10,11 @@ const ProductSectionReverse = ({
   images,
   specImage,
 }: ProductSectionProps) => {
+  const displayImages = images?.slice(0, 4) || [];
+
   return (
     <section className={styles.section}>
       <div className={specImage ? styles.contentGrid : styles.contentNoSpec}>
-        <div className={styles.imageGallery}>
-          {images.map((img, index) => (
-            <div key={`${img}-${index}`} className={styles.imageItem}>
-              <img
-                src={img}
-                alt={`${title} ${index + 1}`}
-                className={styles.image}
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          ))}
-        </div>
-
         <div className={styles.productMainInfo}>
           <div className={styles.header}>
             <h2 className={styles.title}>{title}</h2>
@@ -36,7 +24,7 @@ const ProductSectionReverse = ({
           <div className={styles.textContent}>
             <p className={styles.description}>{description}</p>
 
-            {features && (
+            {features && features.length > 0 && (
               <div className={styles.features}>
                 {features.map((item) => (
                   <div key={item.title} className={styles.featureItem}>
@@ -48,31 +36,36 @@ const ProductSectionReverse = ({
             )}
           </div>
 
-          {specImage && (
-            <div className={`${styles.specSection} ${styles.specSectionDesktop}`}>
-              <div className={styles.specWrap}>
-                <ImageFullscreenViewer
-                  src={specImage}
-                  alt={`${title} specification`}
-                  imageClassName={styles.specImage}
-                />
+          {displayImages.length > 0 && (
+            <div className={styles.specSection}>
+              <div className={styles.specGrid}>
+                {displayImages.map((img, index) => (
+                  <div key={`${img}-${index}`} className={styles.specGridItem}>
+                    <img
+                      src={img}
+                      alt={`${title} image ${index + 1}`}
+                      className={styles.specGridImage}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           )}
         </div>
 
         {specImage && (
-          <div className={`${styles.specSection} ${styles.specSectionMobile}`}>
-            <div className={styles.specWrap}>
+          <div className={styles.imageGallery}>
+            <div className={styles.imageItem}>
               <ImageFullscreenViewer
                 src={specImage}
                 alt={`${title} specification`}
-                imageClassName={styles.specImage}
+                imageClassName={styles.specAsGalleryImage}
               />
             </div>
           </div>
         )}
-       
       </div>
     </section>
   );
